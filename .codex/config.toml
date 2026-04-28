@@ -1,0 +1,9 @@
+[mcp_servers.atlassian-jira]
+url = "http://localhost:4040/mcp"
+
+[mcp_servers.teletronics-mcp]
+command = "npx"
+args = ["-y", "mcp-remote", "https://ssystem-mcp.teletronics.local:30443/mcp"]
+
+[mcp_servers.teletronics-mcp.env]
+NODE_TLS_REJECT_UNAUTHORIZED = "0"

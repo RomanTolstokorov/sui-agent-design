@@ -1,0 +1,155 @@
+{
+  "name": "Teletronics SUI Colors and Elevations",
+  "modes": ["Light", "Dark"],
+  "rules": [
+    "Use only Light and Dark modes for routine drawings.",
+    "Prefer palette variables over hardcoded colors.",
+    "Use background/surface_* tokens for app and container backgrounds instead of raw grays.",
+    "Treat background/surface_* tokens as contextual surfaces, not a strict global elevation ladder. Any surface can appear after another when the composition needs it.",
+    "Use text/primary, text/secondary, and text/disabled for text fills.",
+    "Use primary/main and primary/contrastText for primary actions.",
+    "Use Figma effect styles by key for elevations."
+  ],
+  "tokens": {
+    "text": {
+      "text/primary": { "key": "4d32b2f7a0c37b8f66994f71b32e0b9b3fa253fb", "light": "#1b1d21", "dark": "#f7f7f7" },
+      "text/secondary": { "key": "a26d060dd55c952c6a727f682eaeb4717353fa5c", "light": "#1b1d21b2", "dark": "#f7f7f7b2" },
+      "text/disabled": { "key": "4cc5d32b04e2114f858c5c63cd90514a51ff6ab2", "light": "#1b1d214d", "dark": "#f7f7f761" },
+      "text/link": { "key": "bd1c75fd651840ea2f96d82c61ee50f5f6d98303", "light": "#3b6bf6", "dark": "#81c1ff" }
+    },
+    "primary": {
+      "primary/main": { "key": "98959278111c805060b504594616f165ddd8e939", "light": "#3b6bf6", "dark": "#81c1ff" },
+      "primary/dark": { "key": "138bded53317ccec8ed3deb443672b7ba430ce9a", "light": "#163bf5", "dark": "#6196f8" },
+      "primary/light": { "key": "c3322411d911dffc40bcfc5090dbb34e854b9389", "light": "#6196f8", "dark": "#d8ecfd" },
+      "primary/contrastText": { "key": "b88a4febb0cc830f76698643da725f6fb524f27f", "light": "#f7f7f7", "dark": "#1b1d21" }
+    },
+    "secondary": {
+      "secondary/main": { "key": "b18997940cce9b6fd77557d59cad1a2139fa348d", "light": "#232528", "dark": "#c3c6ca" },
+      "secondary/dark": { "key": "f7e62f0e7e000e2d29aad4a1244fd8736eb724e0", "light": "#1b1d21", "dark": "#9fa2a8" },
+      "secondary/light": { "key": "153e764a62c217407fb4106decd7618090401733", "light": "#3e4045", "dark": "#f7f7f7" },
+      "secondary/contrastText": { "key": "8caffbd7c77c5c6b2dceb212b5931f4e40684b01", "light": "#ffffff", "dark": "#000000" }
+    },
+    "semantic": {
+      "error/main": { "key": "ca3e360fd48ef071f0f0c728a44d288b57c331ec", "light": "#d83731", "dark": "#d83731" },
+      "warning/main": { "key": "dee3d1116efa22702f6a0210214985804712178b", "light": "#ef6c00", "dark": "#e65100" },
+      "info/main": { "key": "37285ff658b1061b0b0cf03e9047707d8e3c5668", "light": "#0073ab", "dark": "#00608d" },
+      "success/main": { "key": "dc5b12cad3b4a98a5e8d72ce305f660fdf182736", "light": "#3f8e50", "dark": "#3f8e50" }
+    },
+    "background": {
+      "background/default": {
+        "key": "9c04f741692a10eb01c2078be2b0e6b1e7d330d8",
+        "light": "#ffffff",
+        "dark": "#232529",
+        "usage": "Default layout/page background. Maps to theme.palette.background.default; use when the layout expects the MUI default background rather than the layered app-canvas surface."
+      },
+      "background/surface_0": {
+        "key": "6989a1c1e70aec75069efd7956f06653d2a6492c",
+        "light": "#f2f2f2",
+        "dark": "#121317",
+        "contextRole": "localBase",
+        "usage": "Base contextual surface token for independent composition contexts. Project-specific frame usage lives in app/rules.md."
+      },
+      "background/surface_1": {
+        "key": "86bc5fded2e10be2b9120a0961f66256e8d142db",
+        "light": "#f7f7f7",
+        "dark": "#131416",
+        "contextRole": "sectionOrPanel",
+        "usage": "Contextual section or panel surface. Can be used before or after other surface tokens when the composition needs this contrast."
+      },
+      "background/surface_2": {
+        "key": "64480181e4b62befc1a78627988dd6ecc82b5c4b",
+        "light": "#fcfcfc",
+        "dark": "#1c1e21",
+        "contextRole": "islandOrHighlight",
+        "usage": "Contextual island, grouped-area, or highlight surface. It does not need to follow surface_1."
+      },
+      "background/surface_3": {
+        "key": "f3d0623140e0a456251c9f908b0e1435e35f22c6",
+        "light": "#ffffff",
+        "dark": "#232529",
+        "contextRole": "containerOrPaper",
+        "usage": "Contextual container surface. Maps to theme.palette.background.paper; useful for cards, panels, menus, and content containers, but can be followed by lower-numbered surfaces inside it."
+      },
+      "background/surface_ai_1": {
+        "key": "83a64118444e56a6a97978b68d808d24f7f4c9ec",
+        "light": "#ffffff",
+        "dark": "#212121",
+        "usage": "AI chat primary surface."
+      },
+      "background/surface_ai_2": {
+        "key": "43fb4cb08de143cbc4dcb04ae63b6fdb6c171bd6",
+        "light": "#f9f9f9",
+        "dark": "#181818",
+        "usage": "AI chat secondary surface."
+      }
+    },
+    "action": {
+      "action/active": { "key": "4373bd50f5733ca2eb0dfe12be02c758e343ce1e", "light": "#0e0f1299", "dark": "#ffffff99" },
+      "action/disabled": { "key": "18c4f2e5e4afc70d5afefe598b27ca8ebf650a46", "light": "#0e0f1261", "dark": "#ffffff61" },
+      "action/disabledBackground": { "key": "9d54365dc25d7bcc1a1b6c3a2de1ffced5c667cd", "light": "#0e0f121a", "dark": "#ffffff1a" },
+      "action/hover": { "key": "e5ab7d54685830bc0cb68534319fcf560ff274c6", "light": "#0e0f120d", "dark": "#ffffff14" },
+      "action/selected": { "key": "2e9d88da767a2340126de4d2cdccaee60c0e05d1", "light": "#0e0f1214", "dark": "#ffffff29" },
+      "action/focus": { "key": "b4acb6b4c48fca98dd60883fe601246fa91ac0f4", "light": "#0e0f1226", "dark": "#ffffff26" },
+      "action/focusStroke": { "key": "2cdbae8cf106dd9dfadbec8f943c9f7f042161b6", "light": "#0e0f1233", "dark": "#ffffff33" }
+    },
+    "structure": {
+      "divider": { "key": "fcd25107aed15e2e2ab8e84cd8ab38e8cc489efa", "light": "#1b1d211f", "dark": "#ffffff1f" },
+      "components/input/border": { "key": "79c82f8abacbb731af98c9749d0c35fdfefbdd8c", "light": "#e1e3e5", "dark": "#60646c" },
+      "components/appBar/defaultFill": { "key": "27caef96981eb4722438c6a4759845dbaf797f82", "light": "#e1e3e5", "dark": "#131416" },
+      "components/tooltip/fill": { "key": "0ac627484d4ac33eb91e6847f07b4a8ed4e8c29c", "light": "#3e4045", "dark": "#f7f7f7" },
+      "components/snackbar/fill": { "key": "3279db1d32f0d92ed039ae7c8b78249577161a94", "light": "#3e4045", "dark": "#f7f7f7" }
+    }
+  },
+  "elevationVariables": {
+    "elevation/inputShadow": { "key": "1ed2b8e1c9fbb7aeab370efcde89aa16c26b0f01", "light": "#9670261f", "dark": "#05063680" },
+    "elevation/inputShadow-2": { "key": "c9a2a938ab096471d6753709cf347ab16c04c0ac", "light": "#a67e301a", "dark": "#08112780" },
+    "elevation/inputShadow-3": { "key": "89110427ebdaaa52d91dd22e1a317a26691d45d8", "light": "#644b1b14", "dark": "#00000014" },
+    "elevation/outlined": { "key": "007f00a19c3e86b5aabf71656072f7b0b05d17a1", "light": "#e0e0e0", "dark": "#ffffff1f" }
+  },
+  "effectStyleKeys": {
+    "elevation/1": "4e891a16fb9b18afc92e930982803dde51f2cd73",
+    "elevation/2": "9838aa64780e18f17b8bc9d70801b7a31bc2f608",
+    "elevation/3": "22eb28591f6ffc3a5e6265e049ee98e857a77466",
+    "elevation/4": "d06f0eb767a1a962547366bc6153e3674cc259a0",
+    "elevation/5": "f393bc75b4854be8316b6d4f9b64ba3dfa3f1a16",
+    "elevation/6": "332a850a24e7ec3707d6912f9249fb361ad09f37",
+    "elevation/7": "c2cf8beab68a2f14efc28462dc81cc7191ed850d",
+    "elevation/8": "89773891477918a080a17d672f9f30939fbdd8fa",
+    "elevation/9": "2cd94016f3bc06aa5448e7518b1410086ecd2812",
+    "elevation/10": "12260634ebd0e498e30a5aa9a5ea354c864b015f",
+    "elevation/11": "02a8ac3d7a22c88107c50a036b091196ccc920de",
+    "elevation/12": "ff86623390d09ac0d3e1cf9cab500a4e568725f0",
+    "elevation/13": "cec8eccdced48217ac85dd25bcb12fbabe57653b",
+    "elevation/14": "826265fb10b951bc0c3d8c0972af4f94e7f4a388",
+    "elevation/15": "62221725a3d138c26a4927ca2661823a9bf82374",
+    "elevation/16": "a401a0901ce909df7a2e81199a3f987e3e977d07",
+    "elevation/17": "b994e6c380314216df95b9c96c3021e53e0d08e3",
+    "elevation/18": "9cc35ef4458e1a318614dba97430235aca725497",
+    "elevation/19": "8af419df596d0c69757b59939d5587f614b23e1d",
+    "elevation/20": "52e3ec31c8632844d549192d1c20abfea2fefbd3",
+    "elevation/21": "615659034f85a038a89b990fd7444f4b78289d0e",
+    "elevation/22": "963d8e6b03f630ba5f7c35672eb74576486d1d94",
+    "elevation/23": "e9e9924013355cd485f97314660d2f8dab278253",
+    "elevation/ai_chat_input": "5a560bb4eb9b3309dc299c906bfd45b40b0e3c32",
+    "elevation/error": "f0c31dde78fbaa699e49baf2e28995b6c1ef85f3",
+    "elevation/prompt_input": "d961d2eedf0e413688c279cbaa3d675c7f563d76"
+  },
+  "drawingDefaults": {
+    "cardSurface": "background/surface_3",
+    "mainText": "text/primary",
+    "supportingText": "text/secondary",
+    "primaryButtonFill": "primary/main",
+    "primaryButtonText": "primary/contrastText",
+    "inputBorder": "components/input/border",
+    "subtleCardElevation": "elevation/2",
+    "strongCardElevation": "elevation/5"
+  },
+  "surfaceComposition": {
+    "isStrictOrder": false,
+    "validExamples": [
+      ["background/surface_0", "background/surface_2", "background/surface_1", "background/surface_3"],
+      ["background/surface_3", "background/surface_2"]
+    ],
+    "elevationGuidance": "Add elevation effects only when the element should visually float above its current surface; surface number alone does not imply elevation depth."
+  }
+}

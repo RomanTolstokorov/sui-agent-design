@@ -1,0 +1,33 @@
+{
+  "apps": {
+    "task-management": {
+      "name": "Task Management",
+      "aliases": [
+        "Tasks",
+        "Task Managment",
+        "Task Management",
+        "task management app"
+      ],
+      "knowledgeFiles": [
+        "app/apps/task-management.md",
+        "app/apps/task-management.json",
+        "app/screens/task-management/default.md"
+      ],
+      "canonicalReference": {
+        "figmaFileName": "Task-Managment",
+        "figmaFileKey": "OdNWALBR45nVe63thAAlEG",
+        "nodeId": "2027:6784",
+        "url": "https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=2027-6784"
+      },
+      "importantNodes": {
+        "topBar": "2027:6821",
+        "workingArea": "2027:6788",
+        "previewDetail": "2027:6789",
+        "taskListAndFilters": "2027:6817",
+        "taskList": "2614:64165",
+        "filters": "2027:6819",
+        "sidebar": "2027:6786"
+      }
+    }
+  }
+}

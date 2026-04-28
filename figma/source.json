@@ -1,0 +1,16 @@
+{
+  "name": "Teletronics SUI",
+  "fileKey": "F8J2cgGBsmyFLyw9OW6Njq",
+  "libraryKey": "lk-aa0ef88728038c9ae27427ca27125d4040269e8343ea19cae768b802c7fc9ecf88220850c53b2a7ea40759c96276770ecedda46f53ed26f2ec07071bab202408",
+  "nodes": {
+    "componentsOverview": "11825:8541",
+    "foundations": "11751:13526",
+    "colors": "11835:7665",
+    "typography": "11835:7604"
+  },
+  "collections": {
+    "palette": "dea8e0b24ac6b1130d6aac352244bc931b31370f",
+    "spacing": "92ba5b54bdeb4897c220ede407b916b59619fa61",
+    "shape": "982a9360d94e957d2682b3137ddc3a6883fea382"
+  }
+}

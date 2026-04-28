@@ -1,0 +1,195 @@
+{
+  "name": "Teletronics SUI Typography",
+  "fontStack": "Noto Kufi Arabic, Helvetica, Arial, sans-serif",
+  "rules": [
+    "Use this file as the local source of truth for Teletronics SUI typography.",
+    "Load Noto Kufi Arabic before placing SUI components that use body, label, input, button, caption, or paragraph text.",
+    "Load Alexandria before placing heading text or components that use heading styles.",
+    "Use dedicated button text styles button/large, button/medium, and button/small for SUI button labels."
+  ],
+  "styles": {
+    "typography/h1": {
+      "muiVariant": "h1",
+      "fontFamily": "Alexandria",
+      "fontStyle": "Light",
+      "fontWeight": 300,
+      "fontSize": 96,
+      "lineHeight": { "unit": "PERCENT", "value": 116.7 },
+      "letterSpacing": { "unit": "PIXELS", "value": -1.5 },
+      "styleKey": "af32c422982c0abb7593965f846a6a6dda844969"
+    },
+    "typography/h2": {
+      "muiVariant": "h2",
+      "fontFamily": "Alexandria",
+      "fontStyle": "Light",
+      "fontWeight": 300,
+      "fontSize": 60,
+      "lineHeight": { "unit": "PERCENT", "value": 120 },
+      "letterSpacing": { "unit": "PIXELS", "value": -0.5 },
+      "styleKey": "de548bc0add9441e87c0d53f0c039d64861d5cd7"
+    },
+    "typography/h3": {
+      "muiVariant": "h3",
+      "fontFamily": "Alexandria",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 48,
+      "lineHeight": { "unit": "PERCENT", "value": 116.7 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0 },
+      "styleKey": "88a56af7952e88eff38e85f695dbe62f74d6cbd1"
+    },
+    "typography/h4": {
+      "muiVariant": "h4",
+      "fontFamily": "Alexandria",
+      "fontStyle": "SemiBold",
+      "fontWeight": 600,
+      "fontSize": 34,
+      "lineHeight": { "unit": "PERCENT", "value": 123.5 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.25 },
+      "styleKey": "5533bffb5c17cf8377e050bd31034085dacae5a4"
+    },
+    "typography/h5": {
+      "muiVariant": "h5",
+      "fontFamily": "Alexandria",
+      "fontStyle": "Bold",
+      "fontWeight": 700,
+      "fontSize": 24,
+      "lineHeight": { "unit": "PERCENT", "value": 140 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0 },
+      "styleKey": "b2767ae833d2048d84a6a8af6034f724e1cefc2c"
+    },
+    "typography/h6": {
+      "muiVariant": "h6",
+      "fontFamily": "Alexandria",
+      "fontStyle": "Medium",
+      "fontWeight": 500,
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 160 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.15 },
+      "styleKey": "719e26c5de7ba5251f466be3a88e9f81835fb98d"
+    },
+    "typography/subtitle1": {
+      "muiVariant": "subtitle1",
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "SemiBold",
+      "fontWeight": 600,
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 175 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.15 },
+      "styleKey": "a4b19621f2ae693d75f30b5c7dbbbd34030f890e"
+    },
+    "typography/subtitle2": {
+      "muiVariant": "subtitle2",
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "SemiBold",
+      "fontWeight": 600,
+      "fontSize": 14,
+      "lineHeight": { "unit": "PERCENT", "value": 157 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.1 },
+      "styleKey": "04fab5bbc985c06650a7dd23369ae7da241f9f94"
+    },
+    "typography/body1": {
+      "muiVariant": "body1",
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 175 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.1 },
+      "styleKey": "ba864006f7e839382b9ebe8b39743b81caee52c1"
+    },
+    "typography/body2": {
+      "muiVariant": "body2",
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": { "unit": "PERCENT", "value": 170 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.1 },
+      "styleKey": "e387a23bfb7a81668b7d56a44e589c7b5b1009c3"
+    },
+    "button/large": {
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Medium",
+      "fontWeight": 500,
+      "fontSize": 15,
+      "lineHeight": { "unit": "PIXELS", "value": 26 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0 },
+      "textTransform": "none",
+      "styleKey": "55f1a71171b931bb91ad6bd44acc0004df3100e4"
+    },
+    "button/medium": {
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Medium",
+      "fontWeight": 500,
+      "fontSize": 14,
+      "lineHeight": { "unit": "PIXELS", "value": 24 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0 },
+      "textTransform": "none",
+      "styleKey": "320b4abb981d996ab141ec3620a11a27c96f8da0"
+    },
+    "button/small": {
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Medium",
+      "fontWeight": 500,
+      "fontSize": 13,
+      "lineHeight": { "unit": "PIXELS", "value": 22 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0 },
+      "textTransform": "none",
+      "styleKey": "e4fb34935bb8ef29abe503d5c1beed77bc769537"
+    },
+    "typography/caption": {
+      "muiVariant": "caption",
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 150 },
+      "letterSpacing": { "unit": "PIXELS", "value": 0.1 },
+      "styleKey": "ac7180aee280c41e3ebf6481b1e4ce1e050d4a4b"
+    },
+    "typography/overline": {
+      "muiVariant": "overline",
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 266 },
+      "letterSpacing": { "unit": "PIXELS", "value": 1 },
+      "textTransform": "uppercase",
+      "styleKey": "5b3de4c6fee0555fe92ef401d8052751fbff2a91"
+    }
+  },
+  "paragraphStyles": {
+    "typography/paragraph/regular": {
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 180 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "textDecoration": "none",
+      "styleKey": "6e0316783ec3633714f646782f5518f1c57fb1fc"
+    },
+    "typography/paragraph/bold": {
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "SemiBold",
+      "fontWeight": 600,
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 180 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "textDecoration": "none",
+      "styleKey": "8d3c452b6562053d3f8dd8bc938da09edbcc2cf3"
+    },
+    "typography/paragraph/underline": {
+      "fontFamily": "Noto Kufi Arabic",
+      "fontStyle": "Regular",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 180 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "textDecoration": "underline",
+      "styleKey": "dad2b9ea098e4db38aea061d1ec26dc731b21bb9"
+    }
+  }
+}
