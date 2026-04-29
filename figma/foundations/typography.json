@@ -160,6 +160,16 @@
       "styleKey": "5b3de4c6fee0555fe92ef401d8052751fbff2a91"
     }
   },
+  "runtimeNotes": {
+    "note": "Load required fonts before creating or appending imported SUI component instances in use_figma.",
+    "loadFonts": [
+      "await figma.loadFontAsync({ family: 'Noto Kufi Arabic', style: 'Regular' });",
+      "await figma.loadFontAsync({ family: 'Noto Kufi Arabic', style: 'Medium' });",
+      "await figma.loadFontAsync({ family: 'Alexandria', style: 'Light' });",
+      "await figma.loadFontAsync({ family: 'Alexandria', style: 'Regular' });"
+    ],
+    "additionalAlexandriaWeights": "Add other Alexandria weights as needed for headings: Medium, SemiBold, Bold."
+  },
   "paragraphStyles": {
     "typography/paragraph/regular": {
       "fontFamily": "Noto Kufi Arabic",

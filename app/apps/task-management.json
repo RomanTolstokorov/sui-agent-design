@@ -6,14 +6,15 @@
   "canonicalReference": {
     "figmaFileName": "Task-Managment",
     "figmaFileKey": "OdNWALBR45nVe63thAAlEG",
-    "nodeId": "2027:6784",
-    "nodeName": "Read only",
-    "url": "https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=2027-6784",
+    "nodeId": "3915:129350",
+    "nodeName": "TaskManagment - Cannonical",
+    "nodeType": "component",
+    "url": "https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=3915-129350",
     "size": {
       "width": 1920,
       "height": 1080
     },
-    "editPolicy": "Treat as canonical reference. Duplicate or create a new variant/mockup unless the user explicitly asks to edit this frame."
+    "editPolicy": "Treat as canonical reference. Create an instance, duplicate, or create a new variant/mockup unless the user explicitly asks to edit this component."
   },
   "layout": {
     "outerPaddingPx": 8,
@@ -193,7 +194,25 @@
       "assignee avatar",
       "from avatar"
     ],
-    "selectedState": "Use selected TaskItem state when the preview/detail area reflects that task."
+    "selectedState": "Use selected TaskItem state when the preview/detail area reflects that task.",
+    "taskTypeSubtypeIconAppearance": {
+      "sourcePreference": "app/flows/type-icon-appearance-preference.md",
+      "appliesWhen": "Task type/subtype icon supports theming.",
+      "defaultMode": "Colorful",
+      "modes": [
+        {
+          "id": "colorful",
+          "label": "Colorful",
+          "rule": "Use configured icon palette colors from components/icon/task_types/*."
+        },
+        {
+          "id": "monochrome",
+          "label": "Monochrome",
+          "rule": "Use neutral monochrome styling while preserving icon size, shape, and placement."
+        }
+      ],
+      "drawingRule": "Do not represent icon appearance as a Task Management filter. Draw the preference control in User Preferences / Appearance and show Task Management as the result example."
+    }
   },
   "previewDetail": {
     "purpose": "Selected task preview/detail content.",
@@ -207,31 +226,23 @@
     ],
     "changeRule": "Do not change this area for filter-only work except to keep selected-task context coherent."
   },
-  "componentKeys": {
-    "Application top-bar": "b6cde7cd669a24472f9645c0a38e57bab7d872e2",
-    "AppFilters": "14eef66e973bc051e32f312ba45c31dec42e145e",
-    "Task list": "59bdb48db0698778ebbdb04f0e4af7110dc0811a",
-    "TaskItem": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7",
-    "Sidebar": "12ede44857f7ed4ba7f2685ba56af26209767210",
-    "Button": "e36ff9f16eeb4cc71a33cd0977de16ddc6af7e41",
-    "Chip": "0fded414b465fc36b7a28b60d7bc2876e77f734c",
-    "IconButton": "7bf383a97f2a696c34c19cd5c1596ac2d22a2642",
-    "MultiSelect": "dc80c39167ccab18f839e00fdf433ee0644e0596",
-    "Select": "7db7714ec290782c969567390d55b44a87305a60",
-    "TextField": "5c6c5b28c1a2735a5ab4400cb4daa8b913ac2664",
-    "ToggleButtonGroup": "0608cbf6c2d770378611f5131623c16b180a6536",
-    "TopBarTab": "372ac44a21c5e5ed0b987ee42a476c7f02f66a56"
-  },
   "drawingRules": [
     "Read app/rules.md and app/rules.json first.",
     "Read this JSON and app/apps/task-management.md before drawing Task Management features.",
-    "Inspect the canonical frame before changing layouts.",
+    "Inspect the canonical component before changing layouts.",
     "Use AppFilters for persistent filters by default.",
     "Use published SUI components from the local component index by componentKey.",
     "Keep RTL alignment and preserve Arabic expansion space.",
     "Keep 8px island gaps unless explicitly redesigning the layout.",
     "Use background/surface_2 for list/filter islands and background/surface_3 for cards and input surfaces.",
-    "Duplicate or create a new mockup frame rather than modifying the canonical reference by default."
+    "Create an instance, duplicate, or create a new mockup frame rather than modifying the canonical reference by default."
+  ],
+  "relatedFlows": [
+    {
+      "id": "type-icon-appearance-preference",
+      "file": "app/flows/type-icon-appearance-preference.md",
+      "description": "System-wide Colorful/Monochrome icon appearance preference configured in User Preferences, with TaskItem type/subtype icons as the primary result example."
+    }
   ],
   "openQuestions": [
     "Which filters belong behind More versus visible by default?",

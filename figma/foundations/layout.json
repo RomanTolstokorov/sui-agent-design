@@ -50,5 +50,12 @@
     "cardRadius": "cornerRadius/2",
     "dialogRadius": "cornerRadius/3",
     "pillRadius": "cornerRadius/10"
+  },
+  "runtimeNotes": {
+    "note": "Import variables by key when binding spacing or corner radius in use_figma.",
+    "examples": [
+      "const radius8 = await figma.variables.importVariableByKeyAsync('58435501f96e75ab1c3e1be3be567a8d5dd52a50'); node.setBoundVariable('cornerRadius', radius8);",
+      "const space24 = await figma.variables.importVariableByKeyAsync('3bfbf5953284e1e1510a69677ea44d7c7c8f549b'); node.setBoundVariable('itemSpacing', space24);"
+    ]
   }
 }

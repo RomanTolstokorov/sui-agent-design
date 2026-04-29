@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "ask": [
+      "mcp__teletronics-mcp__search_knowledge",
+      "mcp__teletronics-mcp__search_glossary",
+      "mcp__teletronics-mcp__get_feature_file"
+    ]
+  }
+}

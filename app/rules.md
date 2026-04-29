@@ -26,6 +26,10 @@ Use this file for project-specific rules about how to build Teletronics SUI-base
 - Do not use large decorative whitespace between islands in data-heavy screens.
 - Keep related controls close to the content they affect.
 
+## SUI-Only Drawing Rule
+
+Never draw a UI element from primitives if a published Teletronics SUI component exists for it. Before placing anything in Figma, verify it is in `figma/components/index.json`. If no matching SUI component exists, stop and ask the user for permission before using a custom or primitive approach — describe exactly what is missing and why. Never silently fall back to hand-built elements.
+
 ## Common App Patterns
 
 - Top bar plus one dominant content island and a narrow side island.

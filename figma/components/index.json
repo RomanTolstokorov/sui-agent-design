@@ -8,6 +8,7 @@
     "atoms": [
       { "name": "<Avatar>", "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417" },
       { "name": "<ProfilePicture>", "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f" },
+      { "name": "Backdrop", "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7" },
       { "name": "<Badge>", "componentKey": "f3567dc7dfe5f272c0fb4dd8c8c21fb412b61237" },
       { "name": "<Badge> | With Instance", "componentKey": "313dc3350b5b7dcde367bf2a239548e521158f30" },
       { "name": "<Checkbox>", "componentKey": "514c6760d8866c7d0b6ed891df3be2aface265ec" },
@@ -233,6 +234,63 @@
       ]
     }
   },
+  "overlayComponents": {
+    "backdrop": {
+      "name": "Backdrop",
+      "category": "atoms",
+      "nodeId": "6643:52207",
+      "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7",
+      "purpose": "Modal overlay layer used to emphasize a foreground element and de-emphasize the current app behind it.",
+      "usage": [
+        "Use with <Dialog> when drawing User Preferences modal states.",
+        "Import the published component; do not recreate or edit the design-system source."
+      ]
+    },
+    "dialog": {
+      "name": "<Dialog>",
+      "category": "organisms",
+      "nodeId": "6586:47183",
+      "componentSetKey": "fccf45793ec542d2e3b09e635d23466412e7f095",
+      "purpose": "Modal container for content that requires user attention or configuration.",
+      "usage": [
+        "Use with Backdrop for Preferences dialog flows.",
+        "Place product-specific content inside the dialog rather than rebuilding the modal shell from primitives."
+      ]
+    }
+  },
+  "agentNotes": {
+    "insertingComponents": "Pass a componentKey to use_figma to insert a library component instance into the current file.",
+    "searchFallback": "Use search_design_system with the Teletronics SUI library key when you need to look up additional components or re-check names and keys.",
+    "routineWork": "Do not query Figma for typography, color/elevation, spacing, or shape tokens during routine mockup work unless the design system has changed.",
+    "relatedFiles": {
+      "typography": "figma/foundations/typography.json",
+      "colors": "figma/foundations/colors.json",
+      "layout": "figma/foundations/layout.json",
+      "appRules": "app/rules.md"
+    }
+  },
+  "formControls": {
+    "radioGroup": {
+      "name": "<RadioGroup>",
+      "category": "molecules",
+      "nodeId": "6558:39344",
+      "componentKey": "ddc023ebe5609db2db3e401039902eaa782369cc",
+      "purpose": "Groups mutually exclusive radio choices.",
+      "usage": [
+        "Use for Preferences / Appearance icon appearance choices."
+      ]
+    },
+    "formControlLabelRadio": {
+      "name": "<FormControlLabel> | Radio",
+      "category": "molecules",
+      "nodeId": "634:100262",
+      "componentSetKey": "e722314e98724d857b604322368a624ab5a963d0",
+      "purpose": "Radio input with visible label.",
+      "usage": [
+        "Use for Colorful and Monochrome icon appearance options."
+      ]
+    }
+  },
   "taskAndDocumentWorkflow": {
     "appFilters": {
       "name": "<AppFilters>",
@@ -306,7 +364,8 @@
       },
       "usage": [
         "Use Selected for the active task shown in an adjacent preview/detail island.",
-        "Use Important?, Freezed?, EJS?, and Color tag only when those data flags are present."
+        "Use Important?, Freezed?, EJS?, and Color tag only when those data flags are present.",
+        "The Task type instance swap is the task type/subtype icon. When the icon supports theming, it follows the system-wide icon appearance preference: Colorful uses components/icon/task_types/* palette variables and Monochrome uses neutral icon styling."
       ]
     }
   }

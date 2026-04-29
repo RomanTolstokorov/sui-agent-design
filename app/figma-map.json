@@ -11,13 +11,19 @@
       "knowledgeFiles": [
         "app/apps/task-management.md",
         "app/apps/task-management.json",
-        "app/screens/task-management/default.md"
+        "app/screens/task-management/default.md",
+        "app/screens/task-management/icon-appearance-result.md"
+      ],
+      "relatedFlows": [
+        "type-icon-appearance-preference"
       ],
       "canonicalReference": {
         "figmaFileName": "Task-Managment",
         "figmaFileKey": "OdNWALBR45nVe63thAAlEG",
-        "nodeId": "2027:6784",
-        "url": "https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=2027-6784"
+        "nodeId": "3915:129350",
+        "nodeName": "TaskManagment - Cannonical",
+        "nodeType": "component",
+        "url": "https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=3915-129350"
       },
       "importantNodes": {
         "topBar": "2027:6821",
@@ -28,6 +34,64 @@
         "filters": "2027:6819",
         "sidebar": "2027:6786"
       }
+    },
+    "user-preferences": {
+      "name": "User Preferences",
+      "aliases": [
+        "Preferences",
+        "User profile settings",
+        "Profile settings",
+        "Appearance preferences",
+        "Appearance settings"
+      ],
+      "knowledgeFiles": [
+        "app/apps/user-preferences.md",
+        "app/apps/user-preferences.json",
+        "app/screens/user-preferences/avatar-menu.md",
+        "app/screens/user-preferences/preferences-dialog.md",
+        "app/screens/user-preferences/appearance-icon-mode.md"
+      ],
+      "figmaReference": {
+        "figmaFileName": "User-profile-settings",
+        "figmaFileKey": "kRLV8EyWZ1uhBtPwLDaGp4"
+      },
+      "importantNodes": {
+        "avatarMenu": "62:11471",
+        "preferencesDialogContent": "5:29244",
+        "preferencesTabsBase": "12:9611",
+        "appearanceTab": "12:9611"
+      },
+      "entryPoint": "Open from any SUI app sidebar by pressing the bottom user avatar and choosing Preferences.",
+      "relatedFlows": [
+        "type-icon-appearance-preference"
+      ]
+    }
+  },
+  "flows": {
+    "type-icon-appearance-preference": {
+      "name": "Type Icon Appearance Preference",
+      "aliases": [
+        "icon appearance",
+        "colorful monochrome icons",
+        "colored monochrome icons",
+        "type icon appearance",
+        "task type subtype icon mode",
+        "User Preferences Appearance"
+      ],
+      "jira": "AIQSS-15797",
+      "knowledgeFiles": [
+        "app/flows/type-icon-appearance-preference.md",
+        "app/flows/type-icon-appearance-preference.json",
+        "app/screens/user-preferences/avatar-menu.md",
+        "app/screens/user-preferences/preferences-dialog.md",
+        "app/screens/user-preferences/appearance-icon-mode.md",
+        "app/screens/task-management/icon-appearance-result.md"
+      ],
+      "affectedApps": [
+        "user-preferences",
+        "task-management"
+      ],
+      "drawingBehavior": "Draw full flow frames: app/sidebar avatar, avatar menu, Preferences dialog, Appearance tab radio choices, preview, and Task Management result example."
     }
   }
 }

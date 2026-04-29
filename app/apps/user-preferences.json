@@ -1,0 +1,90 @@
+{
+  "id": "user-preferences",
+  "name": "User Preferences",
+  "direction": "rtl",
+  "copyPolicy": "Use English labels as working copy/placeholders unless Arabic copy is provided. Preserve space for Arabic translation.",
+  "figmaReference": {
+    "figmaFileName": "User-profile-settings",
+    "figmaFileKey": "kRLV8EyWZ1uhBtPwLDaGp4",
+    "entryMenu": {
+      "nodeId": "62:11471",
+      "url": "https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=62-11471"
+    },
+    "preferencesDialogContent": {
+      "nodeId": "5:29244",
+      "url": "https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=5-29244"
+    },
+    "preferencesTabsBase": {
+      "nodeId": "12:9611",
+      "url": "https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=12-9611"
+    }
+  },
+  "entryPoint": {
+    "source": "SUI Sidebar avatar",
+    "availability": "Any app that uses the standard SUI application shell.",
+    "steps": [
+      "Press sidebar avatar.",
+      "Open user profile menu.",
+      "Click Preferences.",
+      "Open Preferences modal dialog."
+    ]
+  },
+  "dialogComposition": {
+    "backdrop": {
+      "component": "Backdrop",
+      "nodeId": "6643:52207",
+      "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7",
+      "url": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=6643-52207"
+    },
+    "dialog": {
+      "component": "<Dialog>",
+      "nodeId": "6586:47183",
+      "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095",
+      "url": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=6586-47183"
+    },
+    "contentReference": "figmaReference.preferencesDialogContent",
+    "rule": "Use SUI Backdrop and Dialog around User Profile Settings dialog content."
+  },
+  "tabs": {
+    "baseReference": "figmaReference.preferencesTabsBase",
+    "relevantTabForIconAppearance": "Appearance"
+  },
+  "appearanceIconMode": {
+    "sectionName": "Icon appearance",
+    "control": {
+      "component": "<RadioGroup>",
+      "nodeId": "6558:39344",
+      "componentKey": "ddc023ebe5609db2db3e401039902eaa782369cc"
+    },
+    "optionComponent": {
+      "component": "<FormControlLabel> | Radio",
+      "nodeId": "634:100262",
+      "componentKey": "e722314e98724d857b604322368a624ab5a963d0"
+    },
+    "options": [
+      {
+        "id": "colorful",
+        "label": "Colorful",
+        "default": true
+      },
+      {
+        "id": "monochrome",
+        "label": "Monochrome",
+        "default": false
+      }
+    ],
+    "previewRule": "Show icon rendering preview that changes between Colorful and Monochrome."
+  },
+  "relatedFlows": [
+    "app/flows/type-icon-appearance-preference.md"
+  ],
+  "drawingRules": [
+    "Read app/rules.md and app/rules.json first.",
+    "Open User Preferences from the sidebar avatar menu in any app.",
+    "Use SUI Backdrop and Dialog components for the modal state.",
+    "Use Appearance as the active tab for icon appearance settings.",
+    "Use published SUI components by componentKey.",
+    "Keep RTL alignment and preserve Arabic expansion space.",
+    "Treat the Teletronics SUI design system file as read-only."
+  ]
+}

@@ -7,3 +7,12 @@ args = ["-y", "mcp-remote", "https://ssystem-mcp.teletronics.local:30443/mcp"]
 
 [mcp_servers.teletronics-mcp.env]
 NODE_TLS_REJECT_UNAUTHORIZED = "0"
+
+[mcp_servers.teletronics-mcp.tools.search_knowledge]
+approval_mode = "approve"
+
+[mcp_servers.teletronics-mcp.tools.search_glossary]
+approval_mode = "approve"
+
+[mcp_servers.teletronics-mcp.tools.get_feature_file]
+approval_mode = "approve"
