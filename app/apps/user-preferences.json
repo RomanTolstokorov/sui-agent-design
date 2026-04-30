@@ -3,6 +3,7 @@
   "name": "User Preferences",
   "direction": "rtl",
   "copyPolicy": "Use English labels as working copy/placeholders unless Arabic copy is provided. Preserve space for Arabic translation.",
+  "productPurpose": "Personal settings modal for user-level display, appearance, profile, and experience choices that affect S-System across apps.",
   "figmaReference": {
     "figmaFileName": "User-profile-settings",
     "figmaFileKey": "kRLV8EyWZ1uhBtPwLDaGp4",
@@ -29,6 +30,7 @@
       "Open Preferences modal dialog."
     ]
   },
+  "placementRule": "Use User Preferences for personal display, appearance, profile, and experience choices. Do not place app-specific filters or task/document actions here.",
   "dialogComposition": {
     "backdrop": {
       "component": "Backdrop",
@@ -47,7 +49,8 @@
   },
   "tabs": {
     "baseReference": "figmaReference.preferencesTabsBase",
-    "relevantTabForIconAppearance": "Appearance"
+    "relevantTabForIconAppearance": "Appearance",
+    "appearancePurpose": "Home for display-related preferences such as icon appearance."
   },
   "appearanceIconMode": {
     "sectionName": "Icon appearance",
@@ -73,8 +76,31 @@
         "default": false
       }
     ],
-    "previewRule": "Show icon rendering preview that changes between Colorful and Monochrome."
+    "previewRule": "Show icon rendering preview that changes between Colorful and Monochrome.",
+    "flowOwnership": "The type icon appearance flow belongs to User Preferences. Task Management is only the downstream result example."
   },
+  "uxStates": [
+    {
+      "id": "avatar-menu-open",
+      "rule": "Current app remains visible behind the profile menu."
+    },
+    {
+      "id": "preferences-modal-open",
+      "rule": "Current app remains visible under the backdrop."
+    },
+    {
+      "id": "appearance-active",
+      "rule": "Appearance tab is active and shows display-related settings."
+    },
+    {
+      "id": "changed-setting",
+      "rule": "Show the changed control state clearly; use dialog actions when explicit confirmation is part of the interaction."
+    },
+    {
+      "id": "preview",
+      "rule": "Show how the selected preference affects UI elements when a setting changes visual appearance."
+    }
+  ],
   "relatedFlows": [
     "app/flows/type-icon-appearance-preference.md"
   ],

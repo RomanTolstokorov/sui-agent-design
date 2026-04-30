@@ -1,7 +1,7 @@
 {
   "id": "type-icon-appearance-preference",
   "name": "Type Icon Appearance Preference",
-  "type": "cross-app-user-flow",
+  "type": "user-preferences-flow",
   "upstream": {
     "jira": "AIQSS-15797",
     "requirementSummary": "[FE] Let User chose between monochrome and colored icons",
@@ -18,6 +18,7 @@
   ],
   "scope": {
     "application": "system-wide",
+    "ownerApp": "user-preferences",
     "primaryExample": {
       "app": "task-management",
       "screen": "default",
@@ -145,18 +146,18 @@
       "order": 6,
       "app": "task-management",
       "screen": "icon-appearance-result",
-      "action": "Show affected TaskItem type/subtype icons as primary example"
+      "action": "Optionally show affected TaskItem type/subtype icons as the downstream result example"
     }
   ],
   "drawingRequirements": [
-    "Draw full flow frames, not only the dialog.",
+    "Draw full User Preferences flow frames, not only the dialog.",
     "Start from any app with SUI Sidebar and avatar visible.",
     "Show avatar menu with Preferences item.",
     "Use SUI Backdrop and Dialog for the modal state.",
     "Show Appearance tab active.",
     "Use RadioGroup and FormControlLabel | Radio for Colorful and Monochrome options.",
     "Show a preview that updates between colorful and monochrome rendering.",
-    "Show Task Management type/subtype icons as the primary result example.",
+    "Use Task Management type/subtype icons only as the downstream result example.",
     "Keep application frames RTL.",
     "Use published SUI components and variables; do not modify the design system file."
   ],

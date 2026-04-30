@@ -3,6 +3,15 @@
   "name": "Task Management",
   "direction": "rtl",
   "copyPolicy": "Use English labels as working copy/placeholders unless Arabic copy is provided. Preserve space for Arabic translation.",
+  "productPurpose": "Dense work queue for finding, reviewing, editing, and actioning S-System tasks.",
+  "commonUserWork": [
+    "Review an incoming task from the list.",
+    "Filter or search the queue to find the right task.",
+    "Open a selected task and review its preview/detail content.",
+    "Create a new task or continue editing a task draft.",
+    "Update task sections such as linked records, documents, attachments, comments, or extra fields.",
+    "Use visible action buttons to move the task forward when the screen state calls for it."
+  ],
   "canonicalReference": {
     "figmaFileName": "Task-Managment",
     "figmaFileKey": "OdNWALBR45nVe63thAAlEG",
@@ -195,6 +204,7 @@
       "from avatar"
     ],
     "selectedState": "Use selected TaskItem state when the preview/detail area reflects that task.",
+    "businessSignalRule": "Rows should include enough signal for scanning: task ID, subject, type/subtype icon, status, date, assignee/from avatars, attachments, urgency/freeze indicators when relevant, and selected state when tied to the preview.",
     "taskTypeSubtypeIconAppearance": {
       "sourcePreference": "app/flows/type-icon-appearance-preference.md",
       "appliesWhen": "Task type/subtype icon supports theming.",
@@ -224,8 +234,35 @@
       "Documents",
       "Author comment"
     ],
-    "changeRule": "Do not change this area for filter-only work except to keep selected-task context coherent."
+    "changeRule": "Do not change this area for filter-only work except to keep selected-task context coherent.",
+    "emptyStateRule": "If no task is selected, show a compact empty or instructional state rather than leaving the panel blank."
   },
+  "uxStates": [
+    {
+      "id": "selected-task",
+      "rule": "One task row is selected and the preview/detail island reflects that task."
+    },
+    {
+      "id": "empty-queue-no-results",
+      "rule": "Keep filters visible and show a clear empty state in the list area."
+    },
+    {
+      "id": "loading",
+      "rule": "Keep the shell stable and show loading inside the list or preview region."
+    },
+    {
+      "id": "draft-task",
+      "rule": "Show editable state and save/continue actions."
+    },
+    {
+      "id": "action-required",
+      "rule": "Make the primary next action visible near the task detail or action bar."
+    },
+    {
+      "id": "validation-error",
+      "rule": "Show the issue next to the task section or action that needs correction."
+    }
+  ],
   "drawingRules": [
     "Read app/rules.md and app/rules.json first.",
     "Read this JSON and app/apps/task-management.md before drawing Task Management features.",
@@ -235,6 +272,7 @@
     "Keep RTL alignment and preserve Arabic expansion space.",
     "Keep 8px island gaps unless explicitly redesigning the layout.",
     "Use background/surface_2 for list/filter islands and background/surface_3 for cards and input surfaces.",
+    "Keep task actions close to the selected task context; only use global navigation for global actions.",
     "Create an instance, duplicate, or create a new mockup frame rather than modifying the canonical reference by default."
   ],
   "relatedFlows": [

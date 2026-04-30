@@ -3,6 +3,16 @@
   "name": "Documents",
   "direction": "rtl",
   "copyPolicy": "Use English labels as working copy/placeholders unless Arabic copy is provided. Preserve space for Arabic translation.",
+  "productPurpose": "Documents app for reviewing, browsing, editing, and submitting correspondence, drafts, replies, responses, attachments, metadata, and linked work.",
+  "commonUserWork": [
+    "Browse or filter documents and drafts.",
+    "Select a document from the list and review its preview/detail.",
+    "Open a draft or document inside a task-centric editor.",
+    "Edit document body, metadata, attachments, related tasks, keywords, or imported data.",
+    "Save progress manually or through autosave status.",
+    "Submit a draft when the document is ready.",
+    "Adjust sharing or classification when that control is part of the requested screen."
+  ],
   "canonicalReference": {
     "figmaFileName": "Document-applications",
     "figmaFileKey": "ugiudOIGQo98cMUrItDpMI",
@@ -67,13 +77,46 @@
       "Metadata tabs (Comments, Keywords, Tasks, Attachments, Entities, Reply, Document)",
       "Content area (chips/tags, form fields)",
       "Pagination"
-    ]
+    ],
+    "emptyStateRule": "When no document is selected, show a compact empty or instructional state.",
+    "coherenceRule": "When a document is selected, keep the list row and preview content coherent."
   },
   "documentList": {
     "purpose": "Scrollable list of documents with metadata.",
     "rowComponentKey": null,
-    "note": "Row component key to be confirmed from Figma."
+    "note": "Row component key to be confirmed from Figma.",
+    "businessSignalRule": "Rows should show document subject/title, ID, date, draft/submitted/read status where relevant, and selected state when the preview reflects that item."
   },
+  "uxStates": [
+    {
+      "id": "draft",
+      "rule": "Editable work with visible save status and submit affordance."
+    },
+    {
+      "id": "saved",
+      "rule": "Edited draft with saved state shown near editor controls."
+    },
+    {
+      "id": "submitted-read-only",
+      "rule": "Submitted correspondence with review actions rather than editing-first controls."
+    },
+    {
+      "id": "selected-document",
+      "rule": "Selected row drives the preview/detail panel."
+    },
+    {
+      "id": "no-access",
+      "rule": "Keep document context visible where possible and show a restricted-content state."
+    },
+    {
+      "id": "validation-error",
+      "rule": "Show the issue near the document section or action that needs correction."
+    },
+    {
+      "id": "empty-no-results",
+      "rule": "Keep list structure visible and show an empty state in the list or preview area."
+    }
+  ],
   "drawingRules": [
     "Read app/rules.md and app/figma-map.json first.",
     "Read this JSON and app/apps/document.md before drawing Documents features.",
@@ -81,6 +124,8 @@
     "Use published SUI components from the local component index by componentKey.",
     "Keep RTL alignment and preserve Arabic expansion space.",
     "Keep 8px island gaps. Use background/surface_2 for list/preview islands.",
+    "Keep document-specific actions close to the document preview/editor context.",
+    "Show draft/saved/submitted state when the requested screen involves document editing.",
     "Create a duplicate or new mockup frame rather than modifying the canonical reference."
   ],
   "openQuestions": [

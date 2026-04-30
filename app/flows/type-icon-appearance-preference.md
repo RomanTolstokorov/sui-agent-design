@@ -3,12 +3,13 @@ type: flow
 id: type-icon-appearance-preference
 jira: AIQSS-15797
 source: jira, figma, teletronics-mcp
-primary_apps: user-preferences, task-management
+primary_apps: user-preferences
+result_example_apps: task-management
 updated: 2026-04-28
 ---
 # Type Icon Appearance Preference Flow
 
-Use this file when a user asks to draw, update, explain, or recreate the icon appearance preference flow. This is a cross-app flow: the preference is opened from any app through the sidebar avatar menu, configured in User Preferences, and applied system-wide to themed icons. Task Management type/subtype icons are the primary concrete result example.
+Use this file when a user asks to draw, update, explain, or recreate the icon appearance preference flow. This is a **User Preferences** flow: the preference is opened from any app through the sidebar avatar menu, configured in User Preferences, and applied system-wide to themed icons. Task Management type/subtype icons are the primary concrete result example, but the flow itself belongs to User Preferences.
 
 ## Source Priority
 
@@ -51,11 +52,11 @@ Users can choose whether supported UI icons render in `Colorful` or `Monochrome`
    - `Colorful`
    - `Monochrome`
 8. The preview updates to show how supported icons will render.
-9. The selected appearance applies system-wide. Task Management task type/subtype icons are the primary result example.
+9. The selected appearance applies system-wide. Task Management task type/subtype icons can be shown as the downstream result example.
 
 ## Drawing Rule
 
-When asked to draw or update this flow, create full flow frames, not a single dialog:
+When asked to draw or update this flow, prioritize the User Preferences journey. Create full preference-flow frames, not a single dialog:
 
 - Any app screen with SUI sidebar and avatar visible.
 - Avatar menu opened from the sidebar avatar.
@@ -64,7 +65,7 @@ When asked to draw or update this flow, create full flow frames, not a single di
 - Appearance tab active.
 - Icon appearance section with `Colorful` selected by default and `Monochrome` as the alternate choice.
 - Preview showing colorful versus monochrome icon rendering.
-- Result frame showing system-wide icon impact, with Task Management type/subtype icons as the primary concrete example.
+- Optional result frame showing system-wide icon impact, with Task Management type/subtype icons as the primary concrete example.
 
 Use RTL composition for all application frames. Use English working copy unless Arabic copy is provided.
 

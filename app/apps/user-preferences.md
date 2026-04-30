@@ -24,6 +24,12 @@ Default interaction:
 3. User clicks `Preferences`.
 4. Preferences opens as a modal dialog over the current app.
 
+## Product Purpose
+
+User Preferences contains personal settings that affect the current user's S-System experience across apps. It is not a standalone app shell; it is a modal settings surface opened from the sidebar avatar.
+
+Use User Preferences for personal display, appearance, profile, and experience choices. Do not place app-specific filters or task/document actions here.
+
 ## Dialog Composition
 
 Use published SUI overlay components for the modal state:
@@ -46,9 +52,19 @@ When drawing the icon appearance flow:
 - `Colorful` is selected by default unless the requested state says otherwise.
 - Show a preview of the icon rendering result.
 
+The type icon appearance flow belongs to User Preferences. Task Management may be used as the downstream result example because task type/subtype icons are the clearest affected UI element.
+
+## Common UX States
+
+- **Avatar menu open:** current app remains visible behind the profile menu.
+- **Preferences modal open:** current app remains visible under the backdrop.
+- **Appearance active:** Appearance tab is active and shows display-related settings.
+- **Unsaved or changed setting:** show the changed control state clearly; use dialog actions when the interaction requires explicit confirmation.
+- **Preview:** show how the selected preference affects UI elements when a setting changes visual appearance.
+
 ## Related Flows
 
-- `app/flows/type-icon-appearance-preference.md`: full flow for configuring system-wide icon appearance from User Preferences.
+- `app/flows/type-icon-appearance-preference.md`: User Preferences flow for configuring system-wide icon appearance. Task Management is only the downstream result example.
 
 ## Drawing Rules
 

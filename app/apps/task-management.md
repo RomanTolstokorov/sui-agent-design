@@ -16,6 +16,17 @@ Use this file before drawing or modifying Task Management screens. It describes 
 
 Task Management is a dense work queue for reviewing, filtering, opening, and processing tasks. The default screen combines a selected task preview/detail area with a task list and a filter panel.
 
+Tasks are the main actionable work units in S-System. Users use this app to find incoming work, inspect the task context, edit task data, create new tasks or drafts, and take available task actions.
+
+Common task work:
+
+- Review an incoming task from the list.
+- Filter or search the queue to find the right task.
+- Open a selected task and review its preview/detail content.
+- Create a new task or continue editing a task draft.
+- Update task sections such as linked records, documents, attachments, comments, or extra fields.
+- Use visible action buttons to move the task forward when the screen state calls for it.
+
 ## Direction and Copy
 
 - Build all Task Management screens RTL.
@@ -117,6 +128,8 @@ Each `<TaskItem>` card is about `396 x 154` or `396 x 156`, with:
 
 Use the selected task item state when the adjacent preview/detail area reflects that task.
 
+When drawing list rows, include enough business signal to make the queue scannable: task ID, subject, type/subtype icon, status, date, assignee/from avatars, attachments, urgency/freeze indicators when relevant, and selected state when the preview is tied to that row.
+
 #### Task Type/Subtype Icon Appearance
 
 The task type/subtype icon follows the system-wide icon appearance preference when the icon supports theming.
@@ -145,6 +158,17 @@ Observed structure:
 
 When a requested feature only affects filtering or list discovery, avoid changing this preview area except to keep the selected task state coherent.
 
+Use this area for the selected task's work context: subject, fields, attachments, related documents, comments, and action surfaces. If no task is selected, show a compact empty/instructional state rather than leaving the panel blank.
+
+## Common UX States
+
+- **Selected task:** one task row is selected and the preview/detail island reflects that task.
+- **Empty queue / no results:** keep filters visible and show a clear empty state in the list area.
+- **Loading:** keep the shell stable and show loading inside the list or preview region.
+- **Draft task:** show editable state and save/continue actions.
+- **Action required:** make the primary next action visible near the task detail or action bar.
+- **Validation/error:** show the issue next to the task section or action that needs correction.
+
 ## Feature Placement Rules
 
 - Add persistent filters inside `<AppFilters>` first.
@@ -155,10 +179,11 @@ When a requested feature only affects filtering or list discovery, avoid changin
 - Preserve the `8px` gap between the preview, list, and filter islands.
 - Preserve the canonical panel widths unless the requested feature cannot fit in the existing pattern.
 - Use `background/surface_0` for any new independent frame/screen base, `background/surface_2` for task/list/filter islands, and `background/surface_3` for cards/fields.
+- Keep task actions close to the selected task context; do not put task-specific actions in global navigation unless the feature is explicitly global.
 
 ## Related Flows
 
-- `app/flows/type-icon-appearance-preference.md`: users open User Preferences from the sidebar avatar, choose the Appearance tab, and select `Colorful` or `Monochrome` icon rendering. Task Management task type/subtype icons are the primary result example for this flow.
+- `app/flows/type-icon-appearance-preference.md`: User Preferences owns the icon appearance setting. Task Management is the downstream result example for task type/subtype icons.
 
 ## Common Feature Workflow
 

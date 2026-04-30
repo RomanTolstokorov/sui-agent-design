@@ -59,6 +59,41 @@
         "url": "https://www.figma.com/design/ugiudOIGQo98cMUrItDpMI/Document-applications?node-id=2076-7821"
       }
     },
+    "search": {
+      "name": "Search",
+      "aliases": [
+        "Search",
+        "Search app",
+        "Search application",
+        "Quick search",
+        "Advanced search",
+        "Image search"
+      ],
+      "knowledgeFiles": [
+        "app/apps/search.md",
+        "app/apps/search.json",
+        "app/screens/search/canonical-layout.md"
+      ],
+      "canonicalLayoutPreset": "app/screens/search/canonical-layout.md",
+      "canonicalReference": {
+        "figmaFileName": "Search",
+        "figmaFileKey": "YFsunyZ8IDCjPBOJbVu6zO",
+        "nodeId": "2882:27314",
+        "nodeName": "Search - Cannonocal",
+        "nodeType": "component",
+        "url": "https://www.figma.com/design/YFsunyZ8IDCjPBOJbVu6zO/Search?node-id=2882-27314"
+      },
+      "importantNodes": {
+        "topBar": "2124:33978",
+        "queryIsland": "2001:9225",
+        "workingArea": "2001:9194",
+        "previewDetail": "2001:9195",
+        "resultsAndFilters": "2001:9198",
+        "documentList": "2166:22435",
+        "filters": "2001:9200",
+        "sidebar": "2649:35440"
+      }
+    },
     "user-preferences": {
       "name": "User Preferences",
       "aliases": [
@@ -111,11 +146,15 @@
         "app/screens/user-preferences/appearance-icon-mode.md",
         "app/screens/task-management/icon-appearance-result.md"
       ],
+      "ownerApp": "user-preferences",
+      "resultExampleApps": [
+        "task-management"
+      ],
       "affectedApps": [
         "user-preferences",
         "task-management"
       ],
-      "drawingBehavior": "Draw full flow frames: app/sidebar avatar, avatar menu, Preferences dialog, Appearance tab radio choices, preview, and Task Management result example."
+      "drawingBehavior": "Draw the preference flow in User Preferences: app/sidebar avatar, avatar menu, Preferences dialog, Appearance tab radio choices, and preview. Use Task Management only as the downstream result example for task type/subtype icons."
     }
   }
 }

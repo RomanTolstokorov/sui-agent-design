@@ -16,7 +16,7 @@ Before drawing any Figma screen, read in this order:
 
 1. `app/rules.md` — application composition rules (surface hierarchy, island layout, spacing defaults)
 2. `app/figma-map.json` — resolves app names, aliases, Figma file keys, canonical node IDs, and related flows
-3. For product-specific work: `app/apps/<app-id>.md` and `app/apps/<app-id>.json`
+3. For product-specific work: `app/apps/<app-id>.md` and `app/apps/<app-id>.json` — product purpose, user journeys, UX states, placement rules, and canonical references
 4. For building a new screen: `app/screens/<app-id>/canonical-layout.md` — use this as the layout blueprint (frame dimensions, island split, component keys). **Do not fetch the Figma canonical node just to determine frame structure** — open Figma only for content details or when the preset is explicitly insufficient.
 5. `figma/source.json` — Teletronics SUI file key, library key, collection keys, and important node IDs
 6. `figma/components/index.json` — all published component keys before searching Figma
@@ -25,6 +25,8 @@ Before drawing any Figma screen, read in this order:
 9. `figma/foundations/layout.json` — spacing and corner radius variable keys
 
 Do not query Figma for typography, color, spacing, or component keys during routine mockup work — all tokens are cached in the local indexes.
+
+Use `teletronics-mcp` only when the local app and flow docs do not cover the requested business context or when the user asks for context that is not yet documented locally. Keep any MCP-derived additions design-relevant: product purpose, user journeys, UX states, terms, and placement rules. Do not add backend/API/deployment plumbing to app drawing docs.
 
 ## Design System Key Facts
 
@@ -103,11 +105,12 @@ The `<Dialog>` already provides `<DialogTitle>`, `<DialogContent>` (with the swa
 |-----|----------------|
 | Task Management | `app/apps/task-management.md`, `.json`, `app/screens/task-management/default.md`, `app/screens/task-management/canonical-layout.md` |
 | Documents | `app/apps/document.md`, `.json`, `app/screens/document/canonical-layout.md` |
+| Search | `app/apps/search.md`, `.json`, `app/screens/search/canonical-layout.md` |
 | User Preferences | `app/apps/user-preferences.md`, `.json`, `app/screens/user-preferences/*.md` |
 
 | Flow | Knowledge files |
 |------|----------------|
-| Type Icon Appearance Preference | `app/flows/type-icon-appearance-preference.md`, `.json` |
+| Type Icon Appearance Preference | `app/flows/type-icon-appearance-preference.md`, `.json` (owned by User Preferences; Task Management is the result example) |
 
 Resolve app names and aliases via `app/figma-map.json` before reading app-specific files.
 

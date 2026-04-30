@@ -1,0 +1,164 @@
+{
+  "id": "search",
+  "name": "Search",
+  "direction": "rtl",
+  "copyPolicy": "Use English labels as working copy/placeholders unless Arabic copy is provided. Preserve space for Arabic translation.",
+  "canonicalReference": {
+    "figmaFileName": "Search",
+    "figmaFileKey": "YFsunyZ8IDCjPBOJbVu6zO",
+    "nodeId": "2882:27314",
+    "nodeName": "Search - Cannonocal",
+    "nodeType": "component",
+    "url": "https://www.figma.com/design/YFsunyZ8IDCjPBOJbVu6zO/Search?node-id=2882-27314",
+    "size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "editPolicy": "Treat as canonical reference. Create a duplicate or new mockup frame unless the user explicitly asks to edit this component."
+  },
+  "productPurpose": "Core S-System app for finding and reviewing records, documents, images, events, and related evidence across configured data sources.",
+  "domainNotes": [
+    "Records are the main things users can find in Search.",
+    "A record can be linked or attached to a task.",
+    "A record can be linked to an entity.",
+    "Entities are special text items used in documents; this definition should be refined when more domain details are provided."
+  ],
+  "commonUserWork": [
+    "Start a quick, advanced, or image search.",
+    "Choose data sources and search modes.",
+    "Filter and sort results.",
+    "Save or reopen searches.",
+    "Select a result and review its preview/detail.",
+    "Request access for blocked results when the screen state calls for it."
+  ],
+  "layout": {
+    "outerPaddingPx": 8,
+    "appShell": {
+      "width": 1904,
+      "height": 1064
+    },
+    "mainArea": {
+      "width": 1832,
+      "height": 1064
+    },
+    "sidebar": {
+      "nodeId": "2649:35440",
+      "component": "<Sidebar>",
+      "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210",
+      "position": "right edge",
+      "width": 64,
+      "height": 1064
+    },
+    "topBar": {
+      "nodeId": "2124:33978",
+      "component": "<Application top-bar>",
+      "variant": "Application=Search",
+      "width": 1832,
+      "height": 64
+    },
+    "queryIsland": {
+      "nodeId": "2001:9225",
+      "name": "<SearchQueryIsland>",
+      "width": 1832,
+      "height": 64,
+      "y": 72
+    },
+    "workingArea": {
+      "nodeId": "2001:9194",
+      "name": "Document Previews",
+      "x": 0,
+      "y": 144,
+      "width": 1832,
+      "height": 920,
+      "gapPx": 8
+    },
+    "previewDetail": {
+      "nodeId": "2001:9195",
+      "name": "Draft Preview Scrollable: Full screen",
+      "width": 1046,
+      "height": 920
+    },
+    "resultsAndFilters": {
+      "nodeId": "2001:9198",
+      "name": "Filters and Document List",
+      "width": 778,
+      "height": 920,
+      "gapPx": 8,
+      "children": [
+        "documentList",
+        "filters"
+      ]
+    },
+    "documentList": {
+      "nodeId": "2166:22435",
+      "name": "Document List",
+      "width": 420,
+      "height": 920
+    },
+    "filters": {
+      "nodeId": "2001:9200",
+      "name": "Filters",
+      "width": 350,
+      "height": 920
+    }
+  },
+  "mainRegions": {
+    "topBar": {
+      "purpose": "Global Search scope, mode navigation, history, saved-search entry points, and app-level actions."
+    },
+    "queryIsland": {
+      "purpose": "Query text, search mode controls, and immediate query actions.",
+      "observedElements": [
+        "search type controls",
+        "keyword input",
+        "column/view controls",
+        "query clear affordance",
+        "quick search controls"
+      ]
+    },
+    "resultsList": {
+      "purpose": "Returned records, documents, images, events, or related results.",
+      "rowSignals": [
+        "title or subject",
+        "identifier",
+        "date",
+        "source or type",
+        "selected state",
+        "blocked/no-access treatment when needed"
+      ]
+    },
+    "filters": {
+      "purpose": "Persistent search filters, data source refinements, and saved-search related filtering."
+    },
+    "previewDetail": {
+      "purpose": "Selected result preview/detail, or an instructional empty state when nothing is selected."
+    }
+  },
+  "uxStates": [
+    "No query yet",
+    "Loading",
+    "No results",
+    "Selected result",
+    "Blocked/no-access result",
+    "Saved search"
+  ],
+  "drawingRules": [
+    "Read app/rules.md and app/rules.json first.",
+    "Read this JSON and app/apps/search.md before drawing Search features.",
+    "Use app/screens/search/canonical-layout.md as the layout blueprint.",
+    "Put query text and immediate query mode controls in the Search Query Island.",
+    "Put persistent filters in the filters panel.",
+    "Put selected-result content in the preview/detail island.",
+    "Keep RTL alignment and preserve Arabic expansion space.",
+    "Keep 8px island gaps and canonical panel widths unless explicitly redesigning the layout.",
+    "Use published SUI components from the local component index by componentKey. If a Search-specific component is not indexed locally, inspect the Search canonical file before drawing and call out the gap.",
+    "Create a duplicate or new mockup frame rather than modifying the canonical reference."
+  ],
+  "openQuestions": [
+    "Exact tab labels and default active Search mode.",
+    "Exact row component mapping for non-document result types.",
+    "Which filters are always visible versus hidden behind additional controls.",
+    "Detailed copy for no-results, blocked-result, and request-access states.",
+    "Responsive behavior below 1920 x 1080."
+  ]
+}
