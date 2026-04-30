@@ -60,6 +60,6 @@ Scrollable list of document items. Each item shows document metadata (title, ID,
 
 - Full top bar tab list (only "Draft" confirmed as default).
 - Document list item component key.
-- Filter panel — whether Documents has an `<AppFilters>` panel like TPM.
+- Filter panel — whether Documents has an `<AppFilters>` panel like Task Management.
 - Empty, loading, error, and no-results states.
 - Responsive behavior below 1920 × 1080.

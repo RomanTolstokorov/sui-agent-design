@@ -10,39 +10,32 @@ Use this file when building any new Task Management screen or variant. Follow th
 
 ### Step 1 — Root frame
 Create a frame 1920 × 1080 px. Apply:
-- Auto-layout: **VERTICAL**, `primaryAxisSizingMode = FIXED`, `counterAxisSizingMode = FIXED`
+- Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED`, `counterAxisSizingMode = FIXED`
 - Padding all sides bound to `spacing/1` (8 px)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - Fill bound to `background/surface_0`
 
-> The VERTICAL auto-layout + padding=`spacing/1` is what creates the 8 px inset on all sides — do **not** manually position children with x=8, y=8.
+> The HORIZONTAL auto-layout + padding=`spacing/1` creates the 8 px inset and places children left-to-right. Do **not** manually position children with x/y offsets.
 
-### Step 2 — Main Container
-Create a frame inside the root. Apply:
-- Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED` (1904 px), `counterAxisSizingMode = AUTO`
-- Gap (`itemSpacing`) bound to `spacing/1` (8 px)
-- No padding, no fill
-- Name: **Main Container**
+Children order (left → right): `App Container` first, `Sidebar` second (sidebar appears on the right — RTL start).
 
-Children order (left → right): `Main Content` first, `<Sidebar>` second (sidebar appears on the right — RTL start).
-
-### Step 3 — Sidebar
-Place `<Sidebar>` as the **second** child of Main Container (right side).
+### Step 2 — Sidebar
+Place `<Sidebar>` as the **second** child of the root (right side).
 
 | Property | Value |
 |----------|-------|
 | componentKey | `12ede44857f7ed4ba7f2685ba56af26209767210` |
 | Size | 64 × 1064 px |
 
-### Step 4 — Main Content
-Create a frame as the **first** child of Main Container. Apply:
+### Step 3 — App Container
+Create a frame as the **first** child of the root. Apply:
 - Auto-layout: **VERTICAL**, `primaryAxisSizingMode = AUTO`, `counterAxisSizingMode = FIXED` (1832 px)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
-- Name: **Main Content**
+- Name: **App Container**
 
-### Step 5 — Top bar
-Place `<Application top-bar>` as the **first** child of Main Content.
+### Step 4 — Top bar
+Place `<Application top-bar>` as the **first** child of App Container.
 
 | Property | Value |
 |----------|-------|
@@ -54,16 +47,16 @@ Place `<Application top-bar>` as the **first** child of Main Content.
 | Incoming badge | 34/357 |
 | Other tabs | All, Created by me |
 
-### Step 6 — Content Area
-Create a frame as the **second** child of Main Content. Apply:
+### Step 5 — Content Area
+Create a frame as the **second** child of App Container. Apply:
 - Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED` (1832 px), `counterAxisSizingMode = FIXED` (992 px)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
 - Name: **Content Area**
 
-Children order (left → right): `Preview / Detail` first, `Task List + Filters` second.
+Children order (left → right): `Task preview` first, `Task List and Filters Container` second.
 
-#### Step 6a — Preview / Detail island (left, RTL end)
+#### Step 5a — Task preview (left, RTL end)
 Create a frame as the **first** child of Content Area.
 
 | Property | Value |
@@ -71,16 +64,20 @@ Create a frame as the **first** child of Content Area.
 | Size | 1076 × 992 px |
 | Fill | bound to `background/surface_2` |
 | Corner radius | all 4 corners bound to `cornerRadius/2` |
-| Name | **Preview / Detail** |
+| Name | **Task preview** |
 
-#### Step 6b — Task List + Filters (right, RTL start)
+#### Step 5b — Task List and Filters Container (right, RTL start)
 Create a frame as the **second** child of Content Area. Apply:
-- Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED` (748 px), `counterAxisSizingMode = FIXED` (992 px)
+- Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = AUTO`, `counterAxisSizingMode = FIXED` (992 px)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
-- Name: **Task List + Filters**
+- Name: **Task List and Filters Container**
 
-##### Step 6b-i — Task list
+| Property | Value |
+|----------|-------|
+| Size | 748 × 992 px |
+
+##### Step 5b-i — Task list
 Place `<Task list>` as **first** child.
 
 | Property | Value |
@@ -88,7 +85,7 @@ Place `<Task list>` as **first** child.
 | componentKey | `59bdb48db0698778ebbdb04f0e4af7110dc0811a` |
 | Size | 420 × 992 px |
 
-##### Step 6b-ii — Filters
+##### Step 5b-ii — Filters
 Place `<AppFilters>` as **second** child.
 
 | Property | Value |
@@ -106,12 +103,11 @@ Place `<AppFilters>` as **second** child.
 | Root | fills | `background/surface_0` |
 | Root | padding (all 4) | `spacing/1` |
 | Root | itemSpacing | `spacing/1` |
-| Main Container | itemSpacing | `spacing/1` |
-| Main Content | itemSpacing | `spacing/1` |
+| App Container | itemSpacing | `spacing/1` |
 | Content Area | itemSpacing | `spacing/1` |
-| Task List + Filters | itemSpacing | `spacing/1` |
-| Preview / Detail | fills | `background/surface_2` |
-| Preview / Detail | all corner radii | `cornerRadius/2` |
+| Task List and Filters Container | itemSpacing | `spacing/1` |
+| Task preview | fills | `background/surface_2` |
+| Task preview | all corner radii | `cornerRadius/2` |
 
 ---
 
@@ -119,7 +115,7 @@ Place `<AppFilters>` as **second** child.
 - Top bar active tab: **Incoming**, badge 34/357
 - Filters panel tab: **Search**, panel expanded
 - Task list: one item in selected state
-- Preview / Detail: reflects the selected task
+- Task preview: reflects the selected task
 
 ---
 
@@ -127,5 +123,4 @@ Place `<AppFilters>` as **second** child.
 - Do not edit the canonical component (`3915:129350`) — create a duplicate or new frame.
 - **Never use raw hex or raw pixel values** for fills, gaps, padding, or radii — bind to variables.
 - Child order within auto-layout determines visual position. Sidebar second = right side (RTL start).
-- TPM uses VERTICAL root → Main Container (HORIZONTAL) → [Main Content, Sidebar]. This is intentional per canonical — do not simplify to HORIZONTAL root like Documents.
 - See `app/apps/task-management.md` for filter contents, task row fields, and drawing rules.

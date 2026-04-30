@@ -86,7 +86,7 @@
   "openQuestions": [
     "Full top bar tab list (only Draft confirmed as default).",
     "Document list row component key.",
-    "Whether Documents has an AppFilters panel like TPM.",
+    "Whether Documents has an AppFilters panel like Task Management.",
     "Empty, loading, error, and no-results states.",
     "Responsive behavior below 1920 x 1080."
   ]

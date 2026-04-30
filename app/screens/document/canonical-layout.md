@@ -110,5 +110,5 @@ Contains scrollable list of document items with metadata (title, ID, date, statu
 - Do not edit the canonical component (`2076:7821`) — create a duplicate or new frame.
 - **Never use raw hex or raw pixel values** for fills, gaps, padding, or radii — bind to variables.
 - Child order within auto-layout determines visual position. Sidebar second = right side (RTL start).
-- The root is HORIZONTAL (unlike TPM which uses VERTICAL root + Main Container). Both achieve the same visual result.
+- The root is HORIZONTAL, same as Task Management.
 - See `app/apps/document.md` for document list fields, tab contents, and drawing rules.
