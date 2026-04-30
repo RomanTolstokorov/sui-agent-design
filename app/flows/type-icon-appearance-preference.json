@@ -68,12 +68,14 @@
       "avatarMenu": {
         "fileKey": "kRLV8EyWZ1uhBtPwLDaGp4",
         "nodeId": "62:11471",
+        "openedStateNodeId": "62:11465",
         "url": "https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=62-11471"
       },
       "preferencesDialogContent": {
         "fileKey": "kRLV8EyWZ1uhBtPwLDaGp4",
         "nodeId": "5:29244",
-        "url": "https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=5-29244"
+        "url": "https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=5-29244",
+        "copyRule": "Canonical Preferences dialog. When drawing outside User-profile-settings, copy the whole dialog instance into the target file and clone that copied instance."
       },
       "preferencesTabsBase": {
         "fileKey": "kRLV8EyWZ1uhBtPwLDaGp4",
@@ -122,13 +124,13 @@
       "order": 2,
       "app": "user-preferences",
       "screen": "avatar-menu",
-      "action": "Click Preferences menu item"
+      "action": "Open the authored avatar popup dialog near the bottom sidebar avatar, then click Preferences"
     },
     {
       "order": 3,
       "app": "user-preferences",
       "screen": "preferences-dialog",
-      "action": "Open modal preferences dialog"
+      "action": "Open modal preferences dialog on the default Document tab by placing Backdrop behind the copied canonical Preferences dialog"
     },
     {
       "order": 4,
@@ -152,15 +154,62 @@
   "drawingRequirements": [
     "Draw full User Preferences flow frames, not only the dialog.",
     "Start from any app with SUI Sidebar and avatar visible.",
-    "Show avatar menu with Preferences item.",
-    "Use SUI Backdrop and Dialog for the modal state.",
-    "Show Appearance tab active.",
+    "Show the authored avatar popup dialog with Preferences item; do not rebuild it from Menu/MenuItem primitives.",
+    "Use SUI Backdrop behind the copied canonical Preferences dialog for the modal state.",
+    "Open the copied Preferences dialog on Tab=Document by default, then show Appearance tab active in the next state by setting the copied dialog's nested <DialogInners> Preferences instance property Tab=Appearance.",
     "Use RadioGroup and FormControlLabel | Radio for Colorful and Monochrome options.",
     "Show a preview that updates between colorful and monochrome rendering.",
     "Use Task Management type/subtype icons only as the downstream result example.",
     "Keep application frames RTL.",
-    "Use published SUI components and variables; do not modify the design system file."
+    "Use published SUI components and variables; do not modify the design system file.",
+    "If the canonical popup or Preferences dialog has not been copied into the target file and its inner components cannot be imported, stop and ask for a copy instead of approximating from primitives."
   ],
+  "canonicalDrawingSequence": {
+    "avatarPopup": {
+      "sourceNodeId": "62:11471",
+      "openedStateNodeId": "62:11465",
+      "copyRule": "Copy the whole authored popup dialog node 62:11471 from User-profile-settings into the target file, then duplicate or clone that copied instance into the app frame near the bottom sidebar avatar.",
+      "placement": {
+        "frameWidth": 1920,
+        "frameHeight": 1080,
+        "x": 1531,
+        "y": 768,
+        "width": 301,
+        "height": 304
+      },
+      "includedOptions": [
+        "Account",
+        "Theme",
+        "Preferences",
+        "Documentation",
+        "Sign out"
+      ],
+      "rule": "The copied popup already contains the user menu options. Do not draw those options separately from Menu/MenuItem primitives."
+    },
+    "preferencesModal": {
+      "sourceNodeId": "5:29244",
+      "innerReferenceNodeId": "12:9611",
+      "dialogPlacement": {
+        "frameWidth": 1920,
+        "frameHeight": 1080,
+        "x": 448,
+        "y": 183.5,
+        "width": 1024,
+        "height": 648
+      },
+      "defaultProperties": {
+        "Tab": "Document",
+        "Linked Entities": "Yes"
+      },
+      "backdropPlacement": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "rule": "Copy the whole canonical Preferences dialog into the target file and place it over Backdrop. The default opened modal uses Tab=Document and Linked Entities=Yes; switch to Tab=Appearance only for the later icon appearance state."
+    }
+  },
   "relatedFiles": [
     "app/apps/user-preferences.md",
     "app/apps/user-preferences.json",
