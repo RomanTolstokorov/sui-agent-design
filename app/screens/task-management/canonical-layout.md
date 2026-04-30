@@ -54,17 +54,17 @@ Place `<Application top-bar>` as the **first** child of Main Content.
 | Incoming badge | 34/357 |
 | Other tabs | All, Created by me |
 
-### Step 6 — Working Area
+### Step 6 — Content Area
 Create a frame as the **second** child of Main Content. Apply:
 - Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED` (1832 px), `counterAxisSizingMode = FIXED` (992 px)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
-- Name: **Working Area**
+- Name: **Content Area**
 
 Children order (left → right): `Preview / Detail` first, `Task List + Filters` second.
 
 #### Step 6a — Preview / Detail island (left, RTL end)
-Create a frame as the **first** child of Working Area.
+Create a frame as the **first** child of Content Area.
 
 | Property | Value |
 |----------|-------|
@@ -74,7 +74,7 @@ Create a frame as the **first** child of Working Area.
 | Name | **Preview / Detail** |
 
 #### Step 6b — Task List + Filters (right, RTL start)
-Create a frame as the **second** child of Working Area. Apply:
+Create a frame as the **second** child of Content Area. Apply:
 - Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED` (748 px), `counterAxisSizingMode = FIXED` (992 px)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
@@ -108,7 +108,7 @@ Place `<AppFilters>` as **second** child.
 | Root | itemSpacing | `spacing/1` |
 | Main Container | itemSpacing | `spacing/1` |
 | Main Content | itemSpacing | `spacing/1` |
-| Working Area | itemSpacing | `spacing/1` |
+| Content Area | itemSpacing | `spacing/1` |
 | Task List + Filters | itemSpacing | `spacing/1` |
 | Preview / Detail | fills | `background/surface_2` |
 | Preview / Detail | all corner radii | `cornerRadius/2` |
@@ -127,4 +127,5 @@ Place `<AppFilters>` as **second** child.
 - Do not edit the canonical component (`3915:129350`) — create a duplicate or new frame.
 - **Never use raw hex or raw pixel values** for fills, gaps, padding, or radii — bind to variables.
 - Child order within auto-layout determines visual position. Sidebar second = right side (RTL start).
+- TPM uses VERTICAL root → Main Container (HORIZONTAL) → [Main Content, Sidebar]. This is intentional per canonical — do not simplify to HORIZONTAL root like Documents.
 - See `app/apps/task-management.md` for filter contents, task row fields, and drawing rules.
