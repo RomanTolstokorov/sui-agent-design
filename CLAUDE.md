@@ -83,7 +83,7 @@ Duplicate the target screen frame. The copy becomes the "modal state" frame (nam
 
 ### 2. Layer backdrop and dialog
 On top of the duplicated frame's contents:
-1. Add the `Backdrop` SUI component — resize it to fill the entire frame (`width × height` of the frame).
+1. Add the `Backdrop` SUI component. It must cover the entire duplicated frame and stay stretched in all directions: set it to absolute overlay positioning in the root frame, position it at `x=0`, `y=0`, resize it to the frame `width x height`, and use stretch constraints for left, right, top, and bottom when available. Do not leave it as a normal auto-layout child or merely stuck to the top-left corner.
 2. Add the `<Dialog>` SUI component on top of the backdrop, centered in the frame.
 
 Both are library components; import by `componentKey` from `figma/components/index.json`. `<Dialog>` is a component set — use `importComponentSetByKeyAsync` and take `defaultVariant`.
