@@ -17,11 +17,12 @@ Before drawing any Figma screen, read in this order:
 1. `app/rules.md` — application composition rules (surface hierarchy, island layout, spacing defaults)
 2. `app/figma-map.json` — resolves app names, aliases, Figma file keys, canonical node IDs, and related flows
 3. For product-specific work: `app/apps/<app-id>.md` and `app/apps/<app-id>.json`
-4. `figma/source.json` — Teletronics SUI file key, library key, collection keys, and important node IDs
-5. `figma/components/index.json` — all published component keys before searching Figma
-6. `figma/foundations/colors.json` — color and elevation tokens and variable keys
-7. `figma/foundations/typography.json` — text style keys and font loading requirements
-8. `figma/foundations/layout.json` — spacing and corner radius variable keys
+4. For building a new screen: `app/screens/<app-id>/canonical-layout.md` — use this as the layout blueprint (frame dimensions, island split, component keys). **Do not fetch the Figma canonical node just to determine frame structure** — open Figma only for content details or when the preset is explicitly insufficient.
+5. `figma/source.json` — Teletronics SUI file key, library key, collection keys, and important node IDs
+6. `figma/components/index.json` — all published component keys before searching Figma
+7. `figma/foundations/colors.json` — color and elevation tokens and variable keys
+8. `figma/foundations/typography.json` — text style keys and font loading requirements
+9. `figma/foundations/layout.json` — spacing and corner radius variable keys
 
 Do not query Figma for typography, color, spacing, or component keys during routine mockup work — all tokens are cached in the local indexes.
 
@@ -100,7 +101,8 @@ The `<Dialog>` already provides `<DialogTitle>`, `<DialogContent>` (with the swa
 
 | App | Knowledge files |
 |-----|----------------|
-| Task Management | `app/apps/task-management.md`, `.json`, `app/screens/task-management/default.md` |
+| Task Management | `app/apps/task-management.md`, `.json`, `app/screens/task-management/default.md`, `app/screens/task-management/canonical-layout.md` |
+| Documents | `app/apps/document.md`, `.json`, `app/screens/document/canonical-layout.md` |
 | User Preferences | `app/apps/user-preferences.md`, `.json`, `app/screens/user-preferences/*.md` |
 
 | Flow | Knowledge files |

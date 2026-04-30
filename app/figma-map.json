@@ -14,6 +14,7 @@
         "app/screens/task-management/default.md",
         "app/screens/task-management/icon-appearance-result.md"
       ],
+      "canonicalLayoutPreset": "app/screens/task-management/canonical-layout.md",
       "relatedFlows": [
         "type-icon-appearance-preference"
       ],
@@ -33,6 +34,29 @@
         "taskList": "2614:64165",
         "filters": "2027:6819",
         "sidebar": "2027:6786"
+      }
+    },
+    "document": {
+      "name": "Documents",
+      "aliases": [
+        "Documents",
+        "Document app",
+        "Document applications",
+        "Documents app"
+      ],
+      "knowledgeFiles": [
+        "app/apps/document.md",
+        "app/apps/document.json",
+        "app/screens/document/canonical-layout.md"
+      ],
+      "canonicalLayoutPreset": "app/screens/document/canonical-layout.md",
+      "canonicalReference": {
+        "figmaFileName": "Document-applications",
+        "figmaFileKey": "ugiudOIGQo98cMUrItDpMI",
+        "nodeId": "2076:7821",
+        "nodeName": "Documents - Canonical",
+        "nodeType": "component",
+        "url": "https://www.figma.com/design/ugiudOIGQo98cMUrItDpMI/Document-applications?node-id=2076-7821"
       }
     },
     "user-preferences": {
