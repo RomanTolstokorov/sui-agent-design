@@ -36,20 +36,9 @@ Common task work:
 
 ## Canonical Layout
 
-The canonical component is `1920 x 1080`. It contains an inner app shell with 8px outer padding.
+For exact frame construction, sizing behavior, token bindings, and component keys, use `app/screens/task-management/canonical-layout.md`. Use `app/apps/task-management.json` only when a script needs machine-readable node IDs, component keys, or layout values.
 
-- Right edge: `<Sidebar>` navigation rail, fixed width `64`, vertical sizing fills the root frame height (`1064`).
-- Main application area: `1832 x 1064`, positioned to the left of the sidebar.
-- Top: `<Application top-bar>`, horizontal sizing fills the app container (`1832`) and height is fixed at `64`.
-- Below top bar: working area starts 8px below the top bar, `1832 x 992`.
-- Working area is split into:
-  - Main preview/detail island on the left, `1076 x 992`.
-  - Task/list/filter group on the right, `748 x 992`.
-- The task/list/filter group uses an 8px gap:
-  - `<Task list>` on the left side of that group, fixed width `420`, vertical sizing fills the group height (`992`).
-  - `<AppFilters>` on the right side of that group, fixed width `320`, vertical sizing fills the group height (`992`).
-
-Although the screen is RTL, the canonical work queue reads from right to left as filters, then task list, then preview/detail.
+At a product level, the default work queue combines a right-side filter panel, a task list beside it, and a selected task preview/detail area on the left. Although the screen is RTL, the canonical work queue reads from right to left as filters, then task list, then preview/detail.
 
 ## Main Regions
 
@@ -147,9 +136,9 @@ The canonical left area is a selected task preview/detail island.
 
 Observed structure:
 
-- `Draft Preview Scrollable: Full screen`, `1076 x 992`
-- Actions bar at top, `1000 x 72`
-- Main form content below, `1000` wide with inner `968` content width
+- `Draft Preview Scrollable: Full screen`
+- Actions bar at top
+- Main form content below
 - Subject block
 - Inline text fields and chips
 - Attachment block
@@ -176,7 +165,7 @@ Use this area for the selected task's work context: subject, fields, attachments
 - Add top-bar controls only for global list scope, view mode, sorting, tab selection, or creation actions.
 - Add task row metadata only when the feature changes how individual tasks are represented.
 - Keep filter controls close to the task list they affect.
-- Preserve the `8px` gap between the preview, list, and filter islands.
+- Preserve the canonical `spacing/1` gap between the preview, list, and filter islands.
 - Preserve the canonical panel widths unless the requested feature cannot fit in the existing pattern.
 - Use `background/surface_0` for any new independent frame/screen base, `background/surface_2` for task/list/filter islands, and `background/surface_3` for cards/fields.
 - Keep task actions close to the selected task context; do not put task-specific actions in global navigation unless the feature is explicitly global.
@@ -190,15 +179,16 @@ Use this area for the selected task's work context: subject, fields, attachments
 When the user asks for a Task Management feature:
 
 1. Read `app/rules.md`, `app/rules.json`, this file, and `app/apps/task-management.json`.
-2. Read the local SUI component and foundation indexes before searching Figma.
-3. Inspect the canonical component node `3915:129350` in file `OdNWALBR45nVe63thAAlEG`.
-4. If the change affects filters, inspect node `2027:6819`.
-5. If the change affects list rows, inspect node `2614:64165`.
-6. If the change affects global controls, inspect node `2027:6821`.
-7. Create an instance, duplicate, or create a new mockup/version outside the canonical component unless instructed otherwise.
-8. Use published SUI components by `componentKey`; do not rebuild design-system components from primitives.
-9. Bind fills, strokes, spacing, and radius to published variables by `variableKey` where possible.
-10. Call out any missing product rule or token gap instead of silently inventing a new pattern.
+2. Use `app/screens/task-management/canonical-layout.md` for exact frame structure.
+3. Read the local SUI component and foundation indexes before searching Figma.
+4. Inspect the canonical component node `3915:129350` in file `OdNWALBR45nVe63thAAlEG` only when local docs do not provide enough content detail.
+5. If the change affects filters, inspect node `2027:6819`.
+6. If the change affects list rows, inspect node `2614:64165`.
+7. If the change affects global controls, inspect node `2027:6821`.
+8. Create an instance, duplicate, or create a new mockup/version outside the canonical component unless instructed otherwise.
+9. Use published SUI components by `componentKey`; do not rebuild design-system components from primitives.
+10. Bind fills, strokes, spacing, and radius to published variables by `variableKey` where possible.
+11. Call out any missing product rule or token gap instead of silently inventing a new pattern.
 
 ## Example: Adding a New Filter
 

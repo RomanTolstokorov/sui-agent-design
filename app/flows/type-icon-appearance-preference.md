@@ -96,7 +96,6 @@ If the canonical popup or Preferences dialog has not been copied into the target
 - `app/apps/task-management.md`
 - `app/screens/user-preferences/avatar-menu.md`
 - `app/screens/user-preferences/preferences-dialog.md`
-- `app/screens/user-preferences/appearance-icon-mode.md`
 - `app/screens/task-management/icon-appearance-result.md`
 - `figma/components/index.json`
 - `figma/foundations/colors.json`

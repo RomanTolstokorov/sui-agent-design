@@ -23,17 +23,11 @@ Common document work:
 - **Canonical layout preset:** `app/screens/document/canonical-layout.md`
 - **Edit policy:** Treat as reference. Create a duplicate or new frame — do not edit the canonical component directly.
 
-## Layout Structure
+## Canonical Layout
 
-| Zone | Size (px) | Notes |
-|------|-----------|-------|
-| Outer frame | 1920 × 1080 | RTL, fill `background/surface_0` |
-| App shell | 1904 × 1064 | 8 px padding from outer frame |
-| Sidebar | 64 × 1064 | Right edge (RTL start), shared SUI component |
-| Top bar | 1832 × 64 | Full content-column width |
-| Working area | 1832 × 992 | y=72, flex row, 8 px gap |
-| Document Preview panel | 1076 × 992 | Left (RTL end), `background/surface_2`, `cornerRadius/2` |
-| Document List panel | 748 × 992 | Right (RTL start) |
+For exact frame construction, sizing behavior, token bindings, and component keys, use `app/screens/document/canonical-layout.md`. Use `app/apps/document.json` only when a script needs machine-readable canonical references or layout values.
+
+At a product level, the default Documents workspace combines a document list on the right side of the working area and a selected document preview/detail panel on the left. Keep the list row and preview content coherent when a document is selected.
 
 ## Top Bar
 
@@ -75,11 +69,11 @@ Rows should show enough business signal for scanning: document subject/title, ID
 
 1. Read `app/rules.md` and `app/figma-map.json` first.
 2. Read this file and `app/apps/document.json` before drawing any Documents feature.
-3. Use `app/screens/document/canonical-layout.md` as the layout blueprint — do not fetch the Figma canonical node just to determine frame structure.
+3. Use `app/screens/document/canonical-layout.md` as the layout blueprint; do not fetch the Figma canonical node just to determine frame structure.
 4. Use published SUI components by `componentKey` from `figma/components/index.json`.
 5. Sidebar and top bar use the same shared SUI components as all other S-System apps.
 6. Keep RTL alignment and preserve Arabic expansion space.
-7. Keep 8 px island gaps. Use `background/surface_2` for list/preview islands.
+7. Use the canonical `spacing/1` island gaps. Use `background/surface_2` for list/preview islands.
 8. Create a duplicate or new frame — do not modify the canonical component.
 9. Keep document-specific actions close to the document preview/editor context.
 10. Show draft/saved/submitted state when the requested screen involves document editing.

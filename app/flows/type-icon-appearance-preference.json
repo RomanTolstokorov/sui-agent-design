@@ -217,7 +217,6 @@
     "app/apps/task-management.json",
     "app/screens/user-preferences/avatar-menu.md",
     "app/screens/user-preferences/preferences-dialog.md",
-    "app/screens/user-preferences/appearance-icon-mode.md",
     "app/screens/task-management/icon-appearance-result.md",
     "figma/components/index.json",
     "figma/foundations/colors.json"

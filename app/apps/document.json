@@ -28,6 +28,7 @@
   },
   "layout": {
     "outerPaddingPx": 8,
+    "outerPaddingVariable": "spacing/1",
     "appShell": {
       "width": 1904,
       "height": 1064
@@ -51,7 +52,10 @@
       "y": 72,
       "width": 1832,
       "height": 992,
-      "gapPx": 8
+      "gapPx": 8,
+      "gapVariable": "spacing/1",
+      "topBarGapPx": 8,
+      "topBarGapVariable": "spacing/1"
     },
     "documentPreview": {
       "width": 1076,

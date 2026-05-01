@@ -28,11 +28,9 @@ Default interaction:
 
 The avatar menu is an authored popup dialog in `User-profile-settings`; it is not assembled from menu primitives during routine flow drawing.
 
-- Opened state frame: node `62:11465`, URL `https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=62-11465`
-- Popup dialog to copy: node `62:11471`, URL `https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=62-11471`
-- Placement in a `1920x1080` app frame: `x=1531`, `y=768`, size `301x304`
+For exact node IDs, URLs, placement, and drawing notes, use `app/screens/user-preferences/avatar-menu.md`.
 
-When drawing in another file, copy node `62:11471` into the target file, then duplicate or clone that copied instance into the app frame near the bottom-right sidebar avatar. The copied popup already contains the `Account`, `Theme`, `Preferences`, `Documentation`, and `Sign out` options. Do not recreate those options with `<Menu>`, `<MenuItem>`, list items, or primitives.
+When drawing in another file, copy the authored popup into the target file, then duplicate or clone that copied instance into the app frame near the bottom-right sidebar avatar. The copied popup already contains the `Account`, `Theme`, `Preferences`, `Documentation`, and `Sign out` options. Do not recreate those options with `<Menu>`, `<MenuItem>`, list items, or primitives.
 
 If the popup has not been copied into the target file and cannot be imported, stop and ask for it to be copied or made available.
 
@@ -46,15 +44,11 @@ Use User Preferences for personal display, appearance, profile, and experience c
 
 User Preferences modal states are based on the authored canonical Preferences dialog in the `User-profile-settings` file, not a fresh rebuild.
 
-- Canonical Preferences dialog: node `5:29244`, URL `https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=5-29244`
-- Preferences inner component set: node `12:9611`, URL `https://www.figma.com/design/kRLV8EyWZ1uhBtPwLDaGp4/User-profile-settings?node-id=12-9611`
-- SUI `Backdrop`, node `6643:52207`, component key `4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7`
+For exact node IDs, URLs, placement, and drawing notes, use `app/screens/user-preferences/preferences-dialog.md`.
 
 When drawing in another file, first copy the whole canonical Preferences dialog instance from `User-profile-settings` into the target file. Then duplicate or clone that copied dialog for modal states and place it over a SUI `Backdrop`. The default opened Preferences modal uses `Tab=Document` and `Linked Entities=Yes`.
 
 Do not recreate the Preferences dialog by importing SUI `<Dialog>` and trying to import or rebuild `<DialogInners> Preferences` in another file. The inner content is authored in `User-profile-settings`; copying the whole dialog preserves the reachable `<DialogInners> Preferences` instance and its component properties.
-
-Use the copied dialog at `x=448`, `y=183.5`, size `1024x648` inside a `1920x1080` app frame. Place the `Backdrop` behind it at `x=0`, `y=0`, size `1920x1080`.
 
 If the canonical dialog has not been copied into the target file and the inner component cannot be imported, stop and ask for the dialog to be copied or made available. Do not approximate the dialog from primitives.
 

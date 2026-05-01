@@ -107,8 +107,7 @@
         "app/apps/user-preferences.md",
         "app/apps/user-preferences.json",
         "app/screens/user-preferences/avatar-menu.md",
-        "app/screens/user-preferences/preferences-dialog.md",
-        "app/screens/user-preferences/appearance-icon-mode.md"
+        "app/screens/user-preferences/preferences-dialog.md"
       ],
       "figmaReference": {
         "figmaFileName": "User-profile-settings",
@@ -143,7 +142,6 @@
         "app/flows/type-icon-appearance-preference.json",
         "app/screens/user-preferences/avatar-menu.md",
         "app/screens/user-preferences/preferences-dialog.md",
-        "app/screens/user-preferences/appearance-icon-mode.md",
         "app/screens/task-management/icon-appearance-result.md"
       ],
       "ownerApp": "user-preferences",

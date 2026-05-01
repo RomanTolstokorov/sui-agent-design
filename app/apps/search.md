@@ -35,21 +35,9 @@ Common search work:
 
 ## Canonical Layout
 
-The canonical component is `1920 x 1080`. It follows the shared app shell with 8px outer padding.
+For exact frame construction, sizing behavior, token bindings, and component keys, use `app/screens/search/canonical-layout.md`. Use `app/apps/search.json` only when a script needs machine-readable node IDs, component keys, or layout values.
 
-- Right edge: `<Sidebar>` navigation rail, `64 x 1064`.
-- Main application area: `1832 x 1064`, positioned to the left of the sidebar.
-- Top: `<Application top-bar>` Search variant, `1832 x 64`.
-- Search query island: `1832 x 64`, placed 8px below the top bar.
-- Working area: `1832 x 920`, placed 8px below the query island.
-- Working area split:
-  - Preview/detail island on the left, `1046 x 920`.
-  - Results and filters group on the right, `778 x 920`.
-- Results and filters group:
-  - Document/result list on the left of the group, `420 x 920`.
-  - Filters panel on the right of the group, `350 x 920`.
-
-Although the screen is RTL, the canonical Search workspace reads from right to left as filters, then results, then preview/detail.
+At a product level, Search combines a query island above a working area with filters and results on the right side and a selected-result preview/detail panel on the left. Although the screen is RTL, the canonical Search workspace reads from right to left as filters, then results, then preview/detail.
 
 ## Main Regions
 
@@ -113,7 +101,7 @@ The left island shows the selected result preview/detail. If no result is select
 - Put persistent filters in the filters panel.
 - Put result display toggles, sorting, and column/view controls near the list or query controls, matching the canonical pattern.
 - Put selected-result content in the preview/detail island; do not duplicate full details inside list rows.
-- Keep the canonical panel widths unless a requested feature clearly needs a new layout.
+- Keep the canonical panel proportions unless a requested feature clearly needs a new layout.
 - Use published SUI components by `componentKey` from `figma/components/index.json`; if a Search-specific component is not indexed locally, inspect the canonical Search file before drawing and call out the gap.
 
 ## Common Feature Workflow

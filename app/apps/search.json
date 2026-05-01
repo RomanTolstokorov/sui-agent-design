@@ -33,6 +33,7 @@
   ],
   "layout": {
     "outerPaddingPx": 8,
+    "outerPaddingVariable": "spacing/1",
     "appShell": {
       "width": 1904,
       "height": 1064
@@ -61,7 +62,9 @@
       "name": "<SearchQueryIsland>",
       "width": 1832,
       "height": 64,
-      "y": 72
+      "y": 72,
+      "topBarGapPx": 8,
+      "topBarGapVariable": "spacing/1"
     },
     "workingArea": {
       "nodeId": "2001:9194",
@@ -70,7 +73,10 @@
       "y": 144,
       "width": 1832,
       "height": 920,
-      "gapPx": 8
+      "gapPx": 8,
+      "gapVariable": "spacing/1",
+      "queryIslandGapPx": 8,
+      "queryIslandGapVariable": "spacing/1"
     },
     "previewDetail": {
       "nodeId": "2001:9195",
@@ -84,6 +90,7 @@
       "width": 778,
       "height": 920,
       "gapPx": 8,
+      "gapVariable": "spacing/1",
       "children": [
         "documentList",
         "filters"
