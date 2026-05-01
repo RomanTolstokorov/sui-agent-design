@@ -27,6 +27,7 @@
   },
   "layout": {
     "outerPaddingPx": 8,
+    "outerPaddingVariable": "spacing/1",
     "appShell": {
       "nodeId": "3915:126156",
       "width": 1904,
@@ -43,14 +44,18 @@
       "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210",
       "position": "right edge",
       "width": 64,
-      "height": 1064
+      "height": 1064,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FILL"
     },
     "topBar": {
       "nodeId": "2027:6821",
       "component": "<Application top-bar>",
       "componentKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2",
       "width": 1832,
-      "height": 64
+      "height": 64,
+      "layoutSizingHorizontal": "FILL",
+      "layoutSizingVertical": "FIXED"
     },
     "workingArea": {
       "nodeId": "2027:6788",
@@ -58,7 +63,12 @@
       "y": 72,
       "width": 1832,
       "height": 992,
-      "gapPx": 8
+      "gapPx": 8,
+      "gapVariable": "spacing/1",
+      "topBarGapPx": 8,
+      "topBarGapVariable": "spacing/1",
+      "layoutSizingHorizontal": "FILL",
+      "layoutSizingVertical": "FIXED"
     },
     "previewDetail": {
       "nodeId": "2027:6789",
@@ -71,6 +81,9 @@
       "width": 748,
       "height": 992,
       "gapPx": 8,
+      "gapVariable": "spacing/1",
+      "layoutSizingHorizontal": "HUG",
+      "layoutSizingVertical": "FILL",
       "children": [
         "taskList",
         "filters"
@@ -81,14 +94,18 @@
       "component": "<Task list>",
       "componentKey": "59bdb48db0698778ebbdb04f0e4af7110dc0811a",
       "width": 420,
-      "height": 992
+      "height": 992,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FILL"
     },
     "filters": {
       "nodeId": "2027:6819",
       "component": "<AppFilters>",
       "componentKey": "14eef66e973bc051e32f312ba45c31dec42e145e",
       "width": 320,
-      "height": 992
+      "height": 992,
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FILL"
     }
   },
   "topBar": {

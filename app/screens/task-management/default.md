@@ -17,13 +17,13 @@ The default screen reference is a 1920 x 1080 RTL Task Management component.
 | Canonical component | `3915:129350` | `1920 x 1080` | Named `TaskManagment - Cannonical` |
 | App shell | `3915:126156` | `1904 x 1064` | 8px inset from frame |
 | Main app area | `3915:126153` | `1832 x 1064` | Top bar plus working area |
-| Sidebar | `2027:6786` | `64 x 1064` | Right edge |
-| Top bar | `2027:6821` | `1832 x 64` | Tasks title, tabs, actions |
+| Sidebar | `2027:6786` | `64 x 1064` | Right edge; fixed width, vertical fill |
+| Top bar | `2027:6821` | `1832 x 64` | Tasks title, tabs, actions; horizontal fill |
 | Working area | `2027:6788` | `1832 x 992` | Starts at y=72 |
 | Preview/detail | `2027:6789` | `1076 x 992` | Selected task content |
-| Task/list/filter group | `2027:6817` | `748 x 992` | 8px gap |
-| Task list | `2614:64165` | `420 x 992` | Work queue |
-| Filters | `2027:6819` | `320 x 992` | Search/filter panel |
+| Task/list/filter group | `2027:6817` | `748 x 992` | 8px gap; vertical fill |
+| Task list | `2614:64165` | `420 x 992` | Work queue; fixed width, vertical fill |
+| Filters | `2027:6819` | `320 x 992` | Search/filter panel; fixed width, vertical fill |
 
 ## Default State
 

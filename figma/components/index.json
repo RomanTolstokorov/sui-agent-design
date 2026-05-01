@@ -259,7 +259,7 @@
     }
   },
   "agentNotes": {
-    "insertingComponents": "Pass a componentKey to use_figma to insert a library component instance into the current file.",
+    "insertingComponents": "Keys in this index can resolve to either a component or a component set. In use_figma scripts, use the safe import helper from app/instructions/sui-component-imports.md instead of assuming importComponentByKeyAsync or importComponentSetByKeyAsync from the field name.",
     "searchFallback": "Use search_design_system with the Teletronics SUI library key when you need to look up additional components or re-check names and keys.",
     "routineWork": "Do not query Figma for typography, color/elevation, spacing, or shape tokens during routine mockup work unless the design system has changed.",
     "relatedFiles": {

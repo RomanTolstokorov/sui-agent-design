@@ -38,16 +38,16 @@ Common task work:
 
 The canonical component is `1920 x 1080`. It contains an inner app shell with 8px outer padding.
 
-- Right edge: `<Sidebar>` navigation rail, `64 x 1064`.
+- Right edge: `<Sidebar>` navigation rail, fixed width `64`, vertical sizing fills the root frame height (`1064`).
 - Main application area: `1832 x 1064`, positioned to the left of the sidebar.
-- Top: `<Application top-bar>`, `1832 x 64`.
+- Top: `<Application top-bar>`, horizontal sizing fills the app container (`1832`) and height is fixed at `64`.
 - Below top bar: working area starts 8px below the top bar, `1832 x 992`.
 - Working area is split into:
   - Main preview/detail island on the left, `1076 x 992`.
   - Task/list/filter group on the right, `748 x 992`.
 - The task/list/filter group uses an 8px gap:
-  - `<Task list>` on the left side of that group, `420 x 992`.
-  - `<AppFilters>` on the right side of that group, `320 x 992`.
+  - `<Task list>` on the left side of that group, fixed width `420`, vertical sizing fills the group height (`992`).
+  - `<AppFilters>` on the right side of that group, fixed width `320`, vertical sizing fills the group height (`992`).
 
 Although the screen is RTL, the canonical work queue reads from right to left as filters, then task list, then preview/detail.
 

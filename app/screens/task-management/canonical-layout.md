@@ -25,7 +25,8 @@ Place `<Sidebar>` as the **second** child of the root (right side).
 | Property | Value |
 |----------|-------|
 | componentKey | `12ede44857f7ed4ba7f2685ba56af26209767210` |
-| Size | 64 × 1064 px |
+| Width | 64 px |
+| Height behavior | Fill vertical (`layoutSizingVertical = FILL`) inside the root frame |
 
 ### Step 3 — App Container
 Create a frame as the **first** child of the root. Apply:
@@ -41,7 +42,8 @@ Place `<Application top-bar>` as the **first** child of App Container.
 |----------|-------|
 | componentKey (set) | `b6cde7cd669a24472f9645c0a38e57bab7d872e2` |
 | Variant key | `9d20828730ff7b2399c4fd53b97221481369d931` (`Application=Tasks`) |
-| Size | 1832 × 64 px |
+| Width behavior | Fill horizontal (`layoutSizingHorizontal = FILL`) inside App Container |
+| Height | 64 px fixed (`layoutSizingVertical = FIXED`) |
 | Title | Tasks |
 | Active tab | Incoming |
 | Incoming badge | 34/357 |
@@ -50,6 +52,7 @@ Place `<Application top-bar>` as the **first** child of App Container.
 ### Step 5 — Content Area
 Create a frame as the **second** child of App Container. Apply:
 - Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = FIXED` (1832 px), `counterAxisSizingMode = FIXED` (992 px)
+- Layout sizing: horizontal fill inside App Container (`layoutSizingHorizontal = FILL`), vertical fixed
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
 - Name: **Content Area**
@@ -69,6 +72,7 @@ Create a frame as the **first** child of Content Area.
 #### Step 5b — Task List and Filters Container (right, RTL start)
 Create a frame as the **second** child of Content Area. Apply:
 - Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = AUTO`, `counterAxisSizingMode = FIXED` (992 px)
+- Layout sizing: horizontal hug, vertical fill (`layoutSizingVertical = FILL`)
 - Gap (`itemSpacing`) bound to `spacing/1` (8 px)
 - No padding, no fill
 - Name: **Task List and Filters Container**
@@ -83,7 +87,8 @@ Place `<Task list>` as **first** child.
 | Property | Value |
 |----------|-------|
 | componentKey | `59bdb48db0698778ebbdb04f0e4af7110dc0811a` |
-| Size | 420 × 992 px |
+| Width | 420 px |
+| Height behavior | Fill vertical (`layoutSizingVertical = FILL`) inside Task List and Filters Container |
 
 ##### Step 5b-ii — Filters
 Place `<AppFilters>` as **second** child.
@@ -92,7 +97,8 @@ Place `<AppFilters>` as **second** child.
 |----------|-------|
 | componentKey (set) | `14eef66e973bc051e32f312ba45c31dec42e145e` |
 | Variant | `State=Filled in, Tab=Search` |
-| Size | 320 × 992 px |
+| Width | 320 px |
+| Height behavior | Fill vertical (`layoutSizingVertical = FILL`) inside Task List and Filters Container |
 
 ---
 
@@ -109,6 +115,17 @@ Place `<AppFilters>` as **second** child.
 | Task preview | fills | `background/surface_2` |
 | Task preview | all corner radii | `cornerRadius/2` |
 
+## Layout sizing summary
+
+| Node | Horizontal sizing | Vertical sizing |
+|------|-------------------|-----------------|
+| Sidebar | Fixed 64 px | Fill parent |
+| Application top-bar | Fill parent | Fixed 64 px |
+| Content Area | Fill parent | Fixed 992 px |
+| Task List and Filters Container | Hug contents | Fill parent |
+| Task list | Fixed 420 px | Fill parent |
+| Filters | Fixed 320 px | Fill parent |
+
 ---
 
 ## Default State
@@ -122,5 +139,6 @@ Place `<AppFilters>` as **second** child.
 ## Notes
 - Do not edit the canonical component (`3915:129350`) — create a duplicate or new frame.
 - **Never use raw hex or raw pixel values** for fills, gaps, padding, or radii — bind to variables.
+- In Figma scripts, set `layoutSizingVertical = "FILL"` only after appending the node to its auto-layout parent.
 - Child order within auto-layout determines visual position. Sidebar second = right side (RTL start).
 - See `app/apps/task-management.md` for filter contents, task row fields, and drawing rules.
