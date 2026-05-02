@@ -44,7 +44,7 @@ Use local indexes for typography, color, spacing, and component keys during rout
 - Task Management: `app/apps/task-management.md`, `app/screens/task-management/canonical-layout.md`
 - Documents: `app/apps/document.md`, `app/screens/document/canonical-layout.md`
 - Search: `app/apps/search.md`, `app/screens/search/canonical-layout.md`
-- User Preferences: `app/apps/user-preferences.md`, `app/screens/user-preferences/*.md`
+- User Preferences: `app/apps/user-preferences.md`, `app/screens/user-preferences/*.md` (modal-scoped — no `canonical-layout.md` by design)
 - Type Icon Appearance Preference flow: `app/flows/type-icon-appearance-preference.md`
 
 Resolve app names, aliases, canonical references, and related flows through `app/figma-map.json`.
