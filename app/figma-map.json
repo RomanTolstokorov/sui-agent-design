@@ -109,7 +109,7 @@
         "app/screens/user-preferences/avatar-menu.md",
         "app/screens/user-preferences/preferences-dialog.md"
       ],
-      "figmaReference": {
+      "canonicalReference": {
         "figmaFileName": "User-profile-settings",
         "figmaFileKey": "kRLV8EyWZ1uhBtPwLDaGp4"
       },

@@ -4,6 +4,17 @@
     "Code agents must not modify the Teletronics SUI design system file.",
     "Treat the design system as read-only: import and use published components, variables, and styles, but do not create, edit, detach, rename, move, or delete anything inside the DS file unless the user explicitly asks to maintain the DS."
   ],
+  "agentNotes": {
+    "insertingComponents": "Keys in this index can resolve to either a component or a component set. In use_figma scripts, use the safe import helper from app/instructions/sui-component-imports.md instead of assuming importComponentByKeyAsync or importComponentSetByKeyAsync from the field name.",
+    "searchFallback": "Use search_design_system with the Teletronics SUI library key when you need to look up additional components or re-check names and keys.",
+    "routineWork": "Do not query Figma for typography, color/elevation, spacing, or shape tokens during routine mockup work unless the design system has changed.",
+    "relatedFiles": {
+      "typography": "figma/foundations/typography.json",
+      "colors": "figma/foundations/colors.json",
+      "layout": "figma/foundations/layout.json",
+      "appRules": "app/rules.md"
+    }
+  },
   "categories": {
     "atoms": [
       { "name": "<Avatar>", "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417" },
@@ -256,17 +267,6 @@
         "Use with Backdrop for Preferences dialog flows.",
         "Place product-specific content inside the dialog rather than rebuilding the modal shell from primitives."
       ]
-    }
-  },
-  "agentNotes": {
-    "insertingComponents": "Keys in this index can resolve to either a component or a component set. In use_figma scripts, use the safe import helper from app/instructions/sui-component-imports.md instead of assuming importComponentByKeyAsync or importComponentSetByKeyAsync from the field name.",
-    "searchFallback": "Use search_design_system with the Teletronics SUI library key when you need to look up additional components or re-check names and keys.",
-    "routineWork": "Do not query Figma for typography, color/elevation, spacing, or shape tokens during routine mockup work unless the design system has changed.",
-    "relatedFiles": {
-      "typography": "figma/foundations/typography.json",
-      "colors": "figma/foundations/colors.json",
-      "layout": "figma/foundations/layout.json",
-      "appRules": "app/rules.md"
     }
   },
   "formControls": {
