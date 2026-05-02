@@ -39,6 +39,7 @@ Use local indexes for typography, color, spacing, and component keys during rout
 - `app/instructions/icons-imagery.md` - placing icons (Icon wrapper, size variants, color variables, icon catalog, task type icons)
 - `app/instructions/modal-dialogs.md` - generic modal/dialog drawing workflow
 - `app/instructions/sui-component-imports.md` - importing SUI components and component sets safely
+- `app/instructions/figma-api-gotchas.md` - registry of Figma API / `use_figma` scripting quirks and validated workarounds
 
 ## Active Apps and Flows
 
