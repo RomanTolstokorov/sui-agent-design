@@ -48,3 +48,32 @@ inner.swapComponent(importedComponent);
 ```
 
 **Discovered:** pre-2026-05-02 (migrated from `sui-component-imports.md`)
+
+---
+
+### Text edits require loaded fonts
+
+**Symptom:** editing text content or text metrics fails with errors like `Cannot write to node with unloaded font "Noto Kufi Arabic Regular". Please call figma.loadFontAsync({ family: "Noto Kufi Arabic", style: "Regular" }) and await the returned promise first.`
+
+**Cause:** Figma requires every font used by a `TEXT` node to be loaded before changing `.characters`. This applies even when the text node already exists. Typography styles are already declared in the DS; do not work around this by setting raw font values or text metrics.
+
+**Workaround:**
+```js
+const dsFonts = [
+  { family: "Noto Kufi Arabic", style: "Regular" },
+  { family: "Noto Kufi Arabic", style: "Medium" },
+  { family: "Noto Kufi Arabic", style: "SemiBold" },
+  { family: "Alexandria", style: "Light" },
+  { family: "Alexandria", style: "Regular" },
+  { family: "Alexandria", style: "Medium" },
+  { family: "Alexandria", style: "SemiBold" },
+  { family: "Alexandria", style: "Bold" },
+  { family: "Inter", style: "Regular" }
+];
+
+for (const font of dsFonts) {
+  await figma.loadFontAsync(font);
+}
+```
+
+**Discovered:** 2026-05-02

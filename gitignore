@@ -1,1 +1,3 @@
-.claude/worktrees/*
+.claude/*
+.agents/skills/caveman/*
+skills-lock.json

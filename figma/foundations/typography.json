@@ -3,6 +3,7 @@
   "fontStack": "Noto Kufi Arabic, Helvetica, Arial, sans-serif",
   "rules": [
     "Use this file as the local source of truth for Teletronics SUI typography.",
+    "Apply published Figma text styles by styleKey for typography; do not set raw font family, size, weight, line height, or letter spacing when a matching style exists.",
     "Load Noto Kufi Arabic before placing SUI components that use body, label, input, button, caption, or paragraph text.",
     "Load Alexandria before placing heading text or components that use heading styles.",
     "Use dedicated button text styles button/large, button/medium, and button/small for SUI button labels."

@@ -31,6 +31,7 @@ Use local indexes for typography, color, spacing, and component keys during rout
 - Insert UI elements from published SUI components listed in `figma/components/index.json`; use the safe import workflow in `app/instructions/sui-component-imports.md`.
 - Never draw a custom UI element when a SUI component exists. If no matching SUI component exists, stop and ask before using primitives.
 - Bind fills and strokes to published variables by `variableKey`; apply elevation by importing effect styles by `styleKey`.
+- Apply typography by importing published text styles by `styleKey`; do not set raw font family, size, weight, line height, or letter spacing when a matching style exists.
 - App, screen, and flow docs override generic instructions when they describe a more specific workflow.
 
 ## Detailed Instructions
