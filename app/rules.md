@@ -26,6 +26,17 @@ Use this file for project-specific rules about how to build Teletronics SUI-base
 - Do not use large decorative whitespace between islands in data-heavy screens.
 - Keep related controls close to the content they affect.
 
+## Figma API Workaround Rule
+
+When a Figma API or `use_figma` scripting blocker is encountered during drawing (unexpected error, silent misplacement, property rejection, undocumented behavior, etc.):
+
+1. Stop before working around it silently.
+2. Propose a new entry for `app/instructions/figma-api-gotchas.md` using the entry format defined in that file: short symptom title, exact error string, cause if known, minimal workaround code, discovery date.
+3. Wait for user approval of the entry text and target file.
+4. On approval, append the entry to `app/instructions/figma-api-gotchas.md` before continuing the drawing task.
+
+Do not re-derive the same workaround across sessions. Do not skip persistence even when the fix is obvious — future agents need the registry to avoid repeating discovery.
+
 ## SUI-Only Drawing Rule
 
 Never draw a UI element from primitives if a published Teletronics SUI component exists for it. Before placing anything in Figma, verify it is in `figma/components/index.json`. If no matching SUI component exists, stop and ask the user for permission before using a custom or primitive approach — describe exactly what is missing and why. Never silently fall back to hand-built elements.
