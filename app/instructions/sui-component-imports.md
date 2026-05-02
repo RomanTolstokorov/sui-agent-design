@@ -55,3 +55,13 @@ If no matcher is provided, use the set's `defaultVariant`, then fall back to the
 - If only a general SUI key is available, use `createSuiInstance` rather than choosing `importComponentByKeyAsync` or `importComponentSetByKeyAsync` manually.
 - Return created instance IDs from every Figma script.
 - Do not detach imported SUI instances to work around import or variant issues.
+
+## Scripting gotchas
+
+**Page placement** — `createInstance()` appends to `figma.currentPage`. Always call `await figma.setCurrentPageAsync(targetPage)` before creating any nodes; wrong page = silent misplacement. Querying `page.children` from a non-active page also returns empty, so switch pages before reading too.
+
+**INSTANCE_SWAP on wrapper components** — `setProperties` rejects ComponentNode values for INSTANCE_SWAP properties in this codebase (validated against `<Icon>`). Use `swapComponent` on the inner instance instead:
+```js
+const inner = inst.findOne(n => n.type === "INSTANCE");
+inner.swapComponent(importedComponent);
+```

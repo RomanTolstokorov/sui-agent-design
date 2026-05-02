@@ -99,18 +99,31 @@
       "components/tooltip/fill": { "key": "0ac627484d4ac33eb91e6847f07b4a8ed4e8c29c", "light": "#3e4045", "dark": "#f7f7f7" },
       "components/snackbar/fill": { "key": "3279db1d32f0d92ed039ae7c8b78249577161a94", "light": "#3e4045", "dark": "#f7f7f7" }
     },
+    "icons": {
+      "usage": "Standard icon fill colors. Bind icon fills to these variables — never use raw hex. Use default for primary icons, secondary for subdued or helper icons alongside a primary one.",
+      "components/icon/default": { "key": "868ce80f1afc3462645d0b343906eaa8dca2d82e", "light": "#1b1d21", "dark": "#f7f7f7" },
+      "components/icon/secondary": { "key": "c602e2f72f58c1bc8b50fdee8dcc39c9f51f3d02", "light": "#1b1d21b2", "dark": "#f7f7f7b2" }
+    },
     "taskTypeIcons": {
       "usage": "Use these variables for task type/subtype icons when icon appearance is set to Colorful. In Monochrome mode, keep the same icon artwork and use neutral monochrome styling.",
-      "components/icon/task_types/red": { "key": "de6b796eaebd2ee2d8101e5582c9fbcf000fd0cf" },
-      "components/icon/task_types/grey": { "key": "ad5cec2675b025f62208ef8a77a5ef911f567662" },
-      "components/icon/task_types/blue": { "key": "6783688921d22ebee19992fb5120851833e2f79a" },
-      "components/icon/task_types/green": { "key": "8fd5303657fad64fa3e6bd2b4a5824ba7c58a1e0" },
-      "components/icon/task_types/blue_2": { "key": "2faa1038224cf72d3a96dc67872c7a27ed50bda3" },
-      "components/icon/task_types/orange": { "key": "04a69e85e8bf592fded1103ebb0ec44b16ea4238" },
-      "components/icon/task_types/purple": { "key": "b459a8062a7b4e0c48a52c722729b5f5f6811932" },
-      "components/icon/task_types/yellow": { "key": "cb971fd0894e6bdb1178b0477cdd766b82f38926" },
-      "components/icon/task_types/purple_2": { "key": "348f33e5458fb89ebfd0f190db640cdba5040a85" },
-      "components/icon/task_types/default": { "key": "c45b3389cfc76fe01e69ebf809a15f9948b3d3cb" }
+      "components/icon/task_types/red":      { "key": "de6b796eaebd2ee2d8101e5582c9fbcf000fd0cf", "light": "#da5d59" },
+      "components/icon/task_types/grey":     { "key": "ad5cec2675b025f62208ef8a77a5ef911f567662", "light": "#9fa2a8" },
+      "components/icon/task_types/blue":     { "key": "6783688921d22ebee19992fb5120851833e2f79a", "light": "#6998f0" },
+      "components/icon/task_types/blue_2":   { "key": "2faa1038224cf72d3a96dc67872c7a27ed50bda3", "light": "#41c0ea" },
+      "components/icon/task_types/green":    { "key": "8fd5303657fad64fa3e6bd2b4a5824ba7c58a1e0", "light": "#6fb97f" },
+      "components/icon/task_types/orange":   { "key": "04a69e85e8bf592fded1103ebb0ec44b16ea4238", "light": "#f2960d" },
+      "components/icon/task_types/purple":   { "key": "b459a8062a7b4e0c48a52c722729b5f5f6811932", "light": "#8c6dc2" },
+      "components/icon/task_types/purple_2": { "key": "348f33e5458fb89ebfd0f190db640cdba5040a85", "light": "#ca5adb" },
+      "components/icon/task_types/yellow":   { "key": "cb971fd0894e6bdb1178b0477cdd766b82f38926", "light": "#efc24c" },
+      "components/icon/task_types/default":  { "key": "c45b3389cfc76fe01e69ebf809a15f9948b3d3cb" }
+    },
+    "datasourceGroupIcons": {
+      "usage": "Icon fill colors for datasource group indicators in search results and record-type labels. Each variable is mode-aware.",
+      "components/icon/datasource_group/Documents": { "key": "943db0b9b726aa195b800478294fe481fa3b831d" },
+      "components/icon/datasource_group/Persons":   { "key": "a4519bef6b20bde284fdd66ad78744ac9c1988c3" },
+      "components/icon/datasource_group/Companies": { "key": "5128d5e533459864fbd0784f62686e99dd548191" },
+      "components/icon/datasource_group/Events":    { "key": "5b770dc5908305b06746e5bac603e941b2e2ece6" },
+      "components/icon/datasource_group/Other":     { "key": "4f903031c9fe25132a3b819048a74fb489c1e131" }
     }
   },
   "elevationVariables": {
