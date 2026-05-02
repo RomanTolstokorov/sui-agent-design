@@ -48,3 +48,7 @@ Use local indexes for typography, color, spacing, and component keys during rout
 - Type Icon Appearance Preference flow: `app/flows/type-icon-appearance-preference.md`
 
 Resolve app names, aliases, canonical references, and related flows through `app/figma-map.json`.
+
+## Sibling Instruction File
+
+`AGENTS.md` mirrors this file for non-Claude agents (Codex, etc.). Keep both in sync when editing either.
