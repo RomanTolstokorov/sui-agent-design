@@ -1,3 +1,5 @@
 .claude/*
 .agents/skills/caveman/*
 skills-lock.json
+.DS_Store
+.claude/.DS_Store
