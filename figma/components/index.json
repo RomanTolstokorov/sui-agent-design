@@ -18,15 +18,15 @@
   "categories": {
     "atoms": [
       {
+        "name": "<AttachmentBackdrop>",
+        "componentKey": "0f6cbd2f4022636f84a74a86e53aa60eefb0c600"
+      },
+      {
         "name": "<Avatar>",
         "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417"
       },
       {
-        "name": "<ProfilePicture>",
-        "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f"
-      },
-      {
-        "name": "Backdrop",
+        "name": "<Backdrop>",
         "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7"
       },
       {
@@ -38,12 +38,44 @@
         "componentKey": "313dc3350b5b7dcde367bf2a239548e521158f30"
       },
       {
+        "name": "<BottomNavigationAction>",
+        "componentKey": "587bc42858cb5390aa2c4c73e4e6a6833b8e11a5"
+      },
+      {
+        "name": "<CardActions>",
+        "componentKey": "e5d15404825ed65fb35c03a8746d4ffe118b364d"
+      },
+      {
+        "name": "<CardContent>",
+        "componentKey": "a4be3d2cadd97863eaac2517effb0481c49660c3"
+      },
+      {
+        "name": "<CardHeader>",
+        "componentKey": "218259eb0b883e4abdea7e2aad50e01cc4808caa"
+      },
+      {
+        "name": "<CardMedia>",
+        "componentKey": "b548ccc29c8a0690ec708e769de93373552831f0"
+      },
+      {
         "name": "<Checkbox>",
         "componentKey": "514c6760d8866c7d0b6ed891df3be2aface265ec"
       },
       {
-        "name": "✚Checkbox",
-        "componentKey": "b6621b791778c9bc9cd75b7ed8871e011ee9a33f"
+        "name": "<Container>",
+        "componentKey": "a7308052e85a338d3f507c8d9fc18a1f52f48b86"
+      },
+      {
+        "name": "<DialogActions>",
+        "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080"
+      },
+      {
+        "name": "<DialogContent>",
+        "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59"
+      },
+      {
+        "name": "<DialogTitle>",
+        "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80"
       },
       {
         "name": "<Divider> | Horizontal",
@@ -58,12 +90,20 @@
         "componentKey": "ad2b0dce4e7742a8f937c8265a0cadbfef1c4bab"
       },
       {
-        "name": "<Fab>",
-        "componentKey": "a95ed9e2684afb5b48746d16711e237c8f535f47"
+        "name": "<FormLabel>",
+        "componentKey": "667f4ed865d983f3a981f4b4e70c1137ffb7857f"
       },
       {
         "name": "<Icon>",
         "componentKey": "89b4b8d62421765b68506d994ff843e190f726a0"
+      },
+      {
+        "name": "<ImageListItemBar>",
+        "componentKey": "f679dbf5da49445940728f2ac50e1427acb55a27"
+      },
+      {
+        "name": "<InputLabel>",
+        "componentKey": "fe1f718b07dcca492221be53b8ca04938c6b7989"
       },
       {
         "name": "<Link>",
@@ -74,20 +114,68 @@
         "componentKey": "20866e89fb8bcc742ed5d1e35cf31e40c79fff11"
       },
       {
-        "name": "<Pagination>",
-        "componentKey": "2a4aefe8c5c1b107392e1aa7918011c57034f5c7"
+        "name": "<ListSubheader>",
+        "componentKey": "dd7dc968e0f7763d08012fda1b41a32f76469547"
+      },
+      {
+        "name": "<LoadingMask>",
+        "componentKey": "8e1fc97dc9cb0fb06a1201f7a6339b7b3b055d6d"
+      },
+      {
+        "name": "<MenuItem>",
+        "componentKey": "4d13ed87174c580be46b875b21a8730256e34a85"
+      },
+      {
+        "name": "<Mini_Tabs>",
+        "componentKey": "58aea07f935755d83f88826de202b95cf439c7ae"
+      },
+      {
+        "name": "<Minimized_Tab>",
+        "componentKey": "8150564742b6050ef85581ed77aea7666c65b7ef"
+      },
+      {
+        "name": "<PaginationItem>",
+        "componentKey": "f21ed5ee783b0d5d2389efdda070d809efd492ae"
+      },
+      {
+        "name": "<Paper>",
+        "componentKey": "f1648b0ea11c00b48e6aefd4d1850873e6e6d3b8"
+      },
+      {
+        "name": "<ProfilePicture>",
+        "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f"
+      },
+      {
+        "name": "<Progress> | Circular",
+        "componentKey": "09fb4a7bb280dee840db0fa724ff416a56cb2903"
+      },
+      {
+        "name": "<Progress> | Linear",
+        "componentKey": "6402b799aaf505989eab3fb913453381410c95a1"
       },
       {
         "name": "<Radio>",
         "componentKey": "d9107d8af071c3ce688e4c1e2be299511d68c0e6"
       },
       {
+        "name": "<Sidebar menu item>",
+        "componentKey": "93d760dd44ee04aed829c38602b564ea091e7690"
+      },
+      {
+        "name": "<Skeleton>",
+        "componentKey": "aafd2a6c5db21ba83d3f05104dc63c297b53bcbe"
+      },
+      {
+        "name": "<Slider>",
+        "componentKey": "acecd8a0c00c05f1c4430b822b493a28203e944b"
+      },
+      {
         "name": "<SpeedDialItem>",
         "componentKey": "a1a6228f3f94c6349a2bb756c301868bf6145676"
       },
       {
-        "name": "<Sidebar menu item>",
-        "componentKey": "93d760dd44ee04aed829c38602b564ea091e7690"
+        "name": "<Step>",
+        "componentKey": "5b5a89347188d2f0a820b187658a2155c727089f"
       },
       {
         "name": "<Switch>",
@@ -102,24 +190,132 @@
         "componentKey": "732bbb2db30b9512bb13ce47d26d73349567c698"
       },
       {
+        "name": "<TableFooter>",
+        "componentKey": "4074cc2de357680beb046b8c8db468e52b23d7ec"
+      },
+      {
         "name": "<TableHead>",
         "componentKey": "b3bf0c08491f4d4c747467a460a72a3c5de88c41"
+      },
+      {
+        "name": "<TableLoading>",
+        "componentKey": "1a65dd539a816fded9f128973721d9f38ae99c11"
+      },
+      {
+        "name": "<TimelineItem>",
+        "componentKey": "f2bd3767e45a5e04817d7323b1640af48770b397"
       },
       {
         "name": "<ToggleButton>",
         "componentKey": "aef7a1866920cd60767e5976d6ba82394759975d"
       },
       {
+        "name": "<Tooltip>",
+        "componentKey": "71c968ec6e37f54ede1d15fc09d20d65bab29b74"
+      },
+      {
         "name": "<TopBarTab>",
         "componentKey": "372ac44a21c5e5ed0b987ee42a476c7f02f66a56"
       },
       {
-        "name": "<TreeView>",
-        "componentKey": "cb25244edcd69206e1c0206df244391ca4bbc4b6"
+        "name": "<TreeItem>",
+        "componentKey": "cd17f8ca0b3ea073ac24f17e5b7f4604a7b84638"
       },
       {
         "name": "<Typography>",
         "componentKey": "2e7b6c0882fd7bcff37b51c6ba183e30836375d4"
+      },
+      {
+        "name": "Box Set - 1st Level",
+        "componentKey": "1de42c15da197d1806c9df3e93e289074a1a1715"
+      },
+      {
+        "name": "Box Set - 2nd Level",
+        "componentKey": "fc7c4fd6d50553908c7809f65c6926c9a70b1a56"
+      },
+      {
+        "name": "Box Set - 3rd Level",
+        "componentKey": "149123e80b1e31cee9b51763a2683386903b0606"
+      },
+      {
+        "name": "Card Elements",
+        "componentKey": "967edb643b034b8971fd0edaabcc06907e5f0468"
+      },
+      {
+        "name": "Chat Bubble",
+        "componentKey": "7136051a90a1f0424c997bb72e7171930feaf464"
+      },
+      {
+        "name": "Elements / Axis X | Groups Bottom",
+        "componentKey": "127ba5f84a0a34ede45253082b456f225aad7adc"
+      },
+      {
+        "name": "Elements / Axis X | Groups Bottom",
+        "componentKey": "ed0826e8c79a3934c06f336cf3f223166e2b6a96"
+      },
+      {
+        "name": "Elements / Axis Y | Values Left",
+        "componentKey": "dcc3cd1dd1f43c8806574f90b1d028f8a4a5b86f"
+      },
+      {
+        "name": "Elements / Axis Y | Values Left",
+        "componentKey": "edbb9aa5ddf50f38057f4e5ac45d53d2a9274138"
+      },
+      {
+        "name": "Elements / Axis Y | Values Right",
+        "componentKey": "19c5663d37162b15a7f055e14132a4de0364ac94"
+      },
+      {
+        "name": "Elements / Axis Y | Values Right",
+        "componentKey": "1fa4d7cdfc1c3efc4456f93739961dfee8d2057f"
+      },
+      {
+        "name": "Elements / Bars",
+        "componentKey": "90a60fb2d25e099ff1e48d3a83a2548dc5a6dabe"
+      },
+      {
+        "name": "Elements / Bars",
+        "componentKey": "c1d0c37f17877eee2e7d545eeafd6f898128f204"
+      },
+      {
+        "name": "Elements / Legend",
+        "componentKey": "bc7c327432177d3fa314a974b207cdc76bfd53c0"
+      },
+      {
+        "name": "Elements / Legend",
+        "componentKey": "cf67e7252fd9cddd73056107206cfe68482c5eaf"
+      },
+      {
+        "name": "Elements / Lines",
+        "componentKey": "223c3f5fa22be8fb99f185bfd4d17808006980b0"
+      },
+      {
+        "name": "Elements / Lines",
+        "componentKey": "ca617af3090d4271c34bbb4867e1b0ab4719558b"
+      },
+      {
+        "name": "Elements / Tooltip",
+        "componentKey": "7338ad3dfc1d7f8bddabb436c07cba1a679d5fff"
+      },
+      {
+        "name": "Elements / Tooltip",
+        "componentKey": "e89d6157760bb0ccd1286c4bc0ae235c8ef3d467"
+      },
+      {
+        "name": "Spacing | Horizontal",
+        "componentKey": "ba36c75bac14c2b3bf5894240da2bb0456f49e01"
+      },
+      {
+        "name": "Spacing | Vertical",
+        "componentKey": "e52093e61edc215286186f67eab15036e9dd7278"
+      },
+      {
+        "name": "Star",
+        "componentKey": "67553da19c8059cd1d988998cd2b5a741d305efb"
+      },
+      {
+        "name": "Step Icon",
+        "componentKey": "43c6a4cd537adb1ace6214d40e3aaae75cb7b10d"
       }
     ],
     "molecules": [
@@ -140,22 +336,6 @@
         "componentKey": "d09cb9f33763f620e001ae63bbb81187d43d9852"
       },
       {
-        "name": "<LoadingButton>",
-        "componentKey": "1a5317c8c0991ddaeab1d68df1458af252b82783"
-      },
-      {
-        "name": "Floating Button",
-        "componentKey": "38d672df87f4a4277a1ac3f9e43f1daa60059d4e"
-      },
-      {
-        "name": "<SplitIconButton>",
-        "componentKey": "1cfed37811d80157c52a6fc28bdd19e7f5ffa692"
-      },
-      {
-        "name": "<CardHeader>",
-        "componentKey": "218259eb0b883e4abdea7e2aad50e01cc4808caa"
-      },
-      {
         "name": "<Chip>",
         "componentKey": "0fded414b465fc36b7a28b60d7bc2876e77f734c"
       },
@@ -164,16 +344,12 @@
         "componentKey": "ce1f0e1c7cdecd41a764089aff4e5e0de2924b50"
       },
       {
-        "name": "<DialogActions>",
-        "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080"
+        "name": "<DialogTitle | DocSearch>",
+        "componentKey": "88c805527ef6a122dd29ab6476afb74b24540db0"
       },
       {
-        "name": "<DialogContent>",
-        "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59"
-      },
-      {
-        "name": "<DialogTitle>",
-        "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80"
+        "name": "<Fab>",
+        "componentKey": "a95ed9e2684afb5b48746d16711e237c8f535f47"
       },
       {
         "name": "<FormControlLabel> | Checkbox",
@@ -204,8 +380,20 @@
         "componentKey": "7bf383a97f2a696c34c19cd5c1596ac2d22a2642"
       },
       {
+        "name": "<LoadingButton>",
+        "componentKey": "1a5317c8c0991ddaeab1d68df1458af252b82783"
+      },
+      {
         "name": "<MultiSelect>",
         "componentKey": "dc80c39167ccab18f839e00fdf433ee0644e0596"
+      },
+      {
+        "name": "<Pagination>",
+        "componentKey": "2a4aefe8c5c1b107392e1aa7918011c57034f5c7"
+      },
+      {
+        "name": "<PopupActionButton>",
+        "componentKey": "3ef92dd530c33763f5dcffc8e8f2f41d9e1c27fd"
       },
       {
         "name": "<RadioGroup>",
@@ -214,6 +402,22 @@
       {
         "name": "<Select>",
         "componentKey": "7db7714ec290782c969567390d55b44a87305a60"
+      },
+      {
+        "name": "<SplitIconButton>",
+        "componentKey": "1cfed37811d80157c52a6fc28bdd19e7f5ffa692"
+      },
+      {
+        "name": "<TableCellInners>",
+        "componentKey": "0c1425ef9b7c2aebc88f6c64a2bfa85507252479"
+      },
+      {
+        "name": "<TableCellRow>",
+        "componentKey": "c7bd3de33f898bc4ef9a0f46426b0a636f8e13e2"
+      },
+      {
+        "name": "<TableHeadRow>",
+        "componentKey": "a94f5245b4615e549b2645a9f6ae7c1f576580ca"
       },
       {
         "name": "<Tabs>",
@@ -228,28 +432,28 @@
         "componentKey": "4a274160c5103a8a23e4cdf264e641c40e69711b"
       },
       {
+        "name": "<TimelineDot>",
+        "componentKey": "93b57b844d3d7bf973d3d0fcd17764cf5eb604bf"
+      },
+      {
         "name": "<ToggleButtonGroup>",
         "componentKey": "0608cbf6c2d770378611f5131623c16b180a6536"
-      },
-      {
-        "name": "ToggleButton | Entity legend",
-        "componentKey": "4a42a102905fe3dfaf0064a62a1663567b8a6121"
-      },
-      {
-        "name": "<TableCellRow>",
-        "componentKey": "c7bd3de33f898bc4ef9a0f46426b0a636f8e13e2"
-      },
-      {
-        "name": "<TableHeadRow>",
-        "componentKey": "a94f5245b4615e549b2645a9f6ae7c1f576580ca"
       },
       {
         "name": "<TransferList>",
         "componentKey": "4305502cfcdf684c095cbbb42f31c9346ae98454"
       },
       {
-        "name": "<PopupActionButton>",
-        "componentKey": "3ef92dd530c33763f5dcffc8e8f2f41d9e1c27fd"
+        "name": "<TreeView>",
+        "componentKey": "cb25244edcd69206e1c0206df244391ca4bbc4b6"
+      },
+      {
+        "name": "Floating Button",
+        "componentKey": "38d672df87f4a4277a1ac3f9e43f1daa60059d4e"
+      },
+      {
+        "name": "ToggleButton | Entity legend",
+        "componentKey": "4a42a102905fe3dfaf0064a62a1663567b8a6121"
       }
     ],
     "organisms": [
@@ -258,24 +462,12 @@
         "componentKey": "e27f9c2ef70b4fb085a5a1458566e1cdaedaa3f6"
       },
       {
-        "name": "<Application top-bar>",
-        "componentKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2"
-      },
-      {
         "name": "<AppFilters>",
         "componentKey": "14eef66e973bc051e32f312ba45c31dec42e145e"
       },
       {
-        "name": "<DataGridTable>",
-        "componentKey": "e50367fad3b62cfc3a7520cea11499e0370b654f"
-      },
-      {
-        "name": "<DataGrid> | Header",
-        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866"
-      },
-      {
-        "name": "<DataGrid> | Header | Column Group",
-        "componentKey": "ae863b61acc7baaa21e782303067b3471f2c7490"
+        "name": "<Application top-bar>",
+        "componentKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2"
       },
       {
         "name": "<DataGrid> | Cell",
@@ -286,28 +478,44 @@
         "componentKey": "cccb2e0e336ce022a23ccb4e20822e730e7d96bd"
       },
       {
+        "name": "<DataGrid> | Header",
+        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866"
+      },
+      {
+        "name": "<DataGrid> | Header | Column Group",
+        "componentKey": "ae863b61acc7baaa21e782303067b3471f2c7490"
+      },
+      {
+        "name": "<DataGridTable>",
+        "componentKey": "e50367fad3b62cfc3a7520cea11499e0370b654f"
+      },
+      {
         "name": "<Dialog>",
         "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095"
       },
       {
-        "name": "<Side-Drawer>",
-        "componentKey": "eed73b36aec6ede551188b6d42fbdcfdeb5e0257"
+        "name": "<Form Blocks> | Subject",
+        "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4"
       },
       {
-        "name": "<Table>",
-        "componentKey": "39c415479251323d1753bef4b79a3c3fdc1fa810"
-      },
-      {
-        "name": "<TableCellInners>",
-        "componentKey": "0c1425ef9b7c2aebc88f6c64a2bfa85507252479"
+        "name": "<FormFooter>",
+        "componentKey": "ba60ff0dcf8a461cb6be699bf859e4850b6c846b"
       },
       {
         "name": "<SearchResultListItem>",
         "componentKey": "bf8c878ff8021cbd350393861763f8544fdbfa3c"
       },
       {
+        "name": "<Side-Drawer>",
+        "componentKey": "eed73b36aec6ede551188b6d42fbdcfdeb5e0257"
+      },
+      {
         "name": "<Sidebar>",
         "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210"
+      },
+      {
+        "name": "<Table>",
+        "componentKey": "39c415479251323d1753bef4b79a3c3fdc1fa810"
       },
       {
         "name": "<Task list>",
@@ -316,10 +524,6 @@
       {
         "name": "<TaskItem>",
         "componentKey": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7"
-      },
-      {
-        "name": "<Form Blocks> | Subject",
-        "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4"
       }
     ]
   },
@@ -330,23 +534,6 @@
       "nodeId": "18116:4132",
       "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210",
       "purpose": "Main application navigation rail.",
-      "defaultSize": { "width": 64, "height": 860 },
-      "layout": {
-        "layoutMode": "VERTICAL",
-        "primaryAxisSizingMode": "FIXED",
-        "counterAxisSizingMode": "FIXED",
-        "primaryAxisAlignItems": "SPACE_BETWEEN",
-        "counterAxisAlignItems": "CENTER",
-        "itemSpacing": 59,
-        "paddingTop": 12,
-        "paddingBottom": 8,
-        "cornerRadius": 8
-      },
-      "structure": [
-        "Top area contains S-System logo and _Application Navigation/app set.",
-        "Bottom/actions area contains app/action menu items and user avatar."
-      ],
-      "properties": {},
       "usage": [
         "Use as the main app navigation rail at the left edge of application screens.",
         "Prefer the published component instance instead of rebuilding with primitives.",
@@ -359,40 +546,6 @@
       "nodeId": "18112:2554",
       "componentSetKey": "93d760dd44ee04aed829c38602b564ea091e7690",
       "purpose": "Icon-sized app/navigation item used inside Sidebar; represents an app or navigation destination.",
-      "defaultSize": { "width": 48, "height": 48 },
-      "iconSize": { "width": 24, "height": 24 },
-      "layout": {
-        "layoutMode": "HORIZONTAL",
-        "primaryAxisSizingMode": "AUTO",
-        "counterAxisSizingMode": "AUTO",
-        "counterAxisAlignItems": "CENTER",
-        "itemSpacing": 8,
-        "padding": 12,
-        "cornerRadius": 8
-      },
-      "properties": {
-        "Icon#18112:0": { "name": "Icon", "type": "INSTANCE_SWAP" },
-        "Badge?#18182:0": {
-          "name": "Badge?",
-          "type": "BOOLEAN",
-          "defaultValue": false
-        },
-        "State": {
-          "type": "VARIANT",
-          "defaultValue": "Default",
-          "options": ["Default", "Hover", "Focused", "Pressed"]
-        },
-        "Active": {
-          "type": "VARIANT",
-          "defaultValue": "False",
-          "options": ["False", "True"]
-        },
-        "Variant": {
-          "type": "VARIANT",
-          "defaultValue": "E",
-          "options": ["Icon", "E"]
-        }
-      },
       "usage": [
         "Use Variant=Icon for normal app/navigation icons.",
         "Variant=E exists as the default component-set variant but should not be treated as the common app-nav choice unless matching the source design.",
@@ -417,48 +570,6 @@
       "nodeId": "18182:82890",
       "componentSetKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2",
       "purpose": "Top navigation/control bar for a selected application. It represents the current sub-application and its internally grouped content/navigation.",
-      "defaultVariantSize": { "width": 1294, "height": 64 },
-      "tallVariantSizes": [
-        { "application": "Edit document - PDF", "width": 1294, "height": 120 },
-        {
-          "application": "Edit document - AI replays",
-          "width": 1294,
-          "height": 116
-        }
-      ],
-      "properties": {
-        "PDF template selector?#22990:0": {
-          "name": "PDF template selector?",
-          "type": "BOOLEAN",
-          "defaultValue": true
-        },
-        "Application": {
-          "type": "VARIANT",
-          "defaultValue": "Tasks",
-          "options": [
-            "Dashboard",
-            "Documents",
-            "Tasks",
-            "Variation centre",
-            "Search",
-            "Tasks 2",
-            "Edit document",
-            "Edit document - Linking",
-            "Edit document - PDF",
-            "Edit document - AI replays"
-          ]
-        }
-      },
-      "dependencies": [
-        "<TopBarTab>",
-        "<ToggleButtonGroup>",
-        "<IconButton>",
-        "<Select>",
-        "<Button>",
-        "<Icon>",
-        "<Link>",
-        "<Divider> | Horizontal"
-      ],
       "usage": [
         "Use inside the main app shell after the sidebar.",
         "Use the whole organism when mocking a known application state.",
@@ -471,53 +582,6 @@
       "nodeId": "18827:30777",
       "componentSetKey": "372ac44a21c5e5ed0b987ee42a476c7f02f66a56",
       "purpose": "Tab item for grouped content or sub-navigation inside an application top bar.",
-      "commonSizes": [
-        { "variant": "Dynamic default", "width": 154, "height": 64 },
-        { "variant": "Static default", "width": 124, "height": 40 },
-        { "variant": "Static small", "width": 124, "height": 32 }
-      ],
-      "properties": {
-        "Text#10238:13": {
-          "name": "Text",
-          "type": "BOOLEAN",
-          "defaultValue": true
-        },
-        "Tab Content#11073:2012": {
-          "name": "Tab Content",
-          "type": "TEXT",
-          "defaultValue": "Tab"
-        },
-        "TaskIcon?#18828:0": {
-          "name": "TaskIcon?",
-          "type": "BOOLEAN",
-          "defaultValue": false
-        },
-        "Badge?#22765:8": {
-          "name": "Badge?",
-          "type": "BOOLEAN",
-          "defaultValue": false
-        },
-        "Dynamic?": {
-          "type": "VARIANT",
-          "defaultValue": "True",
-          "options": ["False", "True"]
-        },
-        "Active": {
-          "type": "VARIANT",
-          "defaultValue": "False",
-          "options": ["False", "True"]
-        },
-        "State": {
-          "type": "VARIANT",
-          "defaultValue": "Enabled",
-          "options": ["Enabled", "Hovered", "Focused", "Pressed", "Hover"]
-        },
-        "Size": {
-          "type": "VARIANT",
-          "defaultValue": "Default",
-          "options": ["Default", "Small"]
-        }
-      },
       "usage": [
         "Use Active=True for the currently selected grouped-content tab.",
         "Use Dynamic?=True when the tab is part of the dynamic top-bar tab treatment.",
@@ -574,30 +638,6 @@
       "nodeId": "18271:99353",
       "componentSetKey": "14eef66e973bc051e32f312ba45c31dec42e145e",
       "purpose": "Shared filter panel for Task Management and Document applications.",
-      "expandedSize": { "width": 320, "height": 992 },
-      "collapsedSize": { "width": 56, "height": 992 },
-      "properties": {
-        "State": {
-          "type": "VARIANT",
-          "defaultValue": "Empty",
-          "options": ["Filled in", "Empty", "Collapsed"]
-        },
-        "Tab": {
-          "type": "VARIANT",
-          "defaultValue": "Search",
-          "options": ["Search", "Saved Searches"]
-        }
-      },
-      "dependencies": [
-        "<Tabs>",
-        "<Tab>",
-        "<IconButton>",
-        "<TextField>",
-        "<Select>",
-        "<ToggleButtonGroup>",
-        "<ListItem>",
-        "<Divider> | Horizontal"
-      ],
       "usage": [
         "Use as a filter island next to task/document lists or search results.",
         "Use Collapsed when preserving workspace for dense content.",
@@ -610,17 +650,6 @@
       "nodeId": "18764:80165",
       "componentKey": "59bdb48db0698778ebbdb04f0e4af7110dc0811a",
       "purpose": "Vertical task-list island with repeated TaskItem rows and pagination.",
-      "defaultSize": { "width": 420, "height": 942 },
-      "structure": [
-        { "name": "List container", "width": 420, "height": 894 },
-        { "name": "Pagination", "width": 420, "height": 48 }
-      ],
-      "layout": {
-        "layoutMode": "VERTICAL",
-        "primaryAxisSizingMode": "FIXED",
-        "counterAxisSizingMode": "FIXED",
-        "cornerRadius": 8
-      },
       "usage": [
         "Use as the task list island in task-management screens.",
         "Usually place beside filters and a preview/detail island."
@@ -632,44 +661,6 @@
       "nodeId": "18037:218667",
       "componentSetKey": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7",
       "purpose": "Task card/list row used inside Task list.",
-      "defaultSize": { "width": 396, "height": 154 },
-      "properties": {
-        "Submission Date#518:5": {
-          "name": "Submission Date",
-          "type": "TEXT",
-          "defaultValue": "18/11/2020"
-        },
-        "Subject#518:6": { "name": "Subject", "type": "TEXT" },
-        "EJS#518:7": { "name": "EJS", "type": "TEXT" },
-        "Flow status#518:8": { "name": "Flow status", "type": "TEXT" },
-        "Important?#518:9": {
-          "name": "Important?",
-          "type": "BOOLEAN",
-          "defaultValue": true
-        },
-        "ID#518:10": { "name": "ID", "type": "TEXT" },
-        "Task type#518:11": { "name": "Task type", "type": "INSTANCE_SWAP" },
-        "EJS?#18045:0": {
-          "name": "EJS?",
-          "type": "BOOLEAN",
-          "defaultValue": true
-        },
-        "Color tag#24657:0": {
-          "name": "Color tag",
-          "type": "BOOLEAN",
-          "defaultValue": false
-        },
-        "Freezed?#25818:0": {
-          "name": "Freezed?",
-          "type": "BOOLEAN",
-          "defaultValue": false
-        },
-        "State": {
-          "type": "VARIANT",
-          "defaultValue": "Default",
-          "options": ["Default", "Hover", "Focused", "Selected"]
-        }
-      },
       "usage": [
         "Use Selected for the active task shown in an adjacent preview/detail island.",
         "Use Important?, Freezed?, EJS?, and Color tag only when those data flags are present.",
