@@ -53,9 +53,9 @@ inner.swapComponent(importedComponent);
 
 ### Text edits require loaded fonts
 
-**Symptom:** editing text content or text metrics fails with errors like `Cannot write to node with unloaded font "Noto Kufi Arabic Regular". Please call figma.loadFontAsync({ family: "Noto Kufi Arabic", style: "Regular" }) and await the returned promise first.`
+**Symptom:** editing text content or text metrics fails with errors like `Cannot write to node with unloaded font "Noto Kufi Arabic Regular". Please call figma.loadFontAsync({ family: "Noto Kufi Arabic", style: "Regular" }) and await the returned promise first.` It also fails after applying an imported text style if that style's font was not loaded, for example `Cannot write to node with unloaded font "Alexandria Bold".`
 
-**Cause:** Figma requires every font used by a `TEXT` node to be loaded before changing `.characters`. This applies even when the text node already exists. Typography styles are already declared in the DS; do not work around this by setting raw font values or text metrics.
+**Cause:** Figma requires every font used by a `TEXT` node to be loaded before changing `.characters`. This applies even when the text node already exists, and importing/applying a text style by `styleKey` does not load that style's font. Typography styles are already declared in the DS; do not work around this by setting raw font values or text metrics.
 
 **Workaround:**
 ```js

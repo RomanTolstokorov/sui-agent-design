@@ -162,14 +162,18 @@
     }
   },
   "runtimeNotes": {
-    "note": "Load required fonts before creating or appending imported SUI component instances in use_figma.",
+    "note": "Load required fonts before creating text, applying imported text styles, editing text, or appending imported SUI component instances in use_figma. Importing a text style by styleKey does not load its font.",
     "loadFonts": [
       "await figma.loadFontAsync({ family: 'Noto Kufi Arabic', style: 'Regular' });",
       "await figma.loadFontAsync({ family: 'Noto Kufi Arabic', style: 'Medium' });",
+      "await figma.loadFontAsync({ family: 'Noto Kufi Arabic', style: 'SemiBold' });",
       "await figma.loadFontAsync({ family: 'Alexandria', style: 'Light' });",
-      "await figma.loadFontAsync({ family: 'Alexandria', style: 'Regular' });"
+      "await figma.loadFontAsync({ family: 'Alexandria', style: 'Regular' });",
+      "await figma.loadFontAsync({ family: 'Alexandria', style: 'Medium' });",
+      "await figma.loadFontAsync({ family: 'Alexandria', style: 'SemiBold' });",
+      "await figma.loadFontAsync({ family: 'Alexandria', style: 'Bold' });"
     ],
-    "additionalAlexandriaWeights": "Add other Alexandria weights as needed for headings: Medium, SemiBold, Bold."
+    "textStyleImportNote": "After assigning node.textStyleId, load the style's font before setting node.characters. For example, typography/h5 uses Alexandria Bold."
   },
   "paragraphStyles": {
     "typography/paragraph/regular": {
