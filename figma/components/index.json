@@ -17,86 +17,310 @@
   },
   "categories": {
     "atoms": [
-      { "name": "<Avatar>", "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417" },
-      { "name": "<ProfilePicture>", "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f" },
-      { "name": "Backdrop", "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7" },
-      { "name": "<Badge>", "componentKey": "f3567dc7dfe5f272c0fb4dd8c8c21fb412b61237" },
-      { "name": "<Badge> | With Instance", "componentKey": "313dc3350b5b7dcde367bf2a239548e521158f30" },
-      { "name": "<Checkbox>", "componentKey": "514c6760d8866c7d0b6ed891df3be2aface265ec" },
-      { "name": "✚Checkbox", "componentKey": "b6621b791778c9bc9cd75b7ed8871e011ee9a33f" },
-      { "name": "<Divider> | Horizontal", "componentKey": "c5acfc3db5c50cef027786563a9b6080826ace41" },
-      { "name": "<Divider> | Vertical", "componentKey": "ea62405f1ae55e875da0f4367af76aa109519270" },
-      { "name": "<Drawer>", "componentKey": "ad2b0dce4e7742a8f937c8265a0cadbfef1c4bab" },
-      { "name": "<Fab>", "componentKey": "a95ed9e2684afb5b48746d16711e237c8f535f47" },
-      { "name": "<Icon>", "componentKey": "89b4b8d62421765b68506d994ff843e190f726a0" },
-      { "name": "<Link>", "componentKey": "817b50382db55c61f4c709a2781ef82ada76df19" },
-      { "name": "<ListItem>", "componentKey": "20866e89fb8bcc742ed5d1e35cf31e40c79fff11" },
-      { "name": "<Pagination>", "componentKey": "2a4aefe8c5c1b107392e1aa7918011c57034f5c7" },
-      { "name": "<Radio>", "componentKey": "d9107d8af071c3ce688e4c1e2be299511d68c0e6" },
-      { "name": "✚RadioButton", "componentKey": "498fddcd662530a156e020d78663e6a2e4eb39a0" },
-      { "name": "<SpeedDialItem>", "componentKey": "a1a6228f3f94c6349a2bb756c301868bf6145676" },
-      { "name": "<Sidebar menu item>", "componentKey": "93d760dd44ee04aed829c38602b564ea091e7690" },
-      { "name": "<Switch>", "componentKey": "caa8b9915bbc1b1a08c1380d32e79abb35bc87f5" },
-      { "name": "<Tab>", "componentKey": "84d68de8b910fe5498b5daba3b5d2d7aa6b66ddc" },
-      { "name": "<TableCell>", "componentKey": "732bbb2db30b9512bb13ce47d26d73349567c698" },
-      { "name": "<TableHead>", "componentKey": "b3bf0c08491f4d4c747467a460a72a3c5de88c41" },
-      { "name": "<ToggleButton>", "componentKey": "aef7a1866920cd60767e5976d6ba82394759975d" },
-      { "name": "<TopBarTab>", "componentKey": "372ac44a21c5e5ed0b987ee42a476c7f02f66a56" },
-      { "name": "<TreeView>", "componentKey": "cb25244edcd69206e1c0206df244391ca4bbc4b6" },
-      { "name": "<Typography>", "componentKey": "2e7b6c0882fd7bcff37b51c6ba183e30836375d4" },
-      { "name": "<ColorPickerButton>", "componentKey": "ce1f0e1c7cdecd41a764089aff4e5e0de2924b50" }
+      {
+        "name": "<Avatar>",
+        "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417"
+      },
+      {
+        "name": "<ProfilePicture>",
+        "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f"
+      },
+      {
+        "name": "Backdrop",
+        "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7"
+      },
+      {
+        "name": "<Badge>",
+        "componentKey": "f3567dc7dfe5f272c0fb4dd8c8c21fb412b61237"
+      },
+      {
+        "name": "<Badge> | With Instance",
+        "componentKey": "313dc3350b5b7dcde367bf2a239548e521158f30"
+      },
+      {
+        "name": "<Checkbox>",
+        "componentKey": "514c6760d8866c7d0b6ed891df3be2aface265ec"
+      },
+      {
+        "name": "✚Checkbox",
+        "componentKey": "b6621b791778c9bc9cd75b7ed8871e011ee9a33f"
+      },
+      {
+        "name": "<Divider> | Horizontal",
+        "componentKey": "c5acfc3db5c50cef027786563a9b6080826ace41"
+      },
+      {
+        "name": "<Divider> | Vertical",
+        "componentKey": "ea62405f1ae55e875da0f4367af76aa109519270"
+      },
+      {
+        "name": "<Drawer>",
+        "componentKey": "ad2b0dce4e7742a8f937c8265a0cadbfef1c4bab"
+      },
+      {
+        "name": "<Fab>",
+        "componentKey": "a95ed9e2684afb5b48746d16711e237c8f535f47"
+      },
+      {
+        "name": "<Icon>",
+        "componentKey": "89b4b8d62421765b68506d994ff843e190f726a0"
+      },
+      {
+        "name": "<Link>",
+        "componentKey": "817b50382db55c61f4c709a2781ef82ada76df19"
+      },
+      {
+        "name": "<ListItem>",
+        "componentKey": "20866e89fb8bcc742ed5d1e35cf31e40c79fff11"
+      },
+      {
+        "name": "<Pagination>",
+        "componentKey": "2a4aefe8c5c1b107392e1aa7918011c57034f5c7"
+      },
+      {
+        "name": "<Radio>",
+        "componentKey": "d9107d8af071c3ce688e4c1e2be299511d68c0e6"
+      },
+      {
+        "name": "<SpeedDialItem>",
+        "componentKey": "a1a6228f3f94c6349a2bb756c301868bf6145676"
+      },
+      {
+        "name": "<Sidebar menu item>",
+        "componentKey": "93d760dd44ee04aed829c38602b564ea091e7690"
+      },
+      {
+        "name": "<Switch>",
+        "componentKey": "caa8b9915bbc1b1a08c1380d32e79abb35bc87f5"
+      },
+      {
+        "name": "<Tab>",
+        "componentKey": "84d68de8b910fe5498b5daba3b5d2d7aa6b66ddc"
+      },
+      {
+        "name": "<TableCell>",
+        "componentKey": "732bbb2db30b9512bb13ce47d26d73349567c698"
+      },
+      {
+        "name": "<TableHead>",
+        "componentKey": "b3bf0c08491f4d4c747467a460a72a3c5de88c41"
+      },
+      {
+        "name": "<ToggleButton>",
+        "componentKey": "aef7a1866920cd60767e5976d6ba82394759975d"
+      },
+      {
+        "name": "<TopBarTab>",
+        "componentKey": "372ac44a21c5e5ed0b987ee42a476c7f02f66a56"
+      },
+      {
+        "name": "<TreeView>",
+        "componentKey": "cb25244edcd69206e1c0206df244391ca4bbc4b6"
+      },
+      {
+        "name": "<Typography>",
+        "componentKey": "2e7b6c0882fd7bcff37b51c6ba183e30836375d4"
+      }
     ],
     "molecules": [
-      { "name": "<Alert>", "componentKey": "76c285dc9d0097e029c71700c215b8e6a39e2c09" },
-      { "name": "<AvatarGroup>", "componentKey": "cd516037f1540e1cbf33439ecd989c897543846e" },
-      { "name": "<Button>", "componentKey": "e36ff9f16eeb4cc71a33cd0977de16ddc6af7e41" },
-      { "name": "<ButtonGroup>", "componentKey": "d09cb9f33763f620e001ae63bbb81187d43d9852" },
-      { "name": "<LoadingButton>", "componentKey": "1a5317c8c0991ddaeab1d68df1458af252b82783" },
-      { "name": "Floating Button", "componentKey": "38d672df87f4a4277a1ac3f9e43f1daa60059d4e" },
-      { "name": "splitbutton", "componentKey": "1cfed37811d80157c52a6fc28bdd19e7f5ffa692" },
-      { "name": "<CardHeader>", "componentKey": "218259eb0b883e4abdea7e2aad50e01cc4808caa" },
-      { "name": "<Chip>", "componentKey": "0fded414b465fc36b7a28b60d7bc2876e77f734c" },
-      { "name": "<DialogActions>", "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080" },
-      { "name": "<DialogContent>", "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59" },
-      { "name": "<DialogTitle>", "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80" },
-      { "name": "<FormControlLabel> | Checkbox", "componentKey": "cfe635d270845d63e72e5ac68d0de1da5da8e2b0" },
-      { "name": "<FormControlLabel> | Radio", "componentKey": "e722314e98724d857b604322368a624ab5a963d0" },
-      { "name": "<FormControlLabel> | Switch", "componentKey": "5360345cd2e20e4eb7f52cabeb54ca739a68f1ca" },
-      { "name": "<FormGroup> | <Checkbox>", "componentKey": "13eab78dafa49286a03c6ae86473033a65157c21" },
-      { "name": "<FormGroup> | <RadioGroup>", "componentKey": "f2bdc20a4374989042b9106aa5b64238ff872803" },
-      { "name": "<FormGroup> | <Switch>", "componentKey": "5c4af1580b4ad97ddf248c4a85dd3319b98603c1" },
-      { "name": "<IconButton>", "componentKey": "7bf383a97f2a696c34c19cd5c1596ac2d22a2642" },
-      { "name": "<MultiSelect>", "componentKey": "dc80c39167ccab18f839e00fdf433ee0644e0596" },
-      { "name": "<RadioGroup>", "componentKey": "ddc023ebe5609db2db3e401039902eaa782369cc" },
-      { "name": "<Select>", "componentKey": "7db7714ec290782c969567390d55b44a87305a60" },
-      { "name": "<Tabs>", "componentKey": "d86db59630dcf015f18e7e67525d97ec02eea0df" },
-      { "name": "<TextField>", "componentKey": "5c6c5b28c1a2735a5ab4400cb4daa8b913ac2664" },
-      { "name": "<TextField> | Multiline", "componentKey": "4a274160c5103a8a23e4cdf264e641c40e69711b" },
-      { "name": "<ToggleButtonGroup>", "componentKey": "0608cbf6c2d770378611f5131623c16b180a6536" },
-      { "name": "ToggleButton | Entity legend", "componentKey": "4a42a102905fe3dfaf0064a62a1663567b8a6121" },
-      { "name": "<TableCellRow>", "componentKey": "c7bd3de33f898bc4ef9a0f46426b0a636f8e13e2" },
-      { "name": "<TableHeadRow>", "componentKey": "a94f5245b4615e549b2645a9f6ae7c1f576580ca" },
-      { "name": "<TransferList>", "componentKey": "4305502cfcdf684c095cbbb42f31c9346ae98454" },
-      { "name": "<PopupActionButton>", "componentKey": "3ef92dd530c33763f5dcffc8e8f2f41d9e1c27fd" }
+      {
+        "name": "<Alert>",
+        "componentKey": "76c285dc9d0097e029c71700c215b8e6a39e2c09"
+      },
+      {
+        "name": "<AvatarGroup>",
+        "componentKey": "cd516037f1540e1cbf33439ecd989c897543846e"
+      },
+      {
+        "name": "<Button>",
+        "componentKey": "e36ff9f16eeb4cc71a33cd0977de16ddc6af7e41"
+      },
+      {
+        "name": "<ButtonGroup>",
+        "componentKey": "d09cb9f33763f620e001ae63bbb81187d43d9852"
+      },
+      {
+        "name": "<LoadingButton>",
+        "componentKey": "1a5317c8c0991ddaeab1d68df1458af252b82783"
+      },
+      {
+        "name": "Floating Button",
+        "componentKey": "38d672df87f4a4277a1ac3f9e43f1daa60059d4e"
+      },
+      {
+        "name": "<SplitIconButton>",
+        "componentKey": "1cfed37811d80157c52a6fc28bdd19e7f5ffa692"
+      },
+      {
+        "name": "<CardHeader>",
+        "componentKey": "218259eb0b883e4abdea7e2aad50e01cc4808caa"
+      },
+      {
+        "name": "<Chip>",
+        "componentKey": "0fded414b465fc36b7a28b60d7bc2876e77f734c"
+      },
+      {
+        "name": "<ColorPickerButton>",
+        "componentKey": "ce1f0e1c7cdecd41a764089aff4e5e0de2924b50"
+      },
+      {
+        "name": "<DialogActions>",
+        "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080"
+      },
+      {
+        "name": "<DialogContent>",
+        "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59"
+      },
+      {
+        "name": "<DialogTitle>",
+        "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80"
+      },
+      {
+        "name": "<FormControlLabel> | Checkbox",
+        "componentKey": "cfe635d270845d63e72e5ac68d0de1da5da8e2b0"
+      },
+      {
+        "name": "<FormControlLabel> | Radio",
+        "componentKey": "e722314e98724d857b604322368a624ab5a963d0"
+      },
+      {
+        "name": "<FormControlLabel> | Switch",
+        "componentKey": "5360345cd2e20e4eb7f52cabeb54ca739a68f1ca"
+      },
+      {
+        "name": "<FormGroup> | <Checkbox>",
+        "componentKey": "13eab78dafa49286a03c6ae86473033a65157c21"
+      },
+      {
+        "name": "<FormGroup> | <RadioGroup>",
+        "componentKey": "f2bdc20a4374989042b9106aa5b64238ff872803"
+      },
+      {
+        "name": "<FormGroup> | <Switch>",
+        "componentKey": "5c4af1580b4ad97ddf248c4a85dd3319b98603c1"
+      },
+      {
+        "name": "<IconButton>",
+        "componentKey": "7bf383a97f2a696c34c19cd5c1596ac2d22a2642"
+      },
+      {
+        "name": "<MultiSelect>",
+        "componentKey": "dc80c39167ccab18f839e00fdf433ee0644e0596"
+      },
+      {
+        "name": "<RadioGroup>",
+        "componentKey": "ddc023ebe5609db2db3e401039902eaa782369cc"
+      },
+      {
+        "name": "<Select>",
+        "componentKey": "7db7714ec290782c969567390d55b44a87305a60"
+      },
+      {
+        "name": "<Tabs>",
+        "componentKey": "d86db59630dcf015f18e7e67525d97ec02eea0df"
+      },
+      {
+        "name": "<TextField>",
+        "componentKey": "5c6c5b28c1a2735a5ab4400cb4daa8b913ac2664"
+      },
+      {
+        "name": "<TextField> | Multiline",
+        "componentKey": "4a274160c5103a8a23e4cdf264e641c40e69711b"
+      },
+      {
+        "name": "<ToggleButtonGroup>",
+        "componentKey": "0608cbf6c2d770378611f5131623c16b180a6536"
+      },
+      {
+        "name": "ToggleButton | Entity legend",
+        "componentKey": "4a42a102905fe3dfaf0064a62a1663567b8a6121"
+      },
+      {
+        "name": "<TableCellRow>",
+        "componentKey": "c7bd3de33f898bc4ef9a0f46426b0a636f8e13e2"
+      },
+      {
+        "name": "<TableHeadRow>",
+        "componentKey": "a94f5245b4615e549b2645a9f6ae7c1f576580ca"
+      },
+      {
+        "name": "<TransferList>",
+        "componentKey": "4305502cfcdf684c095cbbb42f31c9346ae98454"
+      },
+      {
+        "name": "<PopupActionButton>",
+        "componentKey": "3ef92dd530c33763f5dcffc8e8f2f41d9e1c27fd"
+      }
     ],
     "organisms": [
-      { "name": "<Accordion> | Group", "componentKey": "e27f9c2ef70b4fb085a5a1458566e1cdaedaa3f6" },
-      { "name": "<Application top-bar>", "componentKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2" },
-      { "name": "<AppFilters>", "componentKey": "14eef66e973bc051e32f312ba45c31dec42e145e" },
-      { "name": "<DataGridTable>", "componentKey": "e50367fad3b62cfc3a7520cea11499e0370b654f" },
-      { "name": "<DataGrid> | Header", "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866" },
-      { "name": "<DataGrid> | Header | Column Group", "componentKey": "ae863b61acc7baaa21e782303067b3471f2c7490" },
-      { "name": "<DataGrid> | Cell", "componentKey": "24ab1e4e3abc4658778fb1ab744ea13deef4b64d" },
-      { "name": "<DataGrid> | Cell Rows", "componentKey": "cccb2e0e336ce022a23ccb4e20822e730e7d96bd" },
-      { "name": "<Dialog>", "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095" },
-      { "name": "<Side-Drawer>", "componentKey": "eed73b36aec6ede551188b6d42fbdcfdeb5e0257" },
-      { "name": "<Table>", "componentKey": "39c415479251323d1753bef4b79a3c3fdc1fa810" },
-      { "name": "<TableCellInners>", "componentKey": "0c1425ef9b7c2aebc88f6c64a2bfa85507252479" },
-      { "name": "<SearchResultListItem>", "componentKey": "bf8c878ff8021cbd350393861763f8544fdbfa3c" },
-      { "name": "<Sidebar>", "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210" },
-      { "name": "<Task list>", "componentKey": "59bdb48db0698778ebbdb04f0e4af7110dc0811a" },
-      { "name": "<TaskItem>", "componentKey": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7" },
-      { "name": "<Form Blocks> | Subject", "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4" }
+      {
+        "name": "<Accordion> | Group",
+        "componentKey": "e27f9c2ef70b4fb085a5a1458566e1cdaedaa3f6"
+      },
+      {
+        "name": "<Application top-bar>",
+        "componentKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2"
+      },
+      {
+        "name": "<AppFilters>",
+        "componentKey": "14eef66e973bc051e32f312ba45c31dec42e145e"
+      },
+      {
+        "name": "<DataGridTable>",
+        "componentKey": "e50367fad3b62cfc3a7520cea11499e0370b654f"
+      },
+      {
+        "name": "<DataGrid> | Header",
+        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866"
+      },
+      {
+        "name": "<DataGrid> | Header | Column Group",
+        "componentKey": "ae863b61acc7baaa21e782303067b3471f2c7490"
+      },
+      {
+        "name": "<DataGrid> | Cell",
+        "componentKey": "24ab1e4e3abc4658778fb1ab744ea13deef4b64d"
+      },
+      {
+        "name": "<DataGrid> | Cell Rows",
+        "componentKey": "cccb2e0e336ce022a23ccb4e20822e730e7d96bd"
+      },
+      {
+        "name": "<Dialog>",
+        "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095"
+      },
+      {
+        "name": "<Side-Drawer>",
+        "componentKey": "eed73b36aec6ede551188b6d42fbdcfdeb5e0257"
+      },
+      {
+        "name": "<Table>",
+        "componentKey": "39c415479251323d1753bef4b79a3c3fdc1fa810"
+      },
+      {
+        "name": "<TableCellInners>",
+        "componentKey": "0c1425ef9b7c2aebc88f6c64a2bfa85507252479"
+      },
+      {
+        "name": "<SearchResultListItem>",
+        "componentKey": "bf8c878ff8021cbd350393861763f8544fdbfa3c"
+      },
+      {
+        "name": "<Sidebar>",
+        "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210"
+      },
+      {
+        "name": "<Task list>",
+        "componentKey": "59bdb48db0698778ebbdb04f0e4af7110dc0811a"
+      },
+      {
+        "name": "<TaskItem>",
+        "componentKey": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7"
+      },
+      {
+        "name": "<Form Blocks> | Subject",
+        "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4"
+      }
     ]
   },
   "applicationNavigation": {
@@ -148,10 +372,26 @@
       },
       "properties": {
         "Icon#18112:0": { "name": "Icon", "type": "INSTANCE_SWAP" },
-        "Badge?#18182:0": { "name": "Badge?", "type": "BOOLEAN", "defaultValue": false },
-        "State": { "type": "VARIANT", "defaultValue": "Default", "options": ["Default", "Hover", "Focused", "Pressed"] },
-        "Active": { "type": "VARIANT", "defaultValue": "False", "options": ["False", "True"] },
-        "Variant": { "type": "VARIANT", "defaultValue": "E", "options": ["Icon", "E"] }
+        "Badge?#18182:0": {
+          "name": "Badge?",
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "options": ["Default", "Hover", "Focused", "Pressed"]
+        },
+        "Active": {
+          "type": "VARIANT",
+          "defaultValue": "False",
+          "options": ["False", "True"]
+        },
+        "Variant": {
+          "type": "VARIANT",
+          "defaultValue": "E",
+          "options": ["Icon", "E"]
+        }
       },
       "usage": [
         "Use Variant=Icon for normal app/navigation icons.",
@@ -180,10 +420,18 @@
       "defaultVariantSize": { "width": 1294, "height": 64 },
       "tallVariantSizes": [
         { "application": "Edit document - PDF", "width": 1294, "height": 120 },
-        { "application": "Edit document - AI replays", "width": 1294, "height": 116 }
+        {
+          "application": "Edit document - AI replays",
+          "width": 1294,
+          "height": 116
+        }
       ],
       "properties": {
-        "PDF template selector?#22990:0": { "name": "PDF template selector?", "type": "BOOLEAN", "defaultValue": true },
+        "PDF template selector?#22990:0": {
+          "name": "PDF template selector?",
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
         "Application": {
           "type": "VARIANT",
           "defaultValue": "Tasks",
@@ -229,14 +477,46 @@
         { "variant": "Static small", "width": 124, "height": 32 }
       ],
       "properties": {
-        "Text#10238:13": { "name": "Text", "type": "BOOLEAN", "defaultValue": true },
-        "Tab Content#11073:2012": { "name": "Tab Content", "type": "TEXT", "defaultValue": "Tab" },
-        "TaskIcon?#18828:0": { "name": "TaskIcon?", "type": "BOOLEAN", "defaultValue": false },
-        "Badge?#22765:8": { "name": "Badge?", "type": "BOOLEAN", "defaultValue": false },
-        "Dynamic?": { "type": "VARIANT", "defaultValue": "True", "options": ["False", "True"] },
-        "Active": { "type": "VARIANT", "defaultValue": "False", "options": ["False", "True"] },
-        "State": { "type": "VARIANT", "defaultValue": "Enabled", "options": ["Enabled", "Hovered", "Focused", "Pressed", "Hover"] },
-        "Size": { "type": "VARIANT", "defaultValue": "Default", "options": ["Default", "Small"] }
+        "Text#10238:13": {
+          "name": "Text",
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Tab Content#11073:2012": {
+          "name": "Tab Content",
+          "type": "TEXT",
+          "defaultValue": "Tab"
+        },
+        "TaskIcon?#18828:0": {
+          "name": "TaskIcon?",
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Badge?#22765:8": {
+          "name": "Badge?",
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Dynamic?": {
+          "type": "VARIANT",
+          "defaultValue": "True",
+          "options": ["False", "True"]
+        },
+        "Active": {
+          "type": "VARIANT",
+          "defaultValue": "False",
+          "options": ["False", "True"]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Enabled",
+          "options": ["Enabled", "Hovered", "Focused", "Pressed", "Hover"]
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "options": ["Default", "Small"]
+        }
       },
       "usage": [
         "Use Active=True for the currently selected grouped-content tab.",
@@ -276,9 +556,7 @@
       "nodeId": "6558:39344",
       "componentKey": "ddc023ebe5609db2db3e401039902eaa782369cc",
       "purpose": "Groups mutually exclusive radio choices.",
-      "usage": [
-        "Use for Preferences / Appearance icon appearance choices."
-      ]
+      "usage": ["Use for Preferences / Appearance icon appearance choices."]
     },
     "formControlLabelRadio": {
       "name": "<FormControlLabel> | Radio",
@@ -286,9 +564,7 @@
       "nodeId": "634:100262",
       "componentSetKey": "e722314e98724d857b604322368a624ab5a963d0",
       "purpose": "Radio input with visible label.",
-      "usage": [
-        "Use for Colorful and Monochrome icon appearance options."
-      ]
+      "usage": ["Use for Colorful and Monochrome icon appearance options."]
     }
   },
   "taskAndDocumentWorkflow": {
@@ -301,8 +577,16 @@
       "expandedSize": { "width": 320, "height": 992 },
       "collapsedSize": { "width": 56, "height": 992 },
       "properties": {
-        "State": { "type": "VARIANT", "defaultValue": "Empty", "options": ["Filled in", "Empty", "Collapsed"] },
-        "Tab": { "type": "VARIANT", "defaultValue": "Search", "options": ["Search", "Saved Searches"] }
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Empty",
+          "options": ["Filled in", "Empty", "Collapsed"]
+        },
+        "Tab": {
+          "type": "VARIANT",
+          "defaultValue": "Search",
+          "options": ["Search", "Saved Searches"]
+        }
       },
       "dependencies": [
         "<Tabs>",
@@ -350,17 +634,41 @@
       "purpose": "Task card/list row used inside Task list.",
       "defaultSize": { "width": 396, "height": 154 },
       "properties": {
-        "Submission Date#518:5": { "name": "Submission Date", "type": "TEXT", "defaultValue": "18/11/2020" },
+        "Submission Date#518:5": {
+          "name": "Submission Date",
+          "type": "TEXT",
+          "defaultValue": "18/11/2020"
+        },
         "Subject#518:6": { "name": "Subject", "type": "TEXT" },
         "EJS#518:7": { "name": "EJS", "type": "TEXT" },
         "Flow status#518:8": { "name": "Flow status", "type": "TEXT" },
-        "Important?#518:9": { "name": "Important?", "type": "BOOLEAN", "defaultValue": true },
+        "Important?#518:9": {
+          "name": "Important?",
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
         "ID#518:10": { "name": "ID", "type": "TEXT" },
         "Task type#518:11": { "name": "Task type", "type": "INSTANCE_SWAP" },
-        "EJS?#18045:0": { "name": "EJS?", "type": "BOOLEAN", "defaultValue": true },
-        "Color tag#24657:0": { "name": "Color tag", "type": "BOOLEAN", "defaultValue": false },
-        "Freezed?#25818:0": { "name": "Freezed?", "type": "BOOLEAN", "defaultValue": false },
-        "State": { "type": "VARIANT", "defaultValue": "Default", "options": ["Default", "Hover", "Focused", "Selected"] }
+        "EJS?#18045:0": {
+          "name": "EJS?",
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Color tag#24657:0": {
+          "name": "Color tag",
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Freezed?#25818:0": {
+          "name": "Freezed?",
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "options": ["Default", "Hover", "Focused", "Selected"]
+        }
       },
       "usage": [
         "Use Selected for the active task shown in an adjacent preview/detail island.",
