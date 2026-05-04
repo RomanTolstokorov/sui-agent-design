@@ -37,6 +37,10 @@ When a Figma API or `use_figma` scripting blocker is encountered during drawing 
 
 Do not re-derive the same workaround across sessions. Do not skip persistence even when the fix is obvious — future agents need the registry to avoid repeating discovery.
 
+## Figma Delivery Rule
+
+After drawing or updating a design in Figma, include a direct link to the Figma page that contains the latest created or updated design in the final response.
+
 ## SUI-Only Drawing Rule
 
 Never draw a UI element from primitives if a published Teletronics SUI component exists for it. Before placing anything in Figma, verify it is in `figma/components/index.json`. If no matching SUI component exists, stop and ask the user for permission before using a custom or primitive approach — describe exactly what is missing and why. Never silently fall back to hand-built elements.
