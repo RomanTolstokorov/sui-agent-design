@@ -1,0 +1,293 @@
+{
+  "name": "Teletronics SUI Form Blocks",
+  "purpose": "Focused registry for task/document form block composition. Use only when a task/document form, form block, form block content, attachments block, documents block, keywords block, or task preview/edit section is requested.",
+  "source": {
+    "fileKey": "F8J2cgGBsmyFLyw9OW6Njq",
+    "reliability": "Use componentKey and nodeId fields as stable references. Figma page names are intentionally not used because DS pages can be renamed or reorganized.",
+    "references": {
+      "keywords": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18731-43097",
+      "documents": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18242-9975",
+      "attachmentsVariants": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18722-126452",
+      "subject": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=26259-5412",
+      "subjectAnnotation": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18733-43714"
+    }
+  },
+  "rules": [
+    "A full form block wrapper contains the section icon, section name, actions, and content area.",
+    "Use a <Form Blocks> | ... wrapper when the section needs its own header and section shell.",
+    "Use <Form Blocks Content> | ... inside an existing wrapper or manually constructed section shell.",
+    "Task and document forms choose visible sections by workflow configuration.",
+    "<Form Blocks> | Subject is special and must be first in task forms.",
+    "Documents and Temporary Documents are separate section/content paths even when both reuse <DocumentListItem>.",
+    "Prefer prepared attachment variants when the requested scenario matches one of them."
+  ],
+  "baseComponents": {
+    "title": {
+      "name": "<Form Blocks Component> | Title",
+      "nodeId": "18233:9687",
+      "componentKey": "1451d9914e82e478f9d63c8bb9db2516c3768c96",
+      "role": "Shared block header structure containing section name, icon, and action area."
+    },
+    "actions": {
+      "name": "<Form Blocks Component> | Actions",
+      "nodeId": "18233:9681",
+      "componentKey": "b1ab3ba12333686bac74b81006ec46ec1ed43fe2",
+      "role": "Shared action slot for form block headers."
+    }
+  },
+  "wrappers": {
+    "attachments": {
+      "name": "<Form Blocks> | Attachments",
+      "nodeId": "18241:51758",
+      "componentKey": "c6fcd21cd7326057a277ef408df18c66363de0cc",
+      "content": "<Form Blocks Content> | Attachments"
+    },
+    "authorComment": {
+      "name": "<Form Blocks> | Autor commnet",
+      "nodeId": "18233:46260",
+      "componentKey": "7b832765686cfa38899cc9fa8f6643d580dbe20a",
+      "content": "<Form Blocks Content> | Text"
+    },
+    "comments": {
+      "name": "<Form Blocks> | Comments",
+      "nodeId": "18242:10054",
+      "componentKey": "1937ddd4828303aba970b499988cdc4c8734bc7c",
+      "content": "<Form Blocks Content> | Comments"
+    },
+    "documentBodyText": {
+      "name": "<Form Blocks> | Document body text",
+      "nodeId": "22858:26750",
+      "componentKey": "5831a61894e336ff9f7daac3082011651966b46d",
+      "content": null
+    },
+    "documents": {
+      "name": "<Form Blocks> | Documents",
+      "nodeId": "18242:9975",
+      "componentKey": "216d119ed1f4efd0f634033b708c21b2148b7379",
+      "content": "<Form Blocks Content> | Documents"
+    },
+    "entity": {
+      "name": "<Form Blocks> | Entity",
+      "nodeId": "26515:40821",
+      "componentKey": "a85e275b5058e8761276ec75f24919d787877a13",
+      "content": "<Form Blocks Content> | Entity"
+    },
+    "keywords": {
+      "name": "<Form Blocks> | Keywords",
+      "nodeId": "22867:46729",
+      "componentKey": "25bc75f48165afb9921411b56b1cc48c9b7936c2",
+      "content": "<Form Blocks Content> | Keywords"
+    },
+    "lastTransitionCommentBanner": {
+      "name": "<Form Blocks> | Last transition comment banner",
+      "nodeId": "18233:10353",
+      "componentKey": "c2fc5f9d8642d5372336fd5225b725685abdec44",
+      "content": null
+    },
+    "records": {
+      "name": "<Form Blocks> | Records",
+      "nodeId": "18242:9950",
+      "componentKey": "93635a0932725a8b3845a7b24509348b2ed0f991",
+      "content": "<Form Blocks Content> | Records"
+    },
+    "response": {
+      "name": "<Form Blocks> | Response",
+      "nodeId": "18233:46259",
+      "componentKey": "ff21737c9017db33bb522ff169929b95d5a14855",
+      "content": "<Form Blocks Content> | Text"
+    },
+    "searchRequest": {
+      "name": "<Form Blocks> | Search request",
+      "nodeId": "18764:32052",
+      "componentKey": "0a377adf164bc4c50afe44eeec351ca899f11806",
+      "content": "<Form Blocks Content> | Search"
+    },
+    "subject": {
+      "name": "<Form Blocks> | Subject",
+      "nodeId": "26259:5412",
+      "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4",
+      "content": null,
+      "usage": "Always place first at the top of a task form."
+    },
+    "tasks": {
+      "name": "<Form Blocks> | Tasks",
+      "nodeId": "18242:10132",
+      "componentKey": "ae79c23f575f612812d06f0c613ad12fecbb7228",
+      "content": "<Form Blocks Content> | Task"
+    },
+    "temporaryAccessToDocuments": {
+      "name": "<Form Blocks> | Temporary access to documents",
+      "nodeId": "18254:12213",
+      "componentKey": "45affa7b7956d2682123149a6fc3a8258e2db5e1",
+      "content": "<Form Blocks Content> | Temporary Documents"
+    }
+  },
+  "content": {
+    "attachments": {
+      "name": "<Form Blocks Content> | Attachments",
+      "nodeId": "18235:9434",
+      "componentKey": "95dd2e96e27dff40141c0537c9acbb0d3913c69e",
+      "usedBy": [
+        "<Form Blocks> | Attachments"
+      ]
+    },
+    "comments": {
+      "name": "<Form Blocks Content> | Comments",
+      "nodeId": "18259:25566",
+      "componentKey": "97129d2c435a98a45abb04ce135e05758b76ee9a",
+      "usedBy": [
+        "<Form Blocks> | Comments"
+      ]
+    },
+    "documents": {
+      "name": "<Form Blocks Content> | Documents",
+      "nodeId": "18259:22652",
+      "componentKey": "3ccd6c41cf9a5f04e8994793400397488fec833e",
+      "usedBy": [
+        "<Form Blocks> | Documents"
+      ],
+      "sharedComponents": [
+        "<DocumentListItem>",
+        "<Document list item> | Document actions"
+      ]
+    },
+    "entity": {
+      "name": "<Form Blocks Content> | Entity",
+      "nodeId": "26515:41424",
+      "componentKey": "5bf26822f913157a31b5e3f9fc94f4cf04b42080",
+      "usedBy": [
+        "<Form Blocks> | Entity"
+      ]
+    },
+    "keywords": {
+      "name": "<Form Blocks Content> | Keywords",
+      "nodeId": "18534:38752",
+      "componentKey": "8e6942fa30308dae97b923e7904f231f31852b0d",
+      "usedBy": [
+        "<Form Blocks> | Keywords"
+      ]
+    },
+    "records": {
+      "name": "<Form Blocks Content> | Records",
+      "nodeId": "18274:8007",
+      "componentKey": "12fc63cc586e3939215005834f62b066026b771a",
+      "usedBy": [
+        "<Form Blocks> | Records"
+      ]
+    },
+    "search": {
+      "name": "<Form Blocks Content> | Search",
+      "nodeId": "18763:58908",
+      "componentKey": "8c5feda57400575d75ce02cb5856150be7fdc846",
+      "usedBy": [
+        "<Form Blocks> | Search request"
+      ]
+    },
+    "task": {
+      "name": "<Form Blocks Content> | Task",
+      "nodeId": "18331:54719",
+      "componentKey": "688af4533cb85f5a6f36baf07cdb969e4ad25f46",
+      "usedBy": [
+        "<Form Blocks> | Tasks"
+      ]
+    },
+    "temporaryDocuments": {
+      "name": "<Form Blocks Content> | Temporary Documents",
+      "nodeId": "18259:10842",
+      "componentKey": "9e4a54417e2e633f94f2233cb79424582e51b2d6",
+      "usedBy": [
+        "<Form Blocks> | Temporary access to documents"
+      ],
+      "sharedComponents": [
+        "<DocumentListItem>",
+        "<Document list item> | Access document actions",
+        "<Document list item> | Access denied"
+      ]
+    },
+    "text": {
+      "name": "<Form Blocks Content> | Text",
+      "nodeId": "18233:45918",
+      "componentKey": "5ea4df2bea552df01a29c122f683b890ccac8149",
+      "usedBy": [
+        "<Form Blocks> | Autor commnet",
+        "<Form Blocks> | Response"
+      ]
+    }
+  },
+  "sharedComponents": {
+    "documentListItem": {
+      "name": "<DocumentListItem>",
+      "nodeId": "18254:11755",
+      "componentKey": "806b899e1892bab312bd85d2bd36a1f577ff6bfa",
+      "usedBy": [
+        "<Form Blocks Content> | Documents",
+        "<Form Blocks Content> | Temporary Documents"
+      ]
+    },
+    "documentActions": {
+      "name": "<Document list item> | Document actions",
+      "nodeId": "18254:10419",
+      "componentKey": "add80fd309205db5b89ea7d8c5b8334b6f00d51f",
+      "usedBy": [
+        "<Form Blocks Content> | Documents"
+      ]
+    },
+    "accessDocumentActions": {
+      "name": "<Document list item> | Access document actions",
+      "nodeId": "18254:10351",
+      "componentKey": "329db3451aa33557f1d579c005570d7d4c6c8f3b",
+      "usedBy": [
+        "<Form Blocks Content> | Temporary Documents"
+      ]
+    },
+    "accessDenied": {
+      "name": "<Document list item> | Access denied",
+      "nodeId": "18254:10400",
+      "componentKey": "839254d279d5c58c312edfeae09cb7059932d787",
+      "usedBy": [
+        "<Form Blocks Content> | Temporary Documents"
+      ]
+    }
+  },
+  "toolbars": {
+    "attachments": {
+      "name": "<Form Blocks> | Attachments | ToolBar",
+      "nodeId": "18325:18607",
+      "componentKey": "5a3101eefe85ffcf0512911009dc92587280a245"
+    },
+    "task": {
+      "name": "<Form Blocks> | Task | Toolbar",
+      "nodeId": "18331:48013",
+      "componentKey": "664fd5f5cfae3a2010572c28d8a5dec266853221"
+    }
+  },
+  "readyVariants": {
+    "attachments": {
+      "sourceNodeId": "18722:126452",
+      "sourceUrl": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18722-126452",
+      "component": "<Form Blocks> | Attachments",
+      "scenarios": [
+        "Empty - Readonly",
+        "Empty - Editable",
+        "Drag'N'Drop",
+        "Search - no results",
+        "Cards / Not empty",
+        "Cards / Selected",
+        "Table / Not empty",
+        "Table / Selected",
+        "Cards + 3rd party attachments / Not empty",
+        "Cards + 3rd party attachments / Selected",
+        "Table + 3rd party attachments / Not empty",
+        "Table + 3rd party attachments / Selected"
+      ]
+    }
+  },
+  "discovery": {
+    "loadWhen": [
+      "Drawing task or document edit/preview form sections",
+      "The requested component name starts with <Form Blocks> or <Form Blocks Content>",
+      "A request mentions form blocks, block content, document form sections, attachments block, documents block, keywords block, or subject block"
+    ],
+    "routineIndex": "Do not load this registry during routine component lookup unless one of the loadWhen conditions applies."
+  }
+}

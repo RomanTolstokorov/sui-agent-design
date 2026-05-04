@@ -1,4 +1,4 @@
-.claude/worktree/*
+.claude/worktrees/*
 .agents/skills/caveman/*
 skills-lock.json
 .DS_Store

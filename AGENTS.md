@@ -37,6 +37,7 @@ Use local indexes for typography, color, spacing, and component keys during rout
 ## Detailed Instructions
 
 - `app/instructions/component-instance-text.md` - editing text inside library component instances
+- `app/instructions/figma-api-gotchas.md` - Figma API and `use_figma` scripting quirks
 - `app/instructions/modal-dialogs.md` - generic modal/dialog drawing workflow
 - `app/instructions/sui-component-imports.md` - importing SUI components and component sets safely
 

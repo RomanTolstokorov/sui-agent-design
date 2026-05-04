@@ -66,6 +66,14 @@
         "componentKey": "a7308052e85a338d3f507c8d9fc18a1f52f48b86"
       },
       {
+        "name": "<DataGrid> | Cell",
+        "componentKey": "24ab1e4e3abc4658778fb1ab744ea13deef4b64d"
+      },
+      {
+        "name": "<DataGrid> | Header",
+        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866"
+      },
+      {
         "name": "<DialogActions>",
         "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080"
       },
@@ -88,6 +96,10 @@
       {
         "name": "<Drawer>",
         "componentKey": "ad2b0dce4e7742a8f937c8265a0cadbfef1c4bab"
+      },
+      {
+        "name": "<FormFooter>",
+        "componentKey": "ba60ff0dcf8a461cb6be699bf859e4850b6c846b"
       },
       {
         "name": "<FormLabel>",
@@ -344,12 +356,92 @@
         "componentKey": "ce1f0e1c7cdecd41a764089aff4e5e0de2924b50"
       },
       {
+        "name": "<DataGrid> | Cell Rows",
+        "componentKey": "cccb2e0e336ce022a23ccb4e20822e730e7d96bd"
+      },
+      {
+        "name": "<DataGrid> | Header | Column Group",
+        "componentKey": "ae863b61acc7baaa21e782303067b3471f2c7490"
+      },
+      {
         "name": "<DialogTitle | DocSearch>",
         "componentKey": "88c805527ef6a122dd29ab6476afb74b24540db0"
       },
       {
+        "name": "<Document list item> | Access denied",
+        "componentKey": "839254d279d5c58c312edfeae09cb7059932d787"
+      },
+      {
+        "name": "<Document list item> | Access document actions",
+        "componentKey": "329db3451aa33557f1d579c005570d7d4c6c8f3b"
+      },
+      {
+        "name": "<Document list item> | Document actions",
+        "componentKey": "add80fd309205db5b89ea7d8c5b8334b6f00d51f"
+      },
+      {
+        "name": "<DocumentListItem>",
+        "componentKey": "806b899e1892bab312bd85d2bd36a1f577ff6bfa"
+      },
+      {
         "name": "<Fab>",
         "componentKey": "a95ed9e2684afb5b48746d16711e237c8f535f47"
+      },
+      {
+        "name": "<Form Blocks Component> | Actions",
+        "componentKey": "b1ab3ba12333686bac74b81006ec46ec1ed43fe2"
+      },
+      {
+        "name": "<Form Blocks Component> | Title",
+        "componentKey": "1451d9914e82e478f9d63c8bb9db2516c3768c96"
+      },
+      {
+        "name": "<Form Blocks Content> | Attachments",
+        "componentKey": "95dd2e96e27dff40141c0537c9acbb0d3913c69e"
+      },
+      {
+        "name": "<Form Blocks Content> | Comments",
+        "componentKey": "97129d2c435a98a45abb04ce135e05758b76ee9a"
+      },
+      {
+        "name": "<Form Blocks Content> | Documents",
+        "componentKey": "3ccd6c41cf9a5f04e8994793400397488fec833e"
+      },
+      {
+        "name": "<Form Blocks Content> | Entity",
+        "componentKey": "5bf26822f913157a31b5e3f9fc94f4cf04b42080"
+      },
+      {
+        "name": "<Form Blocks Content> | Keywords",
+        "componentKey": "8e6942fa30308dae97b923e7904f231f31852b0d"
+      },
+      {
+        "name": "<Form Blocks Content> | Records",
+        "componentKey": "12fc63cc586e3939215005834f62b066026b771a"
+      },
+      {
+        "name": "<Form Blocks Content> | Search",
+        "componentKey": "8c5feda57400575d75ce02cb5856150be7fdc846"
+      },
+      {
+        "name": "<Form Blocks Content> | Task",
+        "componentKey": "688af4533cb85f5a6f36baf07cdb969e4ad25f46"
+      },
+      {
+        "name": "<Form Blocks Content> | Temporary Documents",
+        "componentKey": "9e4a54417e2e633f94f2233cb79424582e51b2d6"
+      },
+      {
+        "name": "<Form Blocks Content> | Text",
+        "componentKey": "5ea4df2bea552df01a29c122f683b890ccac8149"
+      },
+      {
+        "name": "<Form Blocks> | Attachments | ToolBar",
+        "componentKey": "5a3101eefe85ffcf0512911009dc92587280a245"
+      },
+      {
+        "name": "<Form Blocks> | Task | Toolbar",
+        "componentKey": "664fd5f5cfae3a2010572c28d8a5dec266853221"
       },
       {
         "name": "<FormControlLabel> | Checkbox",
@@ -462,28 +554,16 @@
         "componentKey": "e27f9c2ef70b4fb085a5a1458566e1cdaedaa3f6"
       },
       {
+        "name": "<AIVariationsBanner>",
+        "componentKey": "6c04566db88b97ec836c7abf0a2e970ba178d932"
+      },
+      {
         "name": "<AppFilters>",
         "componentKey": "14eef66e973bc051e32f312ba45c31dec42e145e"
       },
       {
         "name": "<Application top-bar>",
         "componentKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2"
-      },
-      {
-        "name": "<DataGrid> | Cell",
-        "componentKey": "24ab1e4e3abc4658778fb1ab744ea13deef4b64d"
-      },
-      {
-        "name": "<DataGrid> | Cell Rows",
-        "componentKey": "cccb2e0e336ce022a23ccb4e20822e730e7d96bd"
-      },
-      {
-        "name": "<DataGrid> | Header",
-        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866"
-      },
-      {
-        "name": "<DataGrid> | Header | Column Group",
-        "componentKey": "ae863b61acc7baaa21e782303067b3471f2c7490"
       },
       {
         "name": "<DataGridTable>",
@@ -494,12 +574,60 @@
         "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095"
       },
       {
+        "name": "<Form Blocks> | Attachments",
+        "componentKey": "c6fcd21cd7326057a277ef408df18c66363de0cc"
+      },
+      {
+        "name": "<Form Blocks> | Autor commnet",
+        "componentKey": "7b832765686cfa38899cc9fa8f6643d580dbe20a"
+      },
+      {
+        "name": "<Form Blocks> | Comments",
+        "componentKey": "1937ddd4828303aba970b499988cdc4c8734bc7c"
+      },
+      {
+        "name": "<Form Blocks> | Document body text",
+        "componentKey": "5831a61894e336ff9f7daac3082011651966b46d"
+      },
+      {
+        "name": "<Form Blocks> | Documents",
+        "componentKey": "216d119ed1f4efd0f634033b708c21b2148b7379"
+      },
+      {
+        "name": "<Form Blocks> | Entity",
+        "componentKey": "a85e275b5058e8761276ec75f24919d787877a13"
+      },
+      {
+        "name": "<Form Blocks> | Keywords",
+        "componentKey": "25bc75f48165afb9921411b56b1cc48c9b7936c2"
+      },
+      {
+        "name": "<Form Blocks> | Last transition comment banner",
+        "componentKey": "c2fc5f9d8642d5372336fd5225b725685abdec44"
+      },
+      {
+        "name": "<Form Blocks> | Records",
+        "componentKey": "93635a0932725a8b3845a7b24509348b2ed0f991"
+      },
+      {
+        "name": "<Form Blocks> | Response",
+        "componentKey": "ff21737c9017db33bb522ff169929b95d5a14855"
+      },
+      {
+        "name": "<Form Blocks> | Search request",
+        "componentKey": "0a377adf164bc4c50afe44eeec351ca899f11806"
+      },
+      {
         "name": "<Form Blocks> | Subject",
         "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4"
       },
       {
-        "name": "<FormFooter>",
-        "componentKey": "ba60ff0dcf8a461cb6be699bf859e4850b6c846b"
+        "name": "<Form Blocks> | Tasks",
+        "componentKey": "ae79c23f575f612812d06f0c613ad12fecbb7228"
+      },
+      {
+        "name": "<Form Blocks> | Temporary access to documents",
+        "componentKey": "45affa7b7956d2682123149a6fc3a8258e2db5e1"
       },
       {
         "name": "<SearchResultListItem>",
@@ -526,146 +654,5 @@
         "componentKey": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7"
       }
     ]
-  },
-  "applicationNavigation": {
-    "sidebar": {
-      "name": "<Sidebar>",
-      "category": "organisms",
-      "nodeId": "18116:4132",
-      "componentKey": "12ede44857f7ed4ba7f2685ba56af26209767210",
-      "purpose": "Main application navigation rail.",
-      "usage": [
-        "Use as the main app navigation rail at the left edge of application screens.",
-        "Prefer the published component instance instead of rebuilding with primitives.",
-        "The sidebar has no exposed top-level properties; select app/menu state through nested instances where needed."
-      ]
-    },
-    "sidebarMenuItem": {
-      "name": "<Sidebar menu item>",
-      "category": "atoms",
-      "nodeId": "18112:2554",
-      "componentSetKey": "93d760dd44ee04aed829c38602b564ea091e7690",
-      "purpose": "Icon-sized app/navigation item used inside Sidebar; represents an app or navigation destination.",
-      "usage": [
-        "Use Variant=Icon for normal app/navigation icons.",
-        "Variant=E exists as the default component-set variant but should not be treated as the common app-nav choice unless matching the source design.",
-        "Use Active=True for the currently selected app or section.",
-        "Use interaction states only in state mockups; default static application screens should normally use State=Default."
-      ],
-      "referencedTokens": [
-        "action/active",
-        "primary/dark",
-        "primary/_states/selected",
-        "primary/_states/hover",
-        "primary/_states/focusVisible",
-        "text/_states/hover",
-        "text/_states/focusVisible"
-      ]
-    }
-  },
-  "applicationTopBar": {
-    "applicationTopBar": {
-      "name": "<Application top-bar>",
-      "category": "organisms",
-      "nodeId": "18182:82890",
-      "componentSetKey": "b6cde7cd669a24472f9645c0a38e57bab7d872e2",
-      "purpose": "Top navigation/control bar for a selected application. It represents the current sub-application and its internally grouped content/navigation.",
-      "usage": [
-        "Use inside the main app shell after the sidebar.",
-        "Use the whole organism when mocking a known application state.",
-        "Do not rebuild internals unless the existing top-bar variant does not match the mockup requirement."
-      ]
-    },
-    "topBarTab": {
-      "name": "<TopBarTab>",
-      "category": "atoms",
-      "nodeId": "18827:30777",
-      "componentSetKey": "372ac44a21c5e5ed0b987ee42a476c7f02f66a56",
-      "purpose": "Tab item for grouped content or sub-navigation inside an application top bar.",
-      "usage": [
-        "Use Active=True for the currently selected grouped-content tab.",
-        "Use Dynamic?=True when the tab is part of the dynamic top-bar tab treatment.",
-        "Use Dynamic?=False for compact/static tab groups."
-      ]
-    }
-  },
-  "overlayComponents": {
-    "backdrop": {
-      "name": "Backdrop",
-      "category": "atoms",
-      "nodeId": "6643:52207",
-      "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7",
-      "purpose": "Modal overlay layer used to emphasize a foreground element and de-emphasize the current app behind it.",
-      "usage": [
-        "Use with <Dialog> when drawing User Preferences modal states.",
-        "Import the published component; do not recreate or edit the design-system source."
-      ]
-    },
-    "dialog": {
-      "name": "<Dialog>",
-      "category": "organisms",
-      "nodeId": "6586:47183",
-      "componentSetKey": "fccf45793ec542d2e3b09e635d23466412e7f095",
-      "purpose": "Modal container for content that requires user attention or configuration.",
-      "usage": [
-        "Use with Backdrop for Preferences dialog flows.",
-        "Place product-specific content inside the dialog rather than rebuilding the modal shell from primitives."
-      ]
-    }
-  },
-  "formControls": {
-    "radioGroup": {
-      "name": "<RadioGroup>",
-      "category": "molecules",
-      "nodeId": "6558:39344",
-      "componentKey": "ddc023ebe5609db2db3e401039902eaa782369cc",
-      "purpose": "Groups mutually exclusive radio choices.",
-      "usage": ["Use for Preferences / Appearance icon appearance choices."]
-    },
-    "formControlLabelRadio": {
-      "name": "<FormControlLabel> | Radio",
-      "category": "molecules",
-      "nodeId": "634:100262",
-      "componentSetKey": "e722314e98724d857b604322368a624ab5a963d0",
-      "purpose": "Radio input with visible label.",
-      "usage": ["Use for Colorful and Monochrome icon appearance options."]
-    }
-  },
-  "taskAndDocumentWorkflow": {
-    "appFilters": {
-      "name": "<AppFilters>",
-      "category": "organisms",
-      "nodeId": "18271:99353",
-      "componentSetKey": "14eef66e973bc051e32f312ba45c31dec42e145e",
-      "purpose": "Shared filter panel for Task Management and Document applications.",
-      "usage": [
-        "Use as a filter island next to task/document lists or search results.",
-        "Use Collapsed when preserving workspace for dense content.",
-        "Use Saved Searches when showing reusable filters rather than active search controls."
-      ]
-    },
-    "taskList": {
-      "name": "<Task list>",
-      "category": "organisms",
-      "nodeId": "18764:80165",
-      "componentKey": "59bdb48db0698778ebbdb04f0e4af7110dc0811a",
-      "purpose": "Vertical task-list island with repeated TaskItem rows and pagination.",
-      "usage": [
-        "Use as the task list island in task-management screens.",
-        "Usually place beside filters and a preview/detail island."
-      ]
-    },
-    "taskItem": {
-      "name": "<TaskItem>",
-      "category": "organisms",
-      "nodeId": "18037:218667",
-      "componentSetKey": "afadefcb4745e07f0074b3bc52db1b9b3b6ddef7",
-      "purpose": "Task card/list row used inside Task list.",
-      "usage": [
-        "Use Selected for the active task shown in an adjacent preview/detail island.",
-        "Use Important?, Freezed?, EJS?, and Color tag only when those data flags are present.",
-        "The Task type instance swap is the task type/subtype icon. When the icon supports theming, it follows the system-wide icon appearance preference: Colorful uses components/icon/task_types/* palette variables and Monochrome uses neutral icon styling."
-      ]
-    }
   }
 }

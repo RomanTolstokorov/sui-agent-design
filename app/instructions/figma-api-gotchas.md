@@ -19,6 +19,35 @@ When you hit a new blocker, follow the **Figma API Workaround Rule** in `app/rul
 
 ## Entries
 
+### Page node target has no geometry
+
+**Symptom:** Inspecting or positioning against a user-provided target node fails or returns unusable geometry when the target is a Figma page, because page nodes do not expose `x` / `y` placement fields.
+
+**Cause:** A page node is a container for frames, not a drawable scene node. When a user sends a page node ID as the target, it means "draw on this page", not "draw inside this positioned node".
+
+**Workaround:** preflight the target node type before any geometry reads. If the target is a page, switch to that page and create the screen frame on it. Only read `x` / `y` after checking that the target supports geometry.
+```js
+const target = await figma.getNodeByIdAsync(targetNodeId);
+
+if (target?.type === "PAGE") {
+  await figma.setCurrentPageAsync(target);
+  const screen = figma.createFrame();
+  screen.name = "New screen";
+  screen.resize(1920, 1080);
+  target.appendChild(screen);
+  screen.x = 0;
+  screen.y = 0;
+} else if ("x" in target && "y" in target) {
+  // Safe to position relative to target geometry.
+} else {
+  throw new Error(`Unsupported drawing target type: ${target?.type ?? "missing"}`);
+}
+```
+
+**Discovered:** 2026-05-04
+
+---
+
 ### Page placement — nodes land on wrong page
 
 **Symptom:** `createInstance()` and other node creators silently append to `figma.currentPage` instead of the intended target page. Querying `page.children` from a non-active page returns empty.
