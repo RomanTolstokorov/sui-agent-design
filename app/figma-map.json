@@ -10,8 +10,6 @@
       ],
       "knowledgeFiles": [
         "app/apps/task-management.md",
-        "app/apps/task-management.json",
-        "app/screens/task-management/default.md",
         "app/screens/task-management/icon-appearance-result.md"
       ],
       "canonicalLayoutPreset": "app/screens/task-management/canonical-layout.md",

@@ -1,16 +1,14 @@
 # Task Management App Knowledge
 
-Use this file before drawing or modifying Task Management screens. It describes the product-level screen structure and the canonical Figma component reference. Use `app/apps/task-management.json` for machine-readable node IDs and component mappings.
+Use this file before drawing or modifying Task Management screens.
 
 ## Canonical Reference
 
 - Figma file: `Task-Managment`
 - File key: `OdNWALBR45nVe63thAAlEG`
-- Canonical component node: `3915:129350`
-- Canonical component name in Figma: `TaskManagment - Cannonical`
-- Canonical URL: `https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=3915-129350`
-- Treat this component as the default Task Management reference for application mockups.
-- Do not edit the canonical component unless the user explicitly asks to update it. Prefer creating an instance, duplicating it, or creating a new variant/mockup next to it.
+- Canonical component node: `3915:129350` (`TaskManagment - Cannonical`)
+- URL: `https://www.figma.com/design/OdNWALBR45nVe63thAAlEG/Task-Managment?node-id=3915-129350`
+- Do not edit the canonical component — create an instance, duplicate, or new mockup frame.
 
 ## Product Purpose
 
@@ -27,188 +25,149 @@ Common task work:
 - Update task sections such as linked records, documents, attachments, comments, or extra fields.
 - Use visible action buttons to move the task forward when the screen state calls for it.
 
-## Direction and Copy
-
-- Build all Task Management screens RTL.
-- Use English labels as working copy unless Arabic copy is provided.
-- Preserve enough width and flexible text behavior for future Arabic labels.
-- The canonical component currently mixes English control labels with Arabic task content. This is acceptable working-copy behavior.
-
 ## Canonical Layout
 
-For exact frame construction, sizing behavior, token bindings, and component keys, use `app/screens/task-management/canonical-layout.md`. Use `app/apps/task-management.json` only when a script needs machine-readable node IDs, component keys, or layout values.
+For exact frame construction, sizing behavior, token bindings, and component keys, use `app/screens/task-management/canonical-layout.md`.
 
-At a product level, the default work queue combines a right-side filter panel, a task list beside it, and a selected task preview/detail area on the left. Although the screen is RTL, the canonical work queue reads from right to left as filters, then task list, then preview/detail.
+At a product level, the default work queue reads from right to left (RTL): filters → task list → preview/detail.
 
 ## Main Regions
 
 ### Top Bar
 
-Use `<Application top-bar>` with the Tasks application variant as the starting point.
+Use `<Application top-bar>` with the Tasks application variant.
 
-Observed canonical content:
+| Property | Value |
+|----------|-------|
+| componentKey (set) | `b6cde7cd669a24472f9645c0a38e57bab7d872e2` |
+| Variant | `Application=Tasks` |
+| Title | Tasks |
+| Tabs | All, Created by me, Incoming |
+| Active tab | Incoming (badge `34/357`) |
+| Primary action | New task |
+| View controls | columns/view mode toggle |
+| Sort control | Sort by |
 
-- Title: `Tasks`
-- Tabs: `All`, `Created by me`, `Incoming`
-- Active tab: `Incoming`, with badge value `34/357`
-- Primary action: `New task`
-- View controls: small toggle button group for columns/view mode
-- Sort control: `Sort by`
-
-Do not rebuild the top bar from primitives for routine Task Management work. Use the published top-bar component and only modify/add controls when the requested feature belongs in global task navigation or global list control.
+Do not rebuild the top bar from primitives. Only add controls when the feature belongs in global task navigation or global list control.
 
 ### Filters Panel
 
-Use `<AppFilters>` as the default filter panel. It is the primary place for adding persistent task filters.
+Use `<AppFilters>` as the default filter panel.
 
-Observed canonical structure:
-
-- Panel width: `320`
-- Surface: `background/surface_2`
-- Radius: `cornerRadius/2`
-- Header with collapse icon and tabs
-- Tabs:
-  - `Search` active
-  - Saved searches tab displayed in Arabic in the canonical component
-- Search field below tabs
-- Filter heading with `More` text button
-- Filter content stack with 16px vertical gap
+| Property | Value |
+|----------|-------|
+| componentKey (set) | `14eef66e973bc051e32f312ba45c31dec42e145e` |
+| Default variant | `State=Filled in, Tab=Search` |
+| Width | 320 px |
+| Node ID | `2027:6819` |
 
 Observed canonical filters:
 
-- `Type`
-- `Work status`
-- `Color`
-- `Flow status`
-- `Creation Date`
-- `Country`
-- `Sub-county`, disabled/dependent under Country
-- `Updated Date`
-- `My groups`
+| Filter | Control | Row pattern |
+|--------|---------|-------------|
+| Type | MultiSelect | AppFilterInput |
+| Work status | MultiSelect | AppFilterInput |
+| Color | MultiSelect | AppFilterInput |
+| Flow status | MultiSelect | AppFilterInput |
+| Creation Date | TextField | AppFilterInput |
+| Country | Select | LinkedAppFilterInput parent |
+| Sub-county | MultiSelect (disabled) | LinkedAppFilterInput child |
+| Updated Date | MultiSelect | AppFilterInput |
+| My groups | MultiSelect | AppFilterInput |
 
-Most filter rows use an app-filter input pattern: a field on the left and a borderless medium `<ToggleButtonGroup>`/drag or condition control on the right. Preserve this row structure when adding new filters.
-
-Use `<MultiSelect>` for categorical filters, `<TextField>` for date/text filters, and `<Select>` for single-choice parent filters when matching the canonical pattern. Use dependent linked filter layout for fields like Country/Sub-county.
+New filter default placement: inside `<AppFilters>` content, after Work status and before Color unless product guidance says otherwise. Preserve 16px vertical gap between filter rows.
 
 ### Task List
 
 Use `<Task list>` as the default work queue list.
 
-Observed canonical structure:
+| Property | Value |
+|----------|-------|
+| componentKey | `59bdb48db0698778ebbdb04f0e4af7110dc0811a` |
+| Width | 420 px |
+| Node ID | `2614:64165` |
 
-- Panel width: `420`
-- Surface: `background/surface_2`
-- Radius: `cornerRadius/2`
-- List container uses 12px horizontal padding, 12px top padding, 8px bottom padding
-- Task cards are stacked with 16px vertical gap
-- Pagination is fixed to the bottom, `420 x 48`
+Each `<TaskItem>` row (`afadefcb4745e07f0074b3bc52db1b9b3b6ddef7`) is approximately 396 × 154 px with 16px vertical gap between cards.
 
-Each `<TaskItem>` card is about `396 x 154` or `396 x 156`, with:
+Observed row fields: task ID, task type/subtype icon, work status indicator, attachment indicator, related/subtask count, urgent indicator, subject, secondary/EJS text, submission date, flow status, assignee avatar, from avatar.
 
-- ID and task type/subtype icon
-- Work status indicator
-- Optional attachment and related/subtask indicators
-- Optional urgent icon
-- Subject line
-- Optional secondary/EJS text
-- Submission date
-- Flow status
-- Assignee/from avatar pair
+Use the selected `<TaskItem>` state when the adjacent preview/detail area reflects that task. Include enough signal to make the queue scannable — ID, subject, type icon, status, date, avatars, and indicators.
 
-Use the selected task item state when the adjacent preview/detail area reflects that task.
-
-When drawing list rows, include enough business signal to make the queue scannable: task ID, subject, type/subtype icon, status, date, assignee/from avatars, attachments, urgency/freeze indicators when relevant, and selected state when the preview is tied to that row.
+Pagination is fixed to the bottom at 420 × 48 px.
 
 #### Task Type/Subtype Icon Appearance
 
-The task type/subtype icon follows the system-wide icon appearance preference when the icon supports theming.
-
-- `Colorful` mode uses configured icon palette colors from `components/icon/task_types/*`.
-- `Monochrome` mode uses neutral monochrome styling.
-- Preserve icon size, placement, and row metadata in both modes.
-- Do not use the `Color` filter as the icon appearance control; icon appearance is configured in User Preferences / Appearance.
+- `Colorful` mode: use palette colors from `components/icon/task_types/*`.
+- `Monochrome` mode: neutral monochrome styling, preserve icon size and placement.
+- Icon appearance is configured in User Preferences / Appearance, not via the Color filter.
 
 For the full cross-app flow, read `app/flows/type-icon-appearance-preference.md`.
 
-### Preview or Detail Area
+### Preview / Detail Area
 
-The canonical left area is a selected task preview/detail island.
+| Property | Value |
+|----------|-------|
+| Width | 1076 px |
+| Node ID | `2027:6789` |
 
-Observed structure:
+Observed structure: actions bar, subject form block, inline text fields and chips, attachments, documents, author comment.
 
-- `Draft Preview Scrollable: Full screen`
-- Actions bar at top
-- Main form content below
-- Subject block
-- Inline text fields and chips
-- Attachment block
-- Documents block
-- Author comment block
+Avoid changing this area for filter-only work. If no task is selected, show a compact empty/instructional state rather than leaving the panel blank.
 
-When a requested feature only affects filtering or list discovery, avoid changing this preview area except to keep the selected task state coherent.
+## Targeted Node IDs
 
-Use this area for the selected task's work context: subject, fields, attachments, related documents, comments, and action surfaces. If no task is selected, show a compact empty/instructional state rather than leaving the panel blank.
+Use these when a script needs to inspect or modify a specific region without touching the full canonical component.
+
+| Region | Node ID |
+|--------|---------|
+| Top bar | `2027:6821` |
+| Working area | `2027:6788` |
+| Preview/detail | `2027:6789` |
+| Task list + filters group | `2027:6817` |
+| Task list | `2614:64165` |
+| Filters | `2027:6819` |
+| Sidebar | `2027:6786` |
 
 ## Common UX States
 
-- **Selected task:** one task row is selected and the preview/detail island reflects that task.
-- **Empty queue / no results:** keep filters visible and show a clear empty state in the list area.
-- **Loading:** keep the shell stable and show loading inside the list or preview region.
-- **Draft task:** show editable state and save/continue actions.
-- **Action required:** make the primary next action visible near the task detail or action bar.
-- **Validation/error:** show the issue next to the task section or action that needs correction.
+| State | Rule |
+|-------|------|
+| Selected task | One row selected; preview/detail reflects that task |
+| Empty queue / no results | Keep filters visible; show clear empty state in list area |
+| Loading | Keep shell stable; show loading inside list or preview region |
+| Draft task | Show editable state and save/continue actions |
+| Action required | Make primary next action visible near task detail or action bar |
+| Validation/error | Show issue next to the task section or action that needs correction |
 
 ## Feature Placement Rules
 
 - Add persistent filters inside `<AppFilters>` first.
-- Add active/applied filter chips near the task list or inside the filter panel only when the request explicitly asks for applied-state visibility.
-- Add top-bar controls only for global list scope, view mode, sorting, tab selection, or creation actions.
+- Add top-bar controls only for global scope, view mode, sorting, tabs, or creation actions.
 - Add task row metadata only when the feature changes how individual tasks are represented.
 - Keep filter controls close to the task list they affect.
-- Preserve the canonical `spacing/1` gap between the preview, list, and filter islands.
-- Preserve the canonical panel widths unless the requested feature cannot fit in the existing pattern.
-- Use `background/surface_0` for any new independent frame/screen base, `background/surface_2` for task/list/filter islands, and `background/surface_3` for cards/fields.
-- Keep task actions close to the selected task context; do not put task-specific actions in global navigation unless the feature is explicitly global.
-
-## Related Flows
-
-- `app/flows/type-icon-appearance-preference.md`: User Preferences owns the icon appearance setting. Task Management is the downstream result example for task type/subtype icons.
+- Preserve `spacing/1` (8 px) gap between the preview, list, and filter islands.
+- Preserve canonical panel widths unless the feature cannot fit.
+- Use `background/surface_0` for new screen bases, `background/surface_2` for task/list/filter islands, `background/surface_3` for cards/fields.
+- Keep task actions close to the selected task context.
 
 ## Common Feature Workflow
 
-When the user asks for a Task Management feature:
+1. Read `app/rules.md`, this file, and `app/screens/task-management/canonical-layout.md`.
+2. Inspect the canonical component node `3915:129350` only when local docs don't provide enough content detail.
+3. For targeted changes, use the node IDs in "Targeted Node IDs" above.
+4. Create an instance, duplicate, or new mockup frame — do not modify the canonical component.
+5. Use published SUI components by `componentKey`; never rebuild from primitives.
+6. Bind fills, strokes, spacing, and radius to published variables by `variableKey`.
 
-1. Read `app/rules.md`, `app/rules.json`, this file, and `app/apps/task-management.json`.
-2. Use `app/screens/task-management/canonical-layout.md` for exact frame structure.
-3. Read the local SUI component and foundation indexes before searching Figma.
-4. Inspect the canonical component node `3915:129350` in file `OdNWALBR45nVe63thAAlEG` only when local docs do not provide enough content detail.
-5. If the change affects filters, inspect node `2027:6819`.
-6. If the change affects list rows, inspect node `2614:64165`.
-7. If the change affects global controls, inspect node `2027:6821`.
-8. Create an instance, duplicate, or create a new mockup/version outside the canonical component unless instructed otherwise.
-9. Use published SUI components by `componentKey`; do not rebuild design-system components from primitives.
-10. Bind fills, strokes, spacing, and radius to published variables by `variableKey` where possible.
-11. Call out any missing product rule or token gap instead of silently inventing a new pattern.
+## Related Flows
 
-## Example: Adding a New Filter
-
-For a request like `Add a Priority filter in Task Management`:
-
-- Start from the canonical component `3915:129350`.
-- Place the new filter in `<AppFilters>` content, not the top bar.
-- Match the existing `<AppFilterInput>` row pattern.
-- Use `<MultiSelect>` if Priority can have multiple values; use `<Select>` if it is single-choice.
-- Insert it near similar task metadata filters. A reasonable default is after `Work status` and before `Color`, unless product guidance says otherwise.
-- Keep the row height, 4px internal input/control gap, 16px vertical filter-stack gap, and RTL alignment.
-- Optionally show applied state with a `<Chip>` only if requested.
+- `app/flows/type-icon-appearance-preference.md` — User Preferences owns the icon appearance setting; Task Management is the downstream result example.
 
 ## Open Product Questions
-
-These are not fully defined by the current canonical component:
 
 - Which filters are mandatory versus optional under `More`.
 - Whether active filters should appear as chips, inside the panel, above the list, or both.
 - Exact empty, loading, error, and no-results states.
 - Exact behavior of Saved Searches.
-- Whether `Priority` and `Urgent` are separate product concepts or one concept.
-- Responsive behavior below the canonical `1920 x 1080` component.
+- Whether `Priority` and `Urgent` are separate product concepts.
+- Responsive behavior below 1920 × 1080.
