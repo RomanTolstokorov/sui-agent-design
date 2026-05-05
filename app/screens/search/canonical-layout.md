@@ -143,3 +143,4 @@ Create or use the canonical filters panel as the second child.
 - Do not edit the canonical component (`2882:27314`) unless explicitly requested.
 - Never use raw hex or raw pixel values for fills, gaps, padding, or radii when a variable exists.
 - Search-specific components such as `<SearchQueryIsland>` and document-list internals may not all be present in the local SUI component index. Inspect the Search canonical file before recreating those internals.
+- No state-specific screen docs exist yet for Search — this file covers the default state. Add `app/screens/search/<state>.md` when a new variant is needed.
