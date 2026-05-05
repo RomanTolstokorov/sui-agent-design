@@ -6,6 +6,11 @@
   ],
   "agentNotes": {
     "insertingComponents": "Keys in this index can resolve to either a component or a component set. In use_figma scripts, use the safe import helper from app/instructions/sui-component-imports.md instead of assuming importComponentByKeyAsync or importComponentSetByKeyAsync from the field name.",
+    "componentSelectionRule": [
+      "Resolve the UI role to the most specific indexed component before importing.",
+      "Inspect variants and component properties for components with meaningful placement variants.",
+      "If a specific indexed component exists, use it instead of forcing a generic component."
+    ],
     "searchFallback": "Use search_design_system with the Teletronics SUI library key when you need to look up additional components or re-check names and keys.",
     "routineWork": "Do not query Figma for typography, color/elevation, spacing, or shape tokens during routine mockup work unless the design system has changed.",
     "relatedFiles": {
@@ -23,11 +28,13 @@
       },
       {
         "name": "<Avatar>",
-        "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417"
+        "componentKey": "144c1d6a01a36ed9d12bacbac56f309154060417",
+        "usage": "User identity display in compact contexts such as lists, rows, side panels, assignees, and profile summaries."
       },
       {
         "name": "<Backdrop>",
-        "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7"
+        "componentKey": "4271be8c7d2699b8ec5a8a5b30feb3d5eab219e7",
+        "usage": "Modal overlay layer that sits above inactive background content and behind the dialog or drawer surface."
       },
       {
         "name": "<Badge>",
@@ -67,23 +74,28 @@
       },
       {
         "name": "<DataGrid> | Cell",
-        "componentKey": "24ab1e4e3abc4658778fb1ab744ea13deef4b64d"
+        "componentKey": "24ab1e4e3abc4658778fb1ab744ea13deef4b64d",
+        "usage": "Tabular or grid cell content. Use for data rows instead of raw text when drawing a grid/table."
       },
       {
         "name": "<DataGrid> | Header",
-        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866"
+        "componentKey": "002e86068fc3304fd92ae8788a9b728ff1e3a866",
+        "usage": "Tabular or grid column headers. Use with matching DataGrid cells for table/grid layouts."
       },
       {
         "name": "<DialogActions>",
-        "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080"
+        "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080",
+        "usage": "Dialog footer action region when working with SUI dialog composition patterns."
       },
       {
         "name": "<DialogContent>",
-        "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59"
+        "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59",
+        "usage": "Dialog body region when working with SUI dialog composition patterns."
       },
       {
         "name": "<DialogTitle>",
-        "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80"
+        "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80",
+        "usage": "Dialog header/title region when working with SUI dialog composition patterns."
       },
       {
         "name": "<Divider> | Horizontal",
@@ -119,11 +131,13 @@
       },
       {
         "name": "<Link>",
-        "componentKey": "817b50382db55c61f4c709a2781ef82ada76df19"
+        "componentKey": "817b50382db55c61f4c709a2781ef82ada76df19",
+        "usage": "Navigational or inline text action that opens another view, route, document, or external target."
       },
       {
         "name": "<ListItem>",
-        "componentKey": "20866e89fb8bcc742ed5d1e35cf31e40c79fff11"
+        "componentKey": "20866e89fb8bcc742ed5d1e35cf31e40c79fff11",
+        "usage": "Row item in selectable lists, navigation lists, and compact item collections. Use dedicated Menu/MenuItem components for menu surfaces."
       },
       {
         "name": "<ListSubheader>",
@@ -155,7 +169,8 @@
       },
       {
         "name": "<ProfilePicture>",
-        "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f"
+        "componentKey": "47a7dd7837946a0be77a2b2c7be2215bb0bd005f",
+        "usage": "Larger user profile image display, especially in profile, avatar upload, or account surfaces."
       },
       {
         "name": "<Progress> | Circular",
@@ -235,7 +250,9 @@
       },
       {
         "name": "<Typography>",
-        "componentKey": "2e7b6c0882fd7bcff37b51c6ba183e30836375d4"
+        "componentKey": "2e7b6c0882fd7bcff37b51c6ba183e30836375d4",
+        "usage": "Text component instance for instance slots, swaps, or authored component composition.",
+        "selectionNotes": "Raw text nodes are allowed when bound to published typography styles. Do not replace styled raw text with Typography unless an instance/component slot is needed."
       },
       {
         "name": "Box Set - 1st Level",
@@ -333,7 +350,8 @@
     "molecules": [
       {
         "name": "<Alert>",
-        "componentKey": "76c285dc9d0097e029c71700c215b8e6a39e2c09"
+        "componentKey": "76c285dc9d0097e029c71700c215b8e6a39e2c09",
+        "usage": "Success, warning, info, validation, network failure, or other feedback message."
       },
       {
         "name": "<AvatarGroup>",
@@ -341,15 +359,29 @@
       },
       {
         "name": "<Button>",
-        "componentKey": "e36ff9f16eeb4cc71a33cd0977de16ddc6af7e41"
+        "componentKey": "e36ff9f16eeb4cc71a33cd0977de16ddc6af7e41",
+        "usage": "Explicit command actions such as Save, Create, Submit, Cancel, Upload, Choose file, and inline toolbar actions.",
+        "variantUsage": {
+          "Variant=Contained": "Primary or high-emphasis commands such as Save, Create, Submit.",
+          "Variant=Outlined": "Bordered non-primary commands that still need a clear button affordance, such as Cancel, Upload, or Choose file.",
+          "Variant=Text": "Low-emphasis inline commands, toolbar commands, and dialog tertiary actions.",
+          "Color=Primary": "Default non-destructive action color.",
+          "Color=Error": "Destructive actions.",
+          "Color=Inherit": "Use only when the button should inherit surrounding text color.",
+          "Color=Inherit (white)": "Use only on dark or colored surfaces that require white inherited text.",
+          "State=Disabled": "Unavailable action state."
+        },
+        "selectionNotes": "Choose the variant by command role and surface context. Do not use Color=Secondary unless an existing source screen or explicit product requirement calls for it."
       },
       {
         "name": "<ButtonGroup>",
-        "componentKey": "d09cb9f33763f620e001ae63bbb81187d43d9852"
+        "componentKey": "d09cb9f33763f620e001ae63bbb81187d43d9852",
+        "usage": "Grouped related button actions where choices or commands should appear as one connected control."
       },
       {
         "name": "<Chip>",
-        "componentKey": "0fded414b465fc36b7a28b60d7bc2876e77f734c"
+        "componentKey": "0fded414b465fc36b7a28b60d7bc2876e77f734c",
+        "usage": "Compact label, token, selected value, status marker, filter pill, or removable item."
       },
       {
         "name": "<ColorPickerButton>",
@@ -445,19 +477,23 @@
       },
       {
         "name": "<FormControlLabel> | Checkbox",
-        "componentKey": "cfe635d270845d63e72e5ac68d0de1da5da8e2b0"
+        "componentKey": "cfe635d270845d63e72e5ac68d0de1da5da8e2b0",
+        "usage": "Checkbox with its label for a single boolean option or one item in a checkbox group."
       },
       {
         "name": "<FormControlLabel> | Radio",
-        "componentKey": "e722314e98724d857b604322368a624ab5a963d0"
+        "componentKey": "e722314e98724d857b604322368a624ab5a963d0",
+        "usage": "Radio option with its label for a mutually exclusive choice inside a radio group."
       },
       {
         "name": "<FormControlLabel> | Switch",
-        "componentKey": "5360345cd2e20e4eb7f52cabeb54ca739a68f1ca"
+        "componentKey": "5360345cd2e20e4eb7f52cabeb54ca739a68f1ca",
+        "usage": "Switch with its label for an on/off setting or feature toggle."
       },
       {
         "name": "<FormGroup> | <Checkbox>",
-        "componentKey": "13eab78dafa49286a03c6ae86473033a65157c21"
+        "componentKey": "13eab78dafa49286a03c6ae86473033a65157c21",
+        "usage": "Grouped checkbox options where users may select multiple values."
       },
       {
         "name": "<FormGroup> | <RadioGroup>",
@@ -469,7 +505,8 @@
       },
       {
         "name": "<IconButton>",
-        "componentKey": "7bf383a97f2a696c34c19cd5c1596ac2d22a2642"
+        "componentKey": "7bf383a97f2a696c34c19cd5c1596ac2d22a2642",
+        "usage": "Icon-only action such as close, clear, menu, collapse, expand, or dismiss."
       },
       {
         "name": "<LoadingButton>",
@@ -477,7 +514,8 @@
       },
       {
         "name": "<MultiSelect>",
-        "componentKey": "dc80c39167ccab18f839e00fdf433ee0644e0596"
+        "componentKey": "dc80c39167ccab18f839e00fdf433ee0644e0596",
+        "usage": "Multi-choice filter or picker where more than one value can be selected."
       },
       {
         "name": "<Pagination>",
@@ -493,7 +531,8 @@
       },
       {
         "name": "<Select>",
-        "componentKey": "7db7714ec290782c969567390d55b44a87305a60"
+        "componentKey": "7db7714ec290782c969567390d55b44a87305a60",
+        "usage": "Single-choice dropdown such as role, user type, status, category, or owner."
       },
       {
         "name": "<SplitIconButton>",
@@ -517,11 +556,14 @@
       },
       {
         "name": "<TextField>",
-        "componentKey": "5c6c5b28c1a2735a5ab4400cb4daa8b913ac2664"
+        "componentKey": "5c6c5b28c1a2735a5ab4400cb4daa8b913ac2664",
+        "usage": "Single-line input fields such as name, email, phone, identifier, or search value. Use Size=Small by default in dense application forms.",
+        "selectionNotes": "For multiline input, notes, comments, descriptions, or message body, use <TextField> | Multiline."
       },
       {
         "name": "<TextField> | Multiline",
-        "componentKey": "4a274160c5103a8a23e4cdf264e641c40e69711b"
+        "componentKey": "4a274160c5103a8a23e4cdf264e641c40e69711b",
+        "usage": "Long-form input such as notes, comments, descriptions, message body, or other multiline text entry."
       },
       {
         "name": "<TimelineDot>",
@@ -571,7 +613,8 @@
       },
       {
         "name": "<Dialog>",
-        "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095"
+        "componentKey": "fccf45793ec542d2e3b09e635d23466412e7f095",
+        "usage": "Modal shell. Use with SUI Backdrop and the slot-swap workflow in app/instructions/modal-dialogs.md."
       },
       {
         "name": "<Form Blocks> | Attachments",

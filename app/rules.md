@@ -13,6 +13,7 @@ Project-specific rules for composing Teletronics SUI-based application screens. 
 
 - S-System is a data-heavy application with many sub-applications, controls, forms, previews, lists, and data panels.
 - Application screens must prioritize fast scanning, compact information density, and predictable placement across small and large viewports.
+- Use Figma auto layout for layout containers wherever practical, including screen regions, islands, form stacks, button rows, list/table rows, and grouped controls. Use absolute positioning only for page-level placement, overlays/backdrops, intentionally layered elements, or cases where a SUI component instance cannot participate cleanly in auto layout.
 - Islands follow a dense bento-style composition. The gap between sibling islands is always `spacing/1` (8 px). Prefer `cornerRadius/2` (8 px) for standard islands unless a component or overlay requires another radius.
 - Do not use large decorative whitespace between islands in data-heavy screens.
 - Keep related controls close to the content they affect.

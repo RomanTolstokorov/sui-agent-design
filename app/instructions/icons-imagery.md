@@ -46,7 +46,7 @@ inner.swapComponent(upVariant);
 3. `mediumComp.createInstance()` — then append the instance to the target frame/node.
 4. Import the target icon. For plain icons: `importComponentByKeyAsync(key)`. For variant-based icons (e.g. Chevron directions): import the component set, then pick from `.children`: `chevronSet.children.find(c => c.name === "Direction=Up")`.
 5. `inst.findOne(n => n.type === "INSTANCE").swapComponent(iconComp)` — do not use `setProperties` for this swap.
-6. Bind the icon fill to `components/icon/default` or `components/icon/secondary` from `figma/foundations/colors.json`.
+6. Icon components come pre-wired: the leaf Vector inside every icon already has `components/icon/default` bound. For default color, nothing to do. To use `components/icon/secondary` (or any other variable): rebind the fill variable on the **leaf Vector node(s)** inside the swapped icon — call `findAll(n => n.type === "VECTOR")` on the `<Icon>` instance and apply `setBoundVariableForPaint` there. Do not bind on the `<Icon>` wrapper (it has zero fills) or on the swapped icon instance itself (binding there has no visual effect).
 
 ---
 
@@ -55,8 +55,6 @@ inner.swapComponent(upVariant);
 Never use raw hex values for icon fills. Standard rule: bind to `components/icon/default` (primary icon) or `components/icon/secondary` (subdued/helper icon). Both keys in `figma/foundations/colors.json → tokens.icons`.
 
 Special icon sets have their own color variables — see their sections below.
-
----
 
 ## Icon Catalog
 
@@ -159,7 +157,7 @@ Refer to `figma/components/index.json` for the full `<Checkbox>` and `<Radio>` S
 
 - Always use `<Icon>` (key `89b4b8d62421765b68506d994ff843e190f726a0`) to wrap any icon — never place raw icon components.
 - Always set the icon via INSTANCE_SWAP (`Icon` property), never by replacing children directly.
-- Always bind fills to icon color variables from `figma/foundations/colors.json` — never raw hex.
+- Always bind icon fills to color variables from `figma/foundations/colors.json` — never raw hex. Target the **leaf Vector node(s)** inside the swapped icon. The `<Icon>` wrapper has no fills; binding on the wrapper or the swapped icon instance has no visual effect.
 - Task type icons in Colorful mode use `components/icon/task_types/*` variables.
 - Navigation icons belong inside `<SidebarMenuItem>` — not as freestanding icons.
 - Checkbox and RadioButton icon components are form elements, not `<Icon>` content.

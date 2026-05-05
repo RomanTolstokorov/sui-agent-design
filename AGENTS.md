@@ -44,6 +44,7 @@ Each app has four tiers of documentation:
 - Import components using the workflow in `app/instructions/sui-component-imports.md`.
 - Bind fills and strokes to published variables by `variableKey`; apply elevation by importing effect styles by `styleKey`.
 - Apply typography by importing published text styles by `styleKey`; do not set raw font family, size, weight, line height, or letter spacing when a matching style exists.
+- For icons, use the `<Icon>` wrapper and follow `app/instructions/icons-imagery.md`; never color the wrapper or swapped inner icon instance container.
 - An `island` is a separated functional unit (controls, forms, previews, lists, tables, details, supporting panels). Islands follow a dense bento-style composition with `spacing/1` (8 px) gaps between siblings.
 - App, screen, and flow docs override generic instructions when they describe a more specific workflow.
 
