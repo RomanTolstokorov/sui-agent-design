@@ -112,3 +112,4 @@ Contains scrollable list of document items with metadata (title, ID, date, statu
 - Child order within auto-layout determines visual position. Sidebar second = right side (RTL start).
 - The root is HORIZONTAL, same as Task Management.
 - See `app/apps/document.md` for document list fields, tab contents, and drawing rules.
+- No state-specific screen docs exist yet for Documents — this file covers the default state. Add `app/screens/document/<state>.md` when a new variant is needed.
