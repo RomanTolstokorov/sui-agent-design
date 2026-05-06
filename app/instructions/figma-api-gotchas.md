@@ -106,3 +106,30 @@ for (const font of dsFonts) {
 ```
 
 **Discovered:** 2026-05-02
+
+---
+
+### New frames default to raw white fill
+
+**Symptom:** Frames created with `figma.createFrame()` receive a default white `SOLID` fill, usually `{ r: 1, g: 1, b: 1 }`, with no variable binding. Container frames that should be transparent can therefore end up with a hardcoded `#ffffff` paint that violates the no-raw-color rule and is easy to miss visually.
+
+**Cause:** Figma initializes newly created frame nodes with a white fill by default. The Plugin API does not provide a creation option to disable this.
+
+**Workaround:**
+```js
+const frame = figma.createFrame();
+
+// For layout-only/container frames:
+frame.fills = [];
+
+// For actual surfaces:
+frame.fills = [{
+  type: "SOLID",
+  color: { r: 1, g: 1, b: 1 },
+  boundVariables: {
+    color: { type: "VARIABLE_ALIAS", id: surfaceVariable.id }
+  }
+}];
+```
+
+**Discovered:** 2026-05-06
