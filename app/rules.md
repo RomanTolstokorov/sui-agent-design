@@ -18,6 +18,11 @@ Project-specific rules for composing Teletronics SUI-based application screens. 
 - Do not use large decorative whitespace between islands in data-heavy screens.
 - Keep related controls close to the content they affect.
 
+## Entity Scope Terms
+
+- Task and document are domain entities, not app scopes. A document entity can be displayed in Task Management, Search, Documents, or another app surface.
+- When a component registry uses entity applicability, choose sections by the entity being previewed or edited, then place that entity inside the requested host app layout.
+
 ## Figma API Workaround Rule
 
 When a Figma API or `use_figma` scripting blocker is encountered during drawing (unexpected error, silent misplacement, property rejection, undocumented behavior, etc.):

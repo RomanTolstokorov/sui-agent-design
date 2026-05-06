@@ -37,7 +37,15 @@ At a product level, the default Documents workspace combines a document list on 
 
 ## Document Preview Panel
 
-The preview panel shows the selected document's full content. Sections observed in the canonical frame:
+The preview panel shows the selected document's full content. In read-only preview, the structure is:
+
+- **Action bar** — transition/actions and preview controls.
+- **Subject** — use `<Form Blocks> | Subject` first.
+- **Document preview tabs** — use the ready `<Document preview>` component. Switch its `Tab` variant for Document, Comments, Tasks, Attachments, Entities, Reply, or other documented tab states.
+
+Do not build document read-only preview as a stack of titled `<Form Blocks> | ...` wrappers under the tabs. If a ready `<Document preview>` variant exists, use it as-is. Only when drawing missing tab content manually, omit `<Form Blocks Component> | Title` because the tab label is the section title.
+
+Sections observed in the canonical Documents app frame:
 
 - **Action bar** — Edit (outlined), Delete (text), view mode toggles
 - **Document header** — user avatar, document ID, creation date, report icon

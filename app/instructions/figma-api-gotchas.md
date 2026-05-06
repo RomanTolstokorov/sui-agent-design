@@ -133,3 +133,50 @@ frame.fills = [{
 ```
 
 **Discovered:** 2026-05-06
+
+---
+
+### Shared plugin data namespace rejects hyphens
+
+**Symptom:** `setSharedPluginData()` fails when the namespace contains a hyphen, with the error `The namespace can only consist of alphanumeric characters, _ or .`
+
+**Cause:** Figma shared plugin data namespaces are restricted to letters, numbers, underscores, and dots.
+
+**Workaround:** define a stable namespace constant before writing shared plugin data. Use `_` or `.` as word separators; do not use `-`.
+```js
+const namespace = "agent_design"; // valid
+// const namespace = "agent-design"; // invalid
+
+node.setSharedPluginData(namespace, "entity", "task");
+```
+
+**Discovered:** 2026-05-06
+
+---
+
+### Resize leaves auto-layout frames fixed and clipped
+
+**Symptom:** An auto-layout frame that should hug its children keeps a fixed height or width after `resize()`. Imported instances are correct, but the parent frame can clip or hide content because its sizing mode no longer follows the content.
+
+**Cause:** `resize()` writes explicit dimensions. For auto-layout frames, the intended hug or fill behavior must be restored with sizing mode properties after the resize and, when the frame is inside another auto-layout parent, after append.
+
+**Workaround:**
+```js
+const stack = figma.createFrame();
+stack.layoutMode = "VERTICAL";
+stack.resize(2200, 100);
+stack.primaryAxisSizingMode = "AUTO";
+stack.counterAxisSizingMode = "FIXED";
+
+const row = figma.createFrame();
+row.layoutMode = "HORIZONTAL";
+row.resize(100, 100);
+row.primaryAxisSizingMode = "AUTO";
+row.counterAxisSizingMode = "AUTO";
+
+parent.appendChild(stack);
+stack.layoutSizingHorizontal = "FILL";
+stack.primaryAxisSizingMode = "AUTO";
+```
+
+**Discovered:** 2026-05-06

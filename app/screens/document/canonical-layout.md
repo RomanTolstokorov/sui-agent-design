@@ -69,6 +69,8 @@ Contains (top to bottom): action bar (Edit, Delete, view toggles), document head
 
 Default active metadata tab: **Document**.
 
+For read-only document previews in task/document host surfaces, use `<Form Blocks> | Subject` followed by the ready `<Document preview>` component. Use the component's `Tab` variant to switch the tab content. Do not compose tab content from titled `<Form Blocks> | ...` wrappers unless a specific state doc explicitly calls for that; tabs own the section title.
+
 #### Step 5b — Document List (right, RTL start)
 Create a frame as the **second** child of Content Area. Apply:
 - Auto-layout: **HORIZONTAL**, `primaryAxisSizingMode = AUTO`, `counterAxisSizingMode = FIXED` (992 px)

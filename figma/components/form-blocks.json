@@ -1,38 +1,117 @@
 {
   "name": "Teletronics SUI Form Blocks",
-  "purpose": "Focused registry for task/document form block composition. Use only when a task/document form, form block, form block content, attachments block, documents block, keywords block, or task preview/edit section is requested.",
+  "purpose": "Registry for composing task and document entity form blocks in preview/edit states. Load only for form blocks, form block content, attachments, documents, keywords, subject, or task/document preview/edit sections.",
   "source": {
     "fileKey": "F8J2cgGBsmyFLyw9OW6Njq",
     "reliability": "Use componentKey and nodeId fields as stable references. Figma page names are intentionally not used because DS pages can be renamed or reorganized.",
     "references": {
       "keywords": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18731-43097",
       "documents": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18242-9975",
+      "documentPreview": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18371-9105",
       "attachmentsVariants": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18722-126452",
       "subject": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=26259-5412",
       "subjectAnnotation": "https://www.figma.com/design/F8J2cgGBsmyFLyw9OW6Njq/Teletronics-SUI?node-id=18733-43714"
     }
   },
   "rules": [
-    "A full form block wrapper contains the section icon, section name, actions, and content area.",
-    "Use a <Form Blocks> | ... wrapper when the section needs its own header and section shell.",
-    "Use <Form Blocks Content> | ... inside an existing wrapper or manually constructed section shell.",
-    "Task and document forms choose visible sections by workflow configuration.",
-    "<Form Blocks> | Subject is special and must be first in task forms.",
-    "Documents and Temporary Documents are separate section/content paths even when both reuse <DocumentListItem>.",
-    "Prefer prepared attachment variants when the requested scenario matches one of them."
+    "Use a <Form Blocks> | ... wrapper when the section needs its own header, icon, actions, and content shell.",
+    "Use <Form Blocks Content> | ... only inside an existing wrapper or manually constructed section shell.",
+    "Choose visible sections from workflow configuration plus appliesToEntities.",
+    "Do not cross entity scopes unless a state doc explicitly overrides this registry.",
+    "Place <Form Blocks> | Subject first in task and document previews.",
+    "Build preview forms from readOnlyPreview composition rules.",
+    "Task read-only previews use full <Form Blocks> | ... wrappers with title, toolbar, actions, and shell where the section component provides them.",
+    "Document read-only previews use <Form Blocks> | Subject followed by the ready <Document preview> tabbed component.",
+    "For document preview tabs, use the ready component as-is when one exists; only omit <Form Blocks Component> | Title when manually drawing new tab content.",
+    "Documents and Temporary Documents are separate paths even when both reuse <DocumentListItem>.",
+    "Use a ready attachment variant when its scenario matches the requested state."
   ],
+  "entityApplicabilityModel": {
+    "domainEntities": [
+      "task",
+      "document"
+    ],
+    "contexts": [
+      "preview",
+      "edit"
+    ],
+    "meaning": "appliesToEntities marks the entity being previewed or edited, not the host app. A document entity can appear in Task Management, Search, Documents, or another app surface."
+  },
   "baseComponents": {
     "title": {
       "name": "<Form Blocks Component> | Title",
       "nodeId": "18233:9687",
       "componentKey": "1451d9914e82e478f9d63c8bb9db2516c3768c96",
-      "role": "Shared block header structure containing section name, icon, and action area."
+      "role": "Header structure with section name, icon, and action area."
     },
     "actions": {
       "name": "<Form Blocks Component> | Actions",
       "nodeId": "18233:9681",
       "componentKey": "b1ab3ba12333686bac74b81006ec46ec1ed43fe2",
-      "role": "Shared action slot for form block headers."
+      "role": "Action slot for form block headers."
+    }
+  },
+  "readyPreviewComponents": {
+    "documentPreview": {
+      "name": "<Document preview>",
+      "nodeId": "18371:9105",
+      "componentSetKey": "f868bd32828b806231640c91082fc8bebcf2a285",
+      "appliesToEntities": [
+        "document"
+      ],
+      "usage": "Ready tabbed document read-only preview content. Place immediately after <Form Blocks> | Subject in document preview.",
+      "variantProperty": "Tab",
+      "confirmedVariants": {
+        "document": {
+          "name": "Tab=Document",
+          "componentKey": "f1ace6e511303a4271acd3397f0e5bf60cf0f88d",
+          "usage": "Default document tab: document metadata, extras, and body preview."
+        },
+        "task": {
+          "name": "Tab=Task",
+          "componentKey": "027e134dbaa3e1993b67123bd6b6b4c048c1c2f6",
+          "usage": "Tasks tab: related and linked task content."
+        },
+        "comments": {
+          "name": "Tab=Comments",
+          "componentKey": "cad824ef27af0b28b1be8e097c2cd64c4cd65b17",
+          "usage": "Comments tab: comments preview content."
+        }
+      },
+      "manualContentRule": "When a needed tab has no ready variant, draw only the tab content body. Do not add <Form Blocks Component> | Title because the tab label is the section title."
+    }
+  },
+  "readOnlyPreview": {
+    "task": {
+      "composition": {
+        "firstBlock": "subject",
+        "sectionModel": "stackedFormBlocks",
+        "allowedBlockSource": "wrappers where appliesToEntities includes task",
+        "wrapperBehavior": "Use the full <Form Blocks> | ... instance. Keep its title, icon, actions, toolbar, and content shell when provided by the component.",
+        "contentBehavior": "Use <Form Blocks Content> | ... only inside an existing wrapper or documented custom shell."
+      },
+      "rules": [
+        "Place <Form Blocks> | Subject before all other task preview content.",
+        "After Subject, choose task-visible sections from workflow state and appliesToEntities.",
+        "Do not strip wrapper titles from task read-only sections."
+      ]
+    },
+    "document": {
+      "composition": {
+        "firstBlock": "subject",
+        "secondBlock": "documentPreview",
+        "sectionModel": "subjectPlusTabbedReadyPreview",
+        "readyComponent": "documentPreview",
+        "defaultTab": "document",
+        "variantProperty": "Tab"
+      },
+      "rules": [
+        "Place <Form Blocks> | Subject first.",
+        "Place the ready <Document preview> component immediately after Subject.",
+        "Switch document preview content with the Tab variant.",
+        "Do not assemble document read-only preview from multiple <Form Blocks> | ... wrappers under the tabs.",
+        "If a needed tab has no ready variant, draw only the tab content body and omit <Form Blocks Component> | Title because the tabs own the section title."
+      ]
     }
   },
   "wrappers": {
@@ -40,86 +119,147 @@
       "name": "<Form Blocks> | Attachments",
       "nodeId": "18241:51758",
       "componentKey": "c6fcd21cd7326057a277ef408df18c66363de0cc",
-      "content": "<Form Blocks Content> | Attachments"
+      "content": "<Form Blocks Content> | Attachments",
+      "appliesToEntities": [
+        "task",
+        "document"
+      ],
+      "usage": "Use readyVariants.attachments when the requested state matches one of its scenarios."
     },
     "authorComment": {
       "name": "<Form Blocks> | Autor commnet",
+      "label": "Author comment",
       "nodeId": "18233:46260",
       "componentKey": "7b832765686cfa38899cc9fa8f6643d580dbe20a",
-      "content": "<Form Blocks Content> | Text"
+      "content": "<Form Blocks Content> | Text",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Author comment section."
     },
     "comments": {
       "name": "<Form Blocks> | Comments",
       "nodeId": "18242:10054",
       "componentKey": "1937ddd4828303aba970b499988cdc4c8734bc7c",
-      "content": "<Form Blocks Content> | Comments"
+      "content": "<Form Blocks Content> | Comments",
+      "appliesToEntities": [
+        "task",
+        "document"
+      ],
+      "usage": "In Documents, place under the Comments metadata tab."
     },
     "documentBodyText": {
       "name": "<Form Blocks> | Document body text",
       "nodeId": "22858:26750",
       "componentKey": "5831a61894e336ff9f7daac3082011651966b46d",
-      "content": null
+      "content": null,
+      "appliesToEntities": [
+        "document"
+      ],
+      "usage": "Document body section."
     },
     "documents": {
       "name": "<Form Blocks> | Documents",
       "nodeId": "18242:9975",
       "componentKey": "216d119ed1f4efd0f634033b708c21b2148b7379",
-      "content": "<Form Blocks Content> | Documents"
+      "content": "<Form Blocks Content> | Documents",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Linked documents section. Do not use for the document body."
     },
     "entity": {
       "name": "<Form Blocks> | Entity",
       "nodeId": "26515:40821",
       "componentKey": "a85e275b5058e8761276ec75f24919d787877a13",
-      "content": "<Form Blocks Content> | Entity"
+      "content": "<Form Blocks Content> | Entity",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Attached entity data section."
     },
     "keywords": {
       "name": "<Form Blocks> | Keywords",
       "nodeId": "22867:46729",
       "componentKey": "25bc75f48165afb9921411b56b1cc48c9b7936c2",
-      "content": "<Form Blocks Content> | Keywords"
+      "content": "<Form Blocks Content> | Keywords",
+      "appliesToEntities": [
+        "document"
+      ],
+      "usage": "Keywords metadata section."
     },
     "lastTransitionCommentBanner": {
       "name": "<Form Blocks> | Last transition comment banner",
       "nodeId": "18233:10353",
       "componentKey": "c2fc5f9d8642d5372336fd5225b725685abdec44",
-      "content": null
+      "content": null,
+      "appliesToEntities": [
+        "task",
+        "document"
+      ],
+      "usage": "Show after a flow transition so the user can see the previous assignee's comment and understand the next action."
     },
     "records": {
       "name": "<Form Blocks> | Records",
       "nodeId": "18242:9950",
       "componentKey": "93635a0932725a8b3845a7b24509348b2ed0f991",
-      "content": "<Form Blocks Content> | Records"
+      "content": "<Form Blocks Content> | Records",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Linked records section."
     },
     "response": {
       "name": "<Form Blocks> | Response",
       "nodeId": "18233:46259",
       "componentKey": "ff21737c9017db33bb522ff169929b95d5a14855",
-      "content": "<Form Blocks Content> | Text"
+      "content": "<Form Blocks Content> | Text",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Response text section."
     },
     "searchRequest": {
       "name": "<Form Blocks> | Search request",
       "nodeId": "18764:32052",
       "componentKey": "0a377adf164bc4c50afe44eeec351ca899f11806",
-      "content": "<Form Blocks Content> | Search"
+      "content": "<Form Blocks Content> | Search",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Search request section."
     },
     "subject": {
       "name": "<Form Blocks> | Subject",
       "nodeId": "26259:5412",
       "componentKey": "2ddc76e90f565e80cf1670e493e642f3e6b41af4",
       "content": null,
-      "usage": "Always place first at the top of a task form."
+      "appliesToEntities": [
+        "task",
+        "document"
+      ],
+      "usage": "Place first in the preview for both task and document entities."
     },
     "tasks": {
       "name": "<Form Blocks> | Tasks",
       "nodeId": "18242:10132",
       "componentKey": "ae79c23f575f612812d06f0c613ad12fecbb7228",
-      "content": "<Form Blocks Content> | Task"
+      "content": "<Form Blocks Content> | Task",
+      "appliesToEntities": [
+        "task",
+        "document"
+      ],
+      "usage": "Related tasks metadata section."
     },
     "temporaryAccessToDocuments": {
       "name": "<Form Blocks> | Temporary access to documents",
       "nodeId": "18254:12213",
       "componentKey": "45affa7b7956d2682123149a6fc3a8258e2db5e1",
-      "content": "<Form Blocks Content> | Temporary Documents"
+      "content": "<Form Blocks Content> | Temporary Documents",
+      "appliesToEntities": [
+        "task"
+      ],
+      "usage": "Temporary document access section."
     }
   },
   "content": {
@@ -129,6 +269,10 @@
       "componentKey": "95dd2e96e27dff40141c0537c9acbb0d3913c69e",
       "usedBy": [
         "<Form Blocks> | Attachments"
+      ],
+      "appliesToEntities": [
+        "task",
+        "document"
       ]
     },
     "comments": {
@@ -137,6 +281,10 @@
       "componentKey": "97129d2c435a98a45abb04ce135e05758b76ee9a",
       "usedBy": [
         "<Form Blocks> | Comments"
+      ],
+      "appliesToEntities": [
+        "task",
+        "document"
       ]
     },
     "documents": {
@@ -145,6 +293,9 @@
       "componentKey": "3ccd6c41cf9a5f04e8994793400397488fec833e",
       "usedBy": [
         "<Form Blocks> | Documents"
+      ],
+      "appliesToEntities": [
+        "task"
       ],
       "sharedComponents": [
         "<DocumentListItem>",
@@ -157,6 +308,9 @@
       "componentKey": "5bf26822f913157a31b5e3f9fc94f4cf04b42080",
       "usedBy": [
         "<Form Blocks> | Entity"
+      ],
+      "appliesToEntities": [
+        "task"
       ]
     },
     "keywords": {
@@ -165,6 +319,9 @@
       "componentKey": "8e6942fa30308dae97b923e7904f231f31852b0d",
       "usedBy": [
         "<Form Blocks> | Keywords"
+      ],
+      "appliesToEntities": [
+        "document"
       ]
     },
     "records": {
@@ -173,6 +330,9 @@
       "componentKey": "12fc63cc586e3939215005834f62b066026b771a",
       "usedBy": [
         "<Form Blocks> | Records"
+      ],
+      "appliesToEntities": [
+        "task"
       ]
     },
     "search": {
@@ -181,6 +341,9 @@
       "componentKey": "8c5feda57400575d75ce02cb5856150be7fdc846",
       "usedBy": [
         "<Form Blocks> | Search request"
+      ],
+      "appliesToEntities": [
+        "task"
       ]
     },
     "task": {
@@ -189,6 +352,9 @@
       "componentKey": "688af4533cb85f5a6f36baf07cdb969e4ad25f46",
       "usedBy": [
         "<Form Blocks> | Tasks"
+      ],
+      "appliesToEntities": [
+        "document"
       ]
     },
     "temporaryDocuments": {
@@ -197,6 +363,9 @@
       "componentKey": "9e4a54417e2e633f94f2233cb79424582e51b2d6",
       "usedBy": [
         "<Form Blocks> | Temporary access to documents"
+      ],
+      "appliesToEntities": [
+        "task"
       ],
       "sharedComponents": [
         "<DocumentListItem>",
@@ -211,6 +380,9 @@
       "usedBy": [
         "<Form Blocks> | Autor commnet",
         "<Form Blocks> | Response"
+      ],
+      "appliesToEntities": [
+        "task"
       ]
     }
   },
