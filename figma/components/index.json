@@ -50,15 +50,18 @@
       },
       {
         "name": "<CardActions>",
-        "componentKey": "e5d15404825ed65fb35c03a8746d4ffe118b364d"
+        "componentKey": "e5d15404825ed65fb35c03a8746d4ffe118b364d",
+        "compositionGroup": "Card"
       },
       {
         "name": "<CardContent>",
-        "componentKey": "a4be3d2cadd97863eaac2517effb0481c49660c3"
+        "componentKey": "a4be3d2cadd97863eaac2517effb0481c49660c3",
+        "compositionGroup": "Card"
       },
       {
         "name": "<CardHeader>",
-        "componentKey": "218259eb0b883e4abdea7e2aad50e01cc4808caa"
+        "componentKey": "218259eb0b883e4abdea7e2aad50e01cc4808caa",
+        "compositionGroup": "Card"
       },
       {
         "name": "<CardMedia>",
@@ -67,10 +70,6 @@
       {
         "name": "<Checkbox>",
         "componentKey": "514c6760d8866c7d0b6ed891df3be2aface265ec"
-      },
-      {
-        "name": "<Container>",
-        "componentKey": "a7308052e85a338d3f507c8d9fc18a1f52f48b86"
       },
       {
         "name": "<DataGrid> | Cell",
@@ -85,17 +84,20 @@
       {
         "name": "<DialogActions>",
         "componentKey": "bddef1ae3a168aa193123f7947720c9d82e5a080",
-        "usage": "Dialog footer action region when working with SUI dialog composition patterns."
+        "usage": "Dialog footer action region when working with SUI dialog composition patterns.",
+        "compositionGroup": "Dialog"
       },
       {
         "name": "<DialogContent>",
         "componentKey": "bfdfcc9dd8e759eba0b27d423fe4493016fcfd59",
-        "usage": "Dialog body region when working with SUI dialog composition patterns."
+        "usage": "Dialog body region when working with SUI dialog composition patterns.",
+        "compositionGroup": "Dialog"
       },
       {
         "name": "<DialogTitle>",
         "componentKey": "547f9ad4944535498e7642fc743db6caa1735f80",
-        "usage": "Dialog header/title region when working with SUI dialog composition patterns."
+        "usage": "Dialog header/title region when working with SUI dialog composition patterns.",
+        "compositionGroup": "Dialog"
       },
       {
         "name": "<Divider> | Horizontal",
@@ -104,10 +106,6 @@
       {
         "name": "<Divider> | Vertical",
         "componentKey": "ea62405f1ae55e875da0f4367af76aa109519270"
-      },
-      {
-        "name": "<Drawer>",
-        "componentKey": "ad2b0dce4e7742a8f937c8265a0cadbfef1c4bab"
       },
       {
         "name": "<FormFooter>",
@@ -120,10 +118,6 @@
       {
         "name": "<Icon>",
         "componentKey": "89b4b8d62421765b68506d994ff843e190f726a0"
-      },
-      {
-        "name": "<ImageListItemBar>",
-        "componentKey": "f679dbf5da49445940728f2ac50e1427acb55a27"
       },
       {
         "name": "<InputLabel>",
@@ -255,90 +249,6 @@
         "selectionNotes": "Raw text nodes are allowed when bound to published typography styles. Do not replace styled raw text with Typography unless an instance/component slot is needed."
       },
       {
-        "name": "Box Set - 1st Level",
-        "componentKey": "1de42c15da197d1806c9df3e93e289074a1a1715"
-      },
-      {
-        "name": "Box Set - 2nd Level",
-        "componentKey": "fc7c4fd6d50553908c7809f65c6926c9a70b1a56"
-      },
-      {
-        "name": "Box Set - 3rd Level",
-        "componentKey": "149123e80b1e31cee9b51763a2683386903b0606"
-      },
-      {
-        "name": "Card Elements",
-        "componentKey": "967edb643b034b8971fd0edaabcc06907e5f0468"
-      },
-      {
-        "name": "Chat Bubble",
-        "componentKey": "7136051a90a1f0424c997bb72e7171930feaf464"
-      },
-      {
-        "name": "Elements / Axis X | Groups Bottom",
-        "componentKey": "127ba5f84a0a34ede45253082b456f225aad7adc"
-      },
-      {
-        "name": "Elements / Axis X | Groups Bottom",
-        "componentKey": "ed0826e8c79a3934c06f336cf3f223166e2b6a96"
-      },
-      {
-        "name": "Elements / Axis Y | Values Left",
-        "componentKey": "dcc3cd1dd1f43c8806574f90b1d028f8a4a5b86f"
-      },
-      {
-        "name": "Elements / Axis Y | Values Left",
-        "componentKey": "edbb9aa5ddf50f38057f4e5ac45d53d2a9274138"
-      },
-      {
-        "name": "Elements / Axis Y | Values Right",
-        "componentKey": "19c5663d37162b15a7f055e14132a4de0364ac94"
-      },
-      {
-        "name": "Elements / Axis Y | Values Right",
-        "componentKey": "1fa4d7cdfc1c3efc4456f93739961dfee8d2057f"
-      },
-      {
-        "name": "Elements / Bars",
-        "componentKey": "90a60fb2d25e099ff1e48d3a83a2548dc5a6dabe"
-      },
-      {
-        "name": "Elements / Bars",
-        "componentKey": "c1d0c37f17877eee2e7d545eeafd6f898128f204"
-      },
-      {
-        "name": "Elements / Legend",
-        "componentKey": "bc7c327432177d3fa314a974b207cdc76bfd53c0"
-      },
-      {
-        "name": "Elements / Legend",
-        "componentKey": "cf67e7252fd9cddd73056107206cfe68482c5eaf"
-      },
-      {
-        "name": "Elements / Lines",
-        "componentKey": "223c3f5fa22be8fb99f185bfd4d17808006980b0"
-      },
-      {
-        "name": "Elements / Lines",
-        "componentKey": "ca617af3090d4271c34bbb4867e1b0ab4719558b"
-      },
-      {
-        "name": "Elements / Tooltip",
-        "componentKey": "7338ad3dfc1d7f8bddabb436c07cba1a679d5fff"
-      },
-      {
-        "name": "Elements / Tooltip",
-        "componentKey": "e89d6157760bb0ccd1286c4bc0ae235c8ef3d467"
-      },
-      {
-        "name": "Spacing | Horizontal",
-        "componentKey": "ba36c75bac14c2b3bf5894240da2bb0456f49e01"
-      },
-      {
-        "name": "Spacing | Vertical",
-        "componentKey": "e52093e61edc215286186f67eab15036e9dd7278"
-      },
-      {
         "name": "Star",
         "componentKey": "67553da19c8059cd1d988998cd2b5a741d305efb"
       },
@@ -371,7 +281,8 @@
           "Color=Inherit (white)": "Use only on dark or colored surfaces that require white inherited text.",
           "State=Disabled": "Unavailable action state."
         },
-        "selectionNotes": "Choose the variant by command role and surface context. Do not use Color=Secondary unless an existing source screen or explicit product requirement calls for it."
+        "selectionNotes": "Choose the variant by command role and surface context. Do not use Color=Secondary unless an existing source screen or explicit product requirement calls for it.",
+        "iconSlots": "Icons are hidden by default. To show them, set the boolean instance properties `startIcon?` (key `startIcon?#9974:219`) and/or `endIcon?` (key `endIcon?#9973:33`) to true via setProperties(). The icon itself is an INSTANCE_SWAP slot (`startIcon#9980:0` / `endIcon#9975:0`) — swap it to change the icon. No separate icon-variant exists in the component set name."
       },
       {
         "name": "<ButtonGroup>",
@@ -426,46 +337,6 @@
       {
         "name": "<Form Blocks Component> | Title",
         "componentKey": "1451d9914e82e478f9d63c8bb9db2516c3768c96"
-      },
-      {
-        "name": "<Form Blocks Content> | Attachments",
-        "componentKey": "95dd2e96e27dff40141c0537c9acbb0d3913c69e"
-      },
-      {
-        "name": "<Form Blocks Content> | Comments",
-        "componentKey": "97129d2c435a98a45abb04ce135e05758b76ee9a"
-      },
-      {
-        "name": "<Form Blocks Content> | Documents",
-        "componentKey": "3ccd6c41cf9a5f04e8994793400397488fec833e"
-      },
-      {
-        "name": "<Form Blocks Content> | Entity",
-        "componentKey": "5bf26822f913157a31b5e3f9fc94f4cf04b42080"
-      },
-      {
-        "name": "<Form Blocks Content> | Keywords",
-        "componentKey": "8e6942fa30308dae97b923e7904f231f31852b0d"
-      },
-      {
-        "name": "<Form Blocks Content> | Records",
-        "componentKey": "12fc63cc586e3939215005834f62b066026b771a"
-      },
-      {
-        "name": "<Form Blocks Content> | Search",
-        "componentKey": "8c5feda57400575d75ce02cb5856150be7fdc846"
-      },
-      {
-        "name": "<Form Blocks Content> | Task",
-        "componentKey": "688af4533cb85f5a6f36baf07cdb969e4ad25f46"
-      },
-      {
-        "name": "<Form Blocks Content> | Temporary Documents",
-        "componentKey": "9e4a54417e2e633f94f2233cb79424582e51b2d6"
-      },
-      {
-        "name": "<Form Blocks Content> | Text",
-        "componentKey": "5ea4df2bea552df01a29c122f683b890ccac8149"
       },
       {
         "name": "<Form Blocks> | Attachments | ToolBar",
@@ -574,10 +445,6 @@
         "componentKey": "0608cbf6c2d770378611f5131623c16b180a6536"
       },
       {
-        "name": "<TransferList>",
-        "componentKey": "4305502cfcdf684c095cbbb42f31c9346ae98454"
-      },
-      {
         "name": "<TreeView>",
         "componentKey": "cb25244edcd69206e1c0206df244391ca4bbc4b6"
       },
@@ -673,6 +540,46 @@
         "componentKey": "45affa7b7956d2682123149a6fc3a8258e2db5e1"
       },
       {
+        "name": "<Form Blocks Content> | Attachments",
+        "componentKey": "95dd2e96e27dff40141c0537c9acbb0d3913c69e"
+      },
+      {
+        "name": "<Form Blocks Content> | Comments",
+        "componentKey": "97129d2c435a98a45abb04ce135e05758b76ee9a"
+      },
+      {
+        "name": "<Form Blocks Content> | Documents",
+        "componentKey": "3ccd6c41cf9a5f04e8994793400397488fec833e"
+      },
+      {
+        "name": "<Form Blocks Content> | Entity",
+        "componentKey": "5bf26822f913157a31b5e3f9fc94f4cf04b42080"
+      },
+      {
+        "name": "<Form Blocks Content> | Keywords",
+        "componentKey": "8e6942fa30308dae97b923e7904f231f31852b0d"
+      },
+      {
+        "name": "<Form Blocks Content> | Records",
+        "componentKey": "12fc63cc586e3939215005834f62b066026b771a"
+      },
+      {
+        "name": "<Form Blocks Content> | Search",
+        "componentKey": "8c5feda57400575d75ce02cb5856150be7fdc846"
+      },
+      {
+        "name": "<Form Blocks Content> | Task",
+        "componentKey": "688af4533cb85f5a6f36baf07cdb969e4ad25f46"
+      },
+      {
+        "name": "<Form Blocks Content> | Temporary Documents",
+        "componentKey": "9e4a54417e2e633f94f2233cb79424582e51b2d6"
+      },
+      {
+        "name": "<Form Blocks Content> | Text",
+        "componentKey": "5ea4df2bea552df01a29c122f683b890ccac8149"
+      },
+      {
         "name": "<SearchResultListItem>",
         "componentKey": "bf8c878ff8021cbd350393861763f8544fdbfa3c"
       },
@@ -691,6 +598,10 @@
       {
         "name": "<Task list>",
         "componentKey": "59bdb48db0698778ebbdb04f0e4af7110dc0811a"
+      },
+      {
+        "name": "<TransferList>",
+        "componentKey": "4305502cfcdf684c095cbbb42f31c9346ae98454"
       },
       {
         "name": "<TaskItem>",

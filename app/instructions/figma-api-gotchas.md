@@ -180,3 +180,24 @@ stack.primaryAxisSizingMode = "AUTO";
 ```
 
 **Discovered:** 2026-05-06
+
+---
+
+### Library import session hits LiveGraph subscription limit
+
+**Symptom:** Repeated `importComponentByKeyAsync` / `importComponentSetByKeyAsync` calls in one `use_figma` script start failing with `LivegraphSubscriptionLimitError: LiveGraph subscription limit (100) exceeded for session (next view: StateGroupByKeyWithDestinationAsset)`.
+
+**Cause:** Importing many remote library components in one plugin execution can exhaust Figma's live graph subscription budget for that session.
+
+**Workaround:**
+```js
+// Import large component inventories in small batches across separate use_figma calls.
+// Keep each batch well below the observed limit, e.g. 20-30 library assets.
+const batch = entries.slice(start, end);
+for (const entry of batch) {
+  const instance = await createSuiInstance(entry.componentKey, entry.name);
+  target.appendChild(instance);
+}
+```
+
+**Discovered:** 2026-05-07
